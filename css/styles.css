@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -337,47 +340,251 @@ img {
 
 /* Products Section */
 .products {
-    padding: 80px 0;
+    padding: 0 0 80px 0; /* No top padding to allow banner to touch top */
     background-color: var(--light-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif; /* Upgraded to Plus Jakarta Sans */
 }
 
-.product-category-title {
-    font-size: 1.8rem;
-    color: var(--dark-navy);
-    margin-bottom: 25px;
-    border-left: 4px solid var(--primary-blue);
-    padding-left: 15px;
+/* Products Header Banner with Background Image */
+.products-header-banner {
+    position: relative;
+    background-image: linear-gradient(to bottom, rgba(248, 250, 252, 0.70) 0%, rgba(248, 250, 252, 0.70) 65%, rgba(248, 250, 252, 1.0) 100%), url('../images/products_header_bg.png'); /* reduced light overlay to make image clearer, and fades seamlessly at the bottom */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0 140px 0; /* deep top/bottom padding to make it spacious */
+    text-align: center;
+    /* border-bottom removed for seamless fade transition */
+}
+
+.products-header-banner .section-header {
+    margin-bottom: 0; /* reset default margin since padding handles spacing */
+}
+
+/* Overlapping Wrapper for the Products Card */
+.products-content-wrapper {
+    margin-top: -80px; /* negative margin pulls the container up over the banner */
+    position: relative;
+    z-index: 10;
+}
+
+.products-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack category tabs on top and products body below */
+    height: auto;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 16px; /* Premium rounded corners for the full box */
+    background-color: var(--white);
+    box-shadow: 0 20px 50px rgba(15, 40, 71, 0.06); /* Extremely soft, premium shadow */
+    overflow: visible; /* Let it scroll naturally with the page */
+}
+
+/* Horizontal Category Tabs (Top of Products Container) - Sticky at top: 80px */
+.products-tabs {
+    display: flex;
+    flex-direction: row; /* Horizontal layout / landscape */
+    position: sticky;
+    top: 80px; /* Sticky top position under header */
+    z-index: 100;
+    background: white;
+    border-bottom: 2px solid #E2E8F0;
+    width: 100%;
+    border-top-left-radius: 15px; /* Conform to container's rounded corners */
+    border-top-right-radius: 15px;
+    overflow: hidden; /* Clips the buttons inside the rounded corners */
+}
+
+.products-tabs .tab-btn {
+    flex: 1; /* Stretch tabs equally across the container */
+    padding: 14px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1B3A6B;
+    background: var(--white);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-align: center; /* Center text in landscape buttons */
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.products-tabs .tab-btn:first-child {
+    border-top-left-radius: 15px; /* Fit container rounded corners */
+}
+
+.products-tabs .tab-btn:last-child {
+    border-top-right-radius: 15px; /* Fit container rounded corners */
+}
+
+.products-tabs .tab-btn:hover:not(.active) {
+    background-color: #E8EEF7; /* Hover background #E8EEF7 */
+}
+
+.products-tabs .tab-btn.active {
+    background-color: #1B3A6B;
+    color: var(--white);
+}
+
+/* Products Body - Flex container for Sidebar + Grid */
+.products-body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* Left Sidebar (Sub-category list) - Sticky at top: 132px (below tabs) */
+.products-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: #F4F7FC;
+    border-right: 1px solid #E2E8F0;
+    position: sticky;
+    top: 132px; /* Sticks below category tabs (80px header + 52px tabs) */
+    height: fit-content;
+    align-self: flex-start;
+    z-index: 90;
+    border-bottom-left-radius: 15px; /* Conform to container's rounded corners */
+}
+
+/* Subcategory groups (hidden by default) */
+.subcategory-group {
+    display: none;
+    flex-direction: column;
+}
+
+.subcategory-group.active {
+    display: flex;
+}
+
+/* Sub-category button styles */
+.subcategory-group .sub-btn {
+    text-align: left;
+    padding: 8px 14px; /* padding: 8px 14px */
+    font-size: 13px; /* Sub-category buttons: font-size 13px */
+    font-weight: 500; /* font-weight 500 */
+    color: var(--text-dark);
+    background: transparent;
+    border: none;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    letter-spacing: 0.01em; /* letter-spacing: 0.01em */
+    transition: background-color 0.15s ease, color 0.15s ease, border-left-color 0.15s ease; /* smooth transition: 0.15s */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.subcategory-group .sub-btn:hover:not(.active) {
+    background-color: #E8EEF7; /* inactive hover background #E8EEF7 */
+    color: #1B3A6B; /* Deep Blue text */
+}
+
+.subcategory-group .sub-btn.active {
+    background-color: #1B3A6B; /* Active sub-category = Deep Blue #1B3A6B background */
+    color: var(--white); /* white text */
+    border-left: 3px solid #FFFFFF; /* left border 3px solid white */
+}
+
+/* Right Content Area */
+.products-content {
+    flex: 1;
+    padding: 20px; /* padding: 20px on the right cards panel */
+    overflow: visible; /* scrolls naturally with the page */
+    background-color: var(--white);
+    border-bottom-right-radius: 15px; /* Conform to container's rounded corners */
 }
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on desktop */
+    gap: 16px; /* gap: 16px between cards */
 }
 
+/* Product Cards */
 .product-card {
+    display: none; /* Controlled by JS filters */
     background-color: var(--white);
     border: 1px solid #E2E8F0;
+    border-radius: 12px; /* Card border-radius: 12px */
+    flex-direction: column;
+    overflow: hidden;
+    position: relative; /* Card must have position: relative for absolute badge */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07); /* box-shadow: 0 2px 8px rgba(0,0,0,0.07) */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; /* transition: 0.2s on all card hover properties */
 }
 
-.product-card img {
+.product-card.show {
+    display: flex; /* Shown when matches filters */
+}
+
+/* Hover Effect: slight lift + shadow + blue border */
+.product-card:hover {
+    transform: translateY(-4px); /* transform translateY(-4px) */
+    border-color: #1B3A6B; /* border-color #1B3A6B */
+    box-shadow: 0 8px 20px rgba(27, 58, 107, 0.13); /* box-shadow 0 8px 20px rgba(27,58,107,0.13) */
+}
+
+/* Product Badges */
+.product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1B3A6B; /* Background: #1B3A6B */
+    color: var(--white); /* color white */
+    padding: 3px 8px; /* Padding: 3px 8px */
+    border-radius: 4px; /* border-radius: 4px */
+    font-size: 10px; /* Badge text: font-size: 10px */
+    font-weight: 700; /* font-weight 700 */
+    letter-spacing: 0.08em; /* letter-spacing 0.08em */
+    text-transform: uppercase; /* text-transform: uppercase */
+    z-index: 5;
+    pointer-events: none;
+}
+
+.product-image-container {
+    position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
+    aspect-ratio: 4/3; /* aspect-ratio: 4/3 */
+    overflow: hidden;
+    background-color: #F1F5F9;
+}
+
+.product-image-container img {
+    width: 100%; /* width: 100% */
+    height: 100%;
+    aspect-ratio: 4/3; /* aspect-ratio: 4/3 */
+    object-fit: cover; /* object-fit: cover */
+    transition: transform 0.5s ease-in-out;
+}
+
+.product-card:hover .product-image-container img {
+    transform: scale(1.05);
 }
 
 .product-info {
-    padding: 20px;
+    padding: 14px; /* Card body padding: 14px */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .product-info h4 {
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+    margin-bottom: 0;
+    font-size: 14px; /* Product name: font-size 14px */
+    font-weight: 600; /* font-weight 600 */
+    color: #1a1a1a; /* color #1a1a1a */
+    line-height: 1.3; /* line-height 1.3 */
 }
 
 .product-info p {
-    font-size: 0.9rem;
-    color: var(--text-light);
+    font-size: 12px; /* Product description: font-size 12px */
+    font-weight: 400; /* font-weight 400 */
+    color: #666666; /* color #666666 */
+    margin-top: 4px; /* margin-top 4px */
+    line-height: 1.6; /* line-height 1.6 */
 }
 
 /* Why Choose Us */
@@ -931,6 +1138,95 @@ img {
     .services-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    /* Mobile Split Pane Reset */
+    .products-header-banner {
+        padding: 60px 0 100px 0; /* More compact padding on mobile */
+    }
+    
+    .products-content-wrapper {
+        margin-top: -60px; /* Adjust overlap on mobile */
+    }
+
+    .products-container {
+        height: auto; /* Reset desktop fixed height */
+        flex-direction: column;
+        border-radius: 16px; /* Keep premium rounded corners on mobile */
+        box-shadow: 0 10px 30px rgba(15, 40, 71, 0.05);
+    }
+    
+    .products-body {
+        flex-direction: column;
+    }
+    
+    .products-tabs {
+        flex-direction: row;
+        border-bottom: 1px solid #E2E8F0;
+        position: sticky;
+        top: 80px;
+        z-index: 100;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        overflow: hidden;
+    }
+    
+    .products-tabs .tab-btn {
+        flex: 1;
+        text-align: center;
+        padding: 12px 10px;
+    }
+    
+    .products-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #E2E8F0;
+        overflow-x: auto; /* horizontal scroll */
+        overflow-y: hidden;
+        white-space: nowrap; /* keep pills in one line */
+        padding: 12px 15px;
+        background-color: #F8FAFC;
+        display: flex;
+        -webkit-overflow-scrolling: touch;
+        position: sticky;
+        top: 128px; /* Sticky below category tabs on mobile (80px header + 48px tabs) */
+        z-index: 90;
+        border-bottom-left-radius: 0; /* Reset desktop sidebar radius on mobile */
+    }
+
+    .subcategory-group {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .subcategory-group .sub-btn {
+        width: auto;
+        white-space: nowrap;
+        padding: 8px 16px;
+        border: 1px solid #E2E8F0;
+        border-left: 1px solid #E2E8F0; /* reset desktop active border */
+        border-radius: 20px; /* pill styling */
+        font-size: 0.85rem;
+        background-color: var(--white);
+        display: inline-block;
+    }
+
+    .subcategory-group .sub-btn.active {
+        background-color: #1B3A6B; /* Active sub-category = Deep Blue #1B3A6B background */
+        color: var(--white); /* white text */
+        border-color: #1B3A6B;
+        border-left-color: #1B3A6B; /* reset active border color */
+    }
+
+    .products-content {
+        padding: 20px 15px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Force 2-column grid on mobile */
+        gap: 15px;
+    }
     
     .founder-container {
         flex-direction: column;
@@ -997,9 +1293,7 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
+    /* products-grid stays 2 columns as per user spec */
     
     .why-grid, .reach-grid {
         grid-template-columns: 1fr;

@@ -162,117 +162,62 @@
 
     <!-- OUR PRODUCTS -->
     <section class="products" id="products">
-        <div class="container">
-            <div class="section-header">
-                <h2>From Apparel to Home Textiles — We Source It All</h2>
-            </div>
-            
-            <h3 class="product-category-title">Apparel</h3>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="images/apparel_tshirts_1781974139253.png" alt="Folded T-Shirts and Polo Shirts">
-                    <div class="product-info">
-                        <h4>T-Shirts & Polo Shirts</h4>
-                        <p>High-quality knits in custom colors and fits.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_dress_1781974157772.png" alt="Folded Dress Shirts and Casual Shirts">
-                    <div class="product-info">
-                        <h4>Dress Shirts & Casual Shirts</h4>
-                        <p>Premium wovens for formal and casual wear.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_fleece_1781974178339.png" alt="Folded Fleece Shirts">
-                    <div class="product-info">
-                        <h4>Fleece Shirts</h4>
-                        <p>Warm and comfortable fleece garments.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_denim_1781974189225.png" alt="Folded Denim and Jeans">
-                    <div class="product-info">
-                        <h4>Denim & Jeans</h4>
-                        <p>Durable denim with various washes and fits.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_fleece_1781974178339.png" alt="Folded Hoodies and Sweatshirts">
-                    <div class="product-info">
-                        <h4>Hoodies & Sweatshirts</h4>
-                        <p>Comfortable everyday essentials.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_denim_1781974189225.png" alt="Folded Jackets and Outerwear">
-                    <div class="product-info">
-                        <h4>Jackets & Outerwear</h4>
-                        <p>Reliable and stylish outerwear collections.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_denim_1781974189225.png" alt="Folded Trousers and Bottoms">
-                    <div class="product-info">
-                        <h4>Trousers & Bottoms</h4>
-                        <p>Versatile bottoms for all occasions.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_fleece_1781974178339.png" alt="Folded Knitwear">
-                    <div class="product-info">
-                        <h4>Knitwear</h4>
-                        <p>Cozy and finely crafted knit sweaters.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_tshirts_1781974139253.png" alt="Folded Kids Wear">
-                    <div class="product-info">
-                        <h4>Kids Wear</h4>
-                        <p>Safe, comfortable apparel for children.</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/apparel_tshirts_1781974139253.png" alt="Folded Sportswear and Activewear">
-                    <div class="product-info">
-                        <h4>Sportswear & Activewear</h4>
-                        <p>Performance-driven athletic wear.</p>
-                    </div>
+        <!-- Full-width Header Banner with Background Image -->
+        <div class="products-header-banner">
+            <div class="container">
+                <div class="section-header">
+                    <h2>From Apparel to Home Textiles — We Source It All</h2>
+                    <p>Explore our diverse garment manufacturing and textile sourcing capabilities.</p>
                 </div>
             </div>
+        </div>
 
-            <h3 class="product-category-title mt-4">Accessories</h3>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="images/apparel_tshirts_1781974139253.png" alt="Caps and Headwear">
-                    <div class="product-info">
-                        <h4>Caps & Headwear</h4>
-                        <p>Custom headwear for brands and promotions.</p>
-                    </div>
+        <!-- Overlapping Content Wrapper -->
+        <div class="container products-content-wrapper">
+            <!-- Master-Detail Split Pane Container -->
+            <div class="products-container">
+                <!-- Top Tabs for Main Categories -->
+                <div class="products-tabs" id="products-tabs">
+                    <button class="tab-btn active" data-category="apparel">Apparel</button>
+                    <button class="tab-btn" data-category="accessories">Accessories</button>
+                    <button class="tab-btn" data-category="home-textiles">Home Textiles</button>
                 </div>
-                <div class="product-card">
-                    <img src="images/apparel_tshirts_1781974139253.png" alt="Face Masks">
-                    <div class="product-info">
-                        <h4>Face Masks</h4>
-                        <p>Protective and breathable fabric masks.</p>
-                    </div>
-                </div>
-            </div>
 
-            <h3 class="product-category-title mt-4">Home Textiles</h3>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="images/about_bg_1781974126615.png" alt="Folded Kitchen Textiles">
-                    <div class="product-info">
-                        <h4>Kitchen Textiles</h4>
-                        <p>Towels, aprons, and oven mitts.</p>
+                <!-- Split Pane Body (Sidebar + Content) -->
+                <div class="products-body">
+                    <!-- Left Sidebar (Sub-category buttons) -->
+                    <div class="products-sidebar" id="products-sidebar">
+                        <!-- Apparel Group -->
+                        <div class="subcategory-group active" data-group-category="apparel">
+                            <button class="sub-btn active" data-subcategory="t-shirts-polo-shirts">T-Shirts & Polo Shirts</button>
+                            <button class="sub-btn" data-subcategory="dress-shirts-casual-shirts">Dress Shirts & Casual Shirts</button>
+                            <button class="sub-btn" data-subcategory="fleece-knitwear">Fleece & Knitwear</button>
+                            <button class="sub-btn" data-subcategory="denim-jeans">Denim & Jeans</button>
+                            <button class="sub-btn" data-subcategory="hoodies-sweatshirts">Hoodies & Sweatshirts</button>
+                            <button class="sub-btn" data-subcategory="jackets-outerwear">Jackets & Outerwear</button>
+                            <button class="sub-btn" data-subcategory="trousers-bottoms">Trousers & Bottoms</button>
+                            <button class="sub-btn" data-subcategory="sportswear-activewear">Sportswear & Activewear</button>
+                            <button class="sub-btn" data-subcategory="kids-wear">Kids Wear</button>
+                        </div>
+
+                        <!-- Accessories Group -->
+                        <div class="subcategory-group" data-group-category="accessories">
+                            <button class="sub-btn active" data-subcategory="caps-headwear">Caps & Headwear</button>
+                            <button class="sub-btn" data-subcategory="face-masks">Face Masks</button>
+                        </div>
+
+                        <!-- Home Textiles Group -->
+                        <div class="subcategory-group" data-group-category="home-textiles">
+                            <button class="sub-btn active" data-subcategory="kitchen-bath-textiles">Kitchen & Bath Textiles</button>
+                            <button class="sub-btn" data-subcategory="bedding-linen">Bedding & Linen</button>
+                        </div>
                     </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/about_bg_1781974126615.png" alt="Folded Bedding and Linen">
-                    <div class="product-info">
-                        <h4>Bedding & Linen</h4>
-                        <p>Premium bedding sets and comfortable linens.</p>
+
+                    <!-- Right Content (Product Cards Grid) -->
+                    <div class="products-content">
+                        <div class="products-grid" id="products-grid">
+                            <!-- Dynamically generated by js/script.js -->
+                        </div>
                     </div>
                 </div>
             </div>
