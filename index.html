@@ -19,27 +19,11 @@
     <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome for Icons (Optimized for Render Blocking) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "BM International",
-      "email": "bmi.imp.exp@gmail.com",
-      "telephone": "+923312859323",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karachi",
-        "addressCountry": "Pakistan"
-      }
-    }
-    </script>
+    <!-- Google Fonts (Optimized for Render Blocking) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 </head>
 <body>
 
@@ -486,6 +470,23 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <!-- JSON-LD Organization Schema (Moved to bottom to prevent render blocking) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "BM International",
+      "email": "bmi.imp.exp@gmail.com",
+      "telephone": "+923312859323",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Karachi",
+        "addressCountry": "Pakistan"
+      }
+    }
+    </script>
+
+    <!-- External JS Scripts (With defer attribute) -->
+    <script src="js/script.js" defer></script>
 </body>
 </html>
