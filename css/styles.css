@@ -117,7 +117,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 15px 0;
+    padding: 10px 40px; /* Reduced overall navbar padding */
+    max-height: 65px; /* Restricted header element height to 65px */
     transition: all 0.3s ease;
 }
 
@@ -134,12 +135,12 @@ img {
 }
 
 .logo-img {
-    height: 55px;
+    height: 38px; /* Reduced logo image size */
     width: auto;
 }
 
 .logo-text {
-    font-size: 1.6rem;
+    font-size: 18px; /* Reduced logo text size to 18px */
     font-weight: 800;
     letter-spacing: -0.5px;
     color: var(--dark-navy);
@@ -148,16 +149,16 @@ img {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 28px; /* Set gap between links to 28px */
 }
 
 .nav-links a {
-    font-weight: 600;
+    font-weight: 600; /* Font weight 600 */
     color: var(--dark-navy);
     padding: 8px 12px;
-    font-size: 0.95rem;
+    font-size: 13px; /* Reduced link size to 13px */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.05em; /* Set letter-spacing to 0.05em */
     transition: color 0.3s;
     position: relative;
 }
