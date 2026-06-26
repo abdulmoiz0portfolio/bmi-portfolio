@@ -382,12 +382,12 @@ img {
     overflow: visible; /* Let it scroll naturally with the page */
 }
 
-/* Horizontal Category Tabs (Top of Products Container) - Sticky at top: 80px */
+/* Horizontal Category Tabs (Top of Products Container) - Sticky at top: 60px */
 .products-tabs {
     display: flex;
     flex-direction: row; /* Horizontal layout / landscape */
     position: sticky;
-    top: 80px; /* Sticky top position under header */
+    top: 60px; /* Sticky top position under header */
     z-index: 100;
     background: white;
     border-bottom: 2px solid #E2E8F0;
@@ -436,14 +436,14 @@ img {
     width: 100%;
 }
 
-/* Left Sidebar (Sub-category list) - Sticky at top: 132px (below tabs) */
+/* Left Sidebar (Sub-category list) - Sticky at top: 112px (below tabs) */
 .products-sidebar {
     width: 200px;
     flex-shrink: 0;
     background-color: #F4F7FC;
     border-right: 1px solid #E2E8F0;
     position: sticky;
-    top: 132px; /* Sticks below category tabs (80px header + 52px tabs) */
+    top: 112px; /* Sticks below category tabs (60px header + 52px tabs) */
     height: fit-content;
     align-self: flex-start;
     z-index: 90;
@@ -1164,7 +1164,7 @@ img {
         flex-direction: row;
         border-bottom: 1px solid #E2E8F0;
         position: sticky;
-        top: 80px;
+        top: 60px;
         z-index: 100;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
@@ -1189,7 +1189,7 @@ img {
         display: flex;
         -webkit-overflow-scrolling: touch;
         position: sticky;
-        top: 128px; /* Sticky below category tabs on mobile (80px header + 48px tabs) */
+        top: 108px; /* Sticky below category tabs on mobile (60px header + 48px tabs) */
         z-index: 90;
         border-bottom-left-radius: 0; /* Reset desktop sidebar radius on mobile */
     }
