@@ -149,177 +149,47 @@
 
         <!-- Overlapping Content Wrapper -->
         <div class="container products-content-wrapper">
-            <div class="products-grid">
-                <!-- Card 1: FLANNEL SHIRTS & JACKETS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_flannel.png" alt="Flannel Shirts & Jackets" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Flannel Shirts & Jackets</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Flannel Shirts</li>
-                            <li>Line Jacket</li>
-                            <li>Ladies Gentle</li>
-                            <li>Padded Lined Flannel Jackets</li>
-                            <li>Shirpa Lined Flannel Jackets</li>
-                        </ul>
-                    </div>
+            <!-- Master-Detail Split Pane Container -->
+            <div class="products-container">
+                <!-- Top Tabs for Main Categories -->
+                <div class="products-tabs" id="products-tabs">
+                    <button class="tab-btn active" data-category="apparel">Apparel</button>
+                    <button class="tab-btn" data-category="home-textiles">Home Textiles</button>
+                    <button class="tab-btn" data-category="rags">Rags</button>
                 </div>
 
-                <!-- Card 2: FLEECE & KNITWEAR -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_fleece.png" alt="Fleece & Knitwear" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Fleece & Knitwear</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Fleece Pullover Hoodie</li>
-                            <li>Fleece Zipper Jackets</li>
-                            <li>Fleece Sweet Shirts</li>
-                            <li>Fleece Pajamas</li>
-                            <li>Fleece Joggers</li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- Split Pane Body (Sidebar + Content) -->
+                <div class="products-body">
+                    <!-- Left Sidebar (Sub-category buttons) -->
+                    <div class="products-sidebar" id="products-sidebar">
+                        <!-- Apparel Group -->
+                        <div class="subcategory-group active" data-group-category="apparel">
+                            <button class="sub-btn active" data-subcategory="flannel-shirts-jackets">Flannel Shirts & Jackets</button>
+                            <button class="sub-btn" data-subcategory="fleece-knitwear">Fleece & Knitwear</button>
+                            <button class="sub-btn" data-subcategory="denim-jeans">Denim & Jeans</button>
+                            <button class="sub-btn" data-subcategory="hoodies-sweatshirts">Hoodies & Sweatshirts</button>
+                            <button class="sub-btn" data-subcategory="trousers-bottoms">Trousers & Bottoms</button>
+                            <button class="sub-btn" data-subcategory="sportswear-sleepwear">Sportswear & Sleepwear</button>
+                            <button class="sub-btn" data-subcategory="kids-wear">Kids Wear</button>
+                        </div>
 
-                <!-- Card 3: DENIM & JEANS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_denim.png" alt="Denim & Jeans" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Denim & Jeans</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Skinny Jeans</li>
-                            <li>Slim Fit Jeans</li>
-                            <li>Straight Cut Jeans</li>
-                            <li>Bootcut Jeans</li>
-                            <li>Flapper Jeans</li>
-                            <li>Cargo Jeans</li>
-                            <li>Carpenter Jeans</li>
-                            <li>Regular Denim</li>
-                            <li>Short Body Denim Jacket</li>
-                        </ul>
-                    </div>
-                </div>
+                        <!-- Home Textiles Group -->
+                        <div class="subcategory-group" data-group-category="home-textiles">
+                            <button class="sub-btn active" data-subcategory="kitchen-bath">Kitchen & Bath</button>
+                            <button class="sub-btn" data-subcategory="bedding-linens">Bedding & Linens</button>
+                        </div>
 
-                <!-- Card 4: HOODIES & SWEATSHIRTS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_hoodies.png" alt="Hoodies & Sweatshirts" loading="lazy" width="400" height="300">
+                        <!-- Rags Group -->
+                        <div class="subcategory-group" data-group-category="rags">
+                            <button class="sub-btn active" data-subcategory="rags">Rags</button>
+                        </div>
                     </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Hoodies & Sweatshirts</h3>
-                    </div>
-                </div>
 
-                <!-- Card 5: TROUSERS & BOTTOMS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_trousers.png" alt="Trousers & Bottoms" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Trousers & Bottoms</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Mens & Ladies Cotton Twill Pants</li>
-                            <li>Mens & Ladies Stretch Comfort Twill Pants</li>
-                            <li>Cotton Launch Pants</li>
-                            <li>Flannel Launch Pants</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 6: SPORTSWEAR & SLEEPWEAR -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_sportswear.png" alt="Sportswear & Sleepwear" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Sportswear & Sleepwear</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Mens Cotton Sleep Suit</li>
-                            <li>Womens Cotton Sleep Suit</li>
-                            <li>Mens Flannel Sleep Suit</li>
-                            <li>Womens Flannel Sleep Suit</li>
-                            <li>Sweat Absorbent Tops</li>
-                            <li>Sweat Absorbent Bottoms</li>
-                            <li>Sweat Absorbent Jackets</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 7: KIDS WEAR -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_kids.png" alt="Kids Wear" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Kids Wear</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Infant Rompers</li>
-                            <li>Kids Shorts</li>
-                            <li>Kids T-Shirt</li>
-                            <li>Kids Pajamas</li>
-                            <li>Kids Pajama Suits</li>
-                            <li>Kids Shorts Suits</li>
-                            <li>Kids Jeans</li>
-                            <li>Denim Shorts</li>
-                            <li>Denim Jackets</li>
-                            <li>Hoodie</li>
-                            <li>Sweatshirt</li>
-                            <li>Fleece Pajamas</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 8: KITCHEN & BATH -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_kitchen_bath.png" alt="Kitchen & Bath" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Kitchen & Bath</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Kitchen Towels</li>
-                            <li>Wash Towels</li>
-                            <li>Bath Towels</li>
-                            <li>Bath Mats</li>
-                            <li>Hand Towels</li>
-                            <li>Aprons</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 9: BEDDING & LINENS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_bedding.png" alt="Bedding & Linens" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Bedding & Linens</h3>
-                        <ul class="product-subcategory-list">
-                            <li>Bed Sheet Sets</li>
-                            <li>Fitted Sheet</li>
-                            <li>Duvet Covers</li>
-                            <li>Pillow Cases & Comforter Sets</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Card 10: RAGS -->
-                <div class="product-category-card">
-                    <div class="product-category-image-container">
-                        <img src="images/category_rags.png" alt="Rags" loading="lazy" width="400" height="300">
-                    </div>
-                    <div class="product-category-info">
-                        <h3 class="product-category-title">Rags</h3>
-                        <ul class="product-subcategory-list">
-                            <li>White Cotton Rags</li>
-                            <li>Multi Color Cotton Rags</li>
-                            <li>Multi Fabric Rags</li>
-                        </ul>
+                    <!-- Right Content (Product Cards Grid) -->
+                    <div class="products-content">
+                        <div class="products-grid" id="products-grid">
+                            <!-- Dynamically generated by js/script.js -->
+                        </div>
                     </div>
                 </div>
             </div>
