@@ -92,106 +92,106 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Products Database containing all sub-products
+    // Products Database containing all sub-products with hover image pairs
     const productsData = [
         // TAB 1: APPAREL - Flannel Shirts & Jackets
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Flannel Shirts', image: 'images/prod_flannel_shirts.png', description: 'Premium cotton flannel shirts in customizable plaid patterns for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Flannel Shirts', image: 'images/prod_ladies_gentle.png', description: 'Soft, tailored flannel shirts in elegant plaid patterns for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Line Jacket', image: 'images/prod_line_jacket.png', description: 'Lightweight lined plaid flannel jackets for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Line Jacket', image: 'images/prod_line_jacket.png', description: 'Comfortable and stylish lined flannel jackets for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Padded Lined Flannel Jackets', image: 'images/prod_padded_flannel.png', description: 'Quilted padded lining providing extra warmth for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Padded Lined Flannel Jackets', image: 'images/prod_padded_flannel.png', description: 'Quilted padded lining flannel jackets tailored for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Sherpa Lined Flannel Jackets', image: 'images/prod_sherpa_flannel.png', description: 'Warm sherpa fleece lining for maximum cold weather protection for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Sherpa Lined Flannel Jackets', image: 'images/prod_sherpa_flannel.png', description: 'Cozy sherpa fleece lining flannel jackets designed for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Flannel Shirts', imageA: 'images/products/mens-flannel-shirt-a.jpg', imageB: 'images/products/mens-flannel-shirt-b.jpg', description: 'Premium cotton flannel shirts in customizable plaid patterns for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Flannel Shirts', imageA: 'images/products/ladies-flannel-shirt-a.jpg', imageB: 'images/products/ladies-flannel-shirt-b.jpg', description: 'Soft, tailored flannel shirts in elegant plaid patterns for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Line Jacket', imageA: 'images/products/mens-line-jacket-a.jpg', imageB: 'images/products/mens-line-jacket-b.jpg', description: 'Lightweight lined plaid flannel jackets for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Line Jacket', imageA: 'images/products/ladies-line-jacket-a.jpg', imageB: 'images/products/ladies-line-jacket-b.jpg', description: 'Comfortable and stylish lined flannel jackets for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Padded Lined Flannel Jackets', imageA: 'images/products/mens-padded-flannel-jacket-a.jpg', imageB: 'images/products/mens-padded-flannel-jacket-b.jpg', description: 'Quilted padded lining providing extra warmth for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Padded Lined Flannel Jackets', imageA: 'images/products/ladies-padded-flannel-jacket-a.jpg', imageB: 'images/products/ladies-padded-flannel-jacket-b.jpg', description: 'Quilted padded lining flannel jackets tailored for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Sherpa Lined Flannel Jackets', imageA: 'images/products/mens-sherpa-flannel-jacket-a.jpg', imageB: 'images/products/mens-sherpa-flannel-jacket-b.jpg', description: 'Warm sherpa fleece lining for maximum cold weather protection for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Sherpa Lined Flannel Jackets', imageA: 'images/products/ladies-sherpa-flannel-jacket-a.jpg', imageB: 'images/products/ladies-sherpa-flannel-jacket-b.jpg', description: 'Cozy sherpa fleece lining flannel jackets designed for women.' },
 
         // TAB 1: APPAREL - Fleece & Knitwear
-        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Pullover Hoodie', image: 'images/prod_fleece_pullover.png', description: 'Cozy and warm pullover hoodies made from premium fleece.' },
-        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Mock Neck Zipper Jacket', image: 'images/prod_fleece_zipper.png', description: 'Premium fleece jackets featuring a stylish mock neck and full zipper.' },
-        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Sweat Shirts', image: 'images/prod_fleece_sweatshirt.png', description: 'Classic crewneck sweatshirts in soft fleece fabrics.' },
-        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Pajamas', image: 'images/prod_fleece_pajamas.png', description: 'Comfortable fleece pajama bottoms for loungewear.' },
-        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Joggers', image: 'images/prod_fleece_joggers.png', description: 'Athletic-cut fleece joggers with drawstring waist.' },
+        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Pullover Hoodie', imageA: 'images/products/fleece-pullover-hoodie-a.jpg', imageB: 'images/products/fleece-pullover-hoodie-b.jpg', description: 'Cozy and warm pullover hoodies made from premium fleece.' },
+        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Mock Neck Zipper Jacket', imageA: 'images/products/fleece-mock-neck-zipper-a.jpg', imageB: 'images/products/fleece-mock-neck-zipper-b.jpg', description: 'Premium fleece jackets featuring a stylish mock neck and full zipper.' },
+        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Sweat Shirts', imageA: 'images/products/fleece-sweatshirt-a.jpg', imageB: 'images/products/fleece-sweatshirt-b.jpg', description: 'Classic crewneck sweatshirts in soft fleece fabrics.' },
+        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Pajamas', imageA: 'images/products/fleece-pajamas-a.jpg', imageB: 'images/products/fleece-pajamas-b.jpg', description: 'Comfortable fleece pajama bottoms for loungewear.' },
+        { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Joggers', imageA: 'images/products/fleece-joggers-a.jpg', imageB: 'images/products/fleece-joggers-b.jpg', description: 'Athletic-cut fleece joggers with drawstring waist.' },
 
         // TAB 1: APPAREL - Denim & Jeans
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Skinny Jeans', image: 'images/prod_skinny_jeans.png', description: 'Snug-fit stretch denim jeans in various washes.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Slim Fit Jeans', image: 'images/prod_slim_jeans.png', description: 'Modern slim-cut jeans balancing style and comfort.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Straight Cut Jeans', image: 'images/prod_straight_jeans.png', description: 'Classic straight-leg denim jeans for everyday wear.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Bootcut Jeans', image: 'images/prod_bootcut_jeans.png', description: 'Slightly flared hems designed to fit comfortably over boots.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Flapper Jeans', image: 'images/prod_flapper_jeans.png', description: 'Trendy wide-leg cropped denim pants.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Cargo Jeans', image: 'images/prod_cargo_jeans.png', description: 'Utility-focused denim featuring multiple cargo pockets.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Carpenter Jeans', image: 'images/prod_carpenter_jeans.png', description: 'Durable utility jeans with tool pockets and hammer loops.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Regular Denim', image: 'images/category_denim.png', description: 'Standard fit durable denim trousers.' },
-        { category: 'apparel', subcategory: 'denim-jeans', name: 'Short Body Denim Jacket', image: 'images/apparel_denim_1781974189225.png', description: 'Cropped-style denim jackets in premium washes.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Skinny Jeans', imageA: 'images/products/skinny-jeans-a.jpg', imageB: 'images/products/skinny-jeans-b.jpg', description: 'Snug-fit stretch denim jeans in various washes.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Slim Fit Jeans', imageA: 'images/products/slim-fit-jeans-a.jpg', imageB: 'images/products/slim-fit-jeans-b.jpg', description: 'Modern slim-cut jeans balancing style and comfort.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Straight Cut Jeans', imageA: 'images/products/straight-cut-jeans-a.jpg', imageB: 'images/products/straight-cut-jeans-b.jpg', description: 'Classic straight-leg denim jeans for everyday wear.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Bootcut Jeans', imageA: 'images/products/bootcut-jeans-a.jpg', imageB: 'images/products/bootcut-jeans-b.jpg', description: 'Slightly flared hems designed to fit comfortably over boots.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Flapper Jeans', imageA: 'images/products/flapper-jeans-a.jpg', imageB: 'images/products/flapper-jeans-b.jpg', description: 'Trendy wide-leg cropped denim pants.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Cargo Jeans', imageA: 'images/products/cargo-jeans-a.jpg', imageB: 'images/products/cargo-jeans-b.jpg', description: 'Utility-focused denim featuring multiple cargo pockets.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Carpenter Jeans', imageA: 'images/products/carpenter-jeans-a.jpg', imageB: 'images/products/carpenter-jeans-b.jpg', description: 'Durable utility jeans with tool pockets and hammer loops.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Regular Denim', imageA: 'images/products/regular-denim-a.jpg', imageB: 'images/products/regular-denim-b.jpg', description: 'Standard fit durable denim trousers.' },
+        { category: 'apparel', subcategory: 'denim-jeans', name: 'Short Body Denim Jacket', imageA: 'images/products/short-denim-jacket-a.jpg', imageB: 'images/products/short-denim-jacket-b.jpg', description: 'Cropped-style denim jackets in premium washes.' },
 
         // TAB 1: APPAREL - Hoodies & Sweatshirts
-        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Pullover Hoodie', image: 'images/media__1781983884455.png', description: 'Comfortable pullover hoodies in custom weights.' },
-        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Zipper Hoodie', image: 'images/media__1781984060075.png', description: 'Full-zip hoodies, perfect for layering.' },
-        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Crewneck Sweatshirt', image: 'images/media__1781984212849.png', description: 'Classic crewneck sweatshirts in soft cotton fleece.' },
-        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Oversized Hoodie', image: 'images/category_hoodies.png', description: 'Trendy oversized baggy hoodies in heavy fabrics.' },
+        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Pullover Hoodie', imageA: 'images/products/pullover-hoodie-a.jpg', imageB: 'images/products/pullover-hoodie-b.jpg', description: 'Comfortable pullover hoodies in custom weights.' },
+        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Zipper Hoodie', imageA: 'images/products/zipper-hoodie-a.jpg', imageB: 'images/products/zipper-hoodie-b.jpg', description: 'Full-zip hoodies, perfect for layering.' },
+        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Crewneck Sweatshirt', imageA: 'images/products/crewneck-sweatshirt-a.jpg', imageB: 'images/products/crewneck-sweatshirt-b.jpg', description: 'Classic crewneck sweatshirts in soft cotton fleece.' },
+        { category: 'apparel', subcategory: 'hoodies-sweatshirts', name: 'Oversized Hoodie', imageA: 'images/products/oversized-hoodie-a.jpg', imageB: 'images/products/oversized-hoodie-b.jpg', description: 'Trendy oversized baggy hoodies in heavy fabrics.' },
 
         // TAB 1: APPAREL - Trousers & Bottoms
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Mens Cotton Twill Pants', image: 'images/category_trousers.png', description: 'Durable and breathable cotton twill trousers for men.' },
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Ladies Cotton Twill Pants', image: 'images/category_trousers.png', description: 'Comfortable and stylish cotton twill trousers for women.' },
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Mens Stretch Comfort Twill Pants', image: 'images/media__1781984424941.png', description: 'Flexible stretch twill pants for men.' },
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Ladies Stretch Comfort Twill Pants', image: 'images/media__1781984424941.png', description: 'Flexible stretch twill pants designed for women.' },
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Cotton Lounge Pants', image: 'images/media__1781984480943.png', description: 'Lightweight, breathable cotton loungewear pants.' },
-        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Flannel Lounge Pants', image: 'images/media__1782085393405.png', description: 'Warm and cozy flannel loungewear pants.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Mens Cotton Twill Pants', imageA: 'images/products/mens-cotton-twill-pants-a.jpg', imageB: 'images/products/mens-cotton-twill-pants-b.jpg', description: 'Durable and breathable cotton twill trousers for men.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Ladies Cotton Twill Pants', imageA: 'images/products/ladies-cotton-twill-pants-a.jpg', imageB: 'images/products/ladies-cotton-twill-pants-b.jpg', description: 'Comfortable and stylish cotton twill trousers for women.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Mens Stretch Comfort Twill Pants', imageA: 'images/products/mens-stretch-twill-pants-a.jpg', imageB: 'images/products/mens-stretch-twill-pants-b.jpg', description: 'Flexible stretch twill pants for men.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Ladies Stretch Comfort Twill Pants', imageA: 'images/products/ladies-stretch-twill-pants-a.jpg', imageB: 'images/products/ladies-stretch-twill-pants-b.jpg', description: 'Flexible stretch twill pants designed for women.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Cotton Lounge Pants', imageA: 'images/products/cotton-lounge-pants-a.jpg', imageB: 'images/products/cotton-lounge-pants-b.jpg', description: 'Lightweight, breathable cotton loungewear pants.' },
+        { category: 'apparel', subcategory: 'trousers-bottoms', name: 'Flannel Lounge Pants', imageA: 'images/products/flannel-lounge-pants-a.jpg', imageB: 'images/products/flannel-lounge-pants-b.jpg', description: 'Warm and cozy flannel loungewear pants.' },
 
         // TAB 1: APPAREL - Sportswear & Sleepwear
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Cotton Sleep Suit', image: 'images/media__1782086259595.png', description: 'Two-piece breathable cotton sleepwear set for men.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Womens Cotton Sleep Suit', image: 'images/media__1782086561558.png', description: 'Soft and comfortable cotton sleepwear set for women.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Flannel Sleep Suit', image: 'images/media__1782086574402.png', description: 'Warm two-piece flannel sleepwear set for men.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Womens Flannel Sleep Suit', image: 'images/media__1782086582771.png', description: 'Cozy two-piece flannel sleepwear set for women.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Tops', image: 'images/category_sportswear.png', description: 'Moisture-wicking athletic tops for men.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Tops', image: 'images/category_sportswear.png', description: 'Moisture-wicking athletic tops for women.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Bottoms', image: 'images/apparel_tshirts_1781974139253.png', description: 'Moisture-wicking athletic pants and shorts for men.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Bottoms', image: 'images/apparel_tshirts_1781974139253.png', description: 'Moisture-wicking athletic pants and shorts for women.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Jackets', image: 'images/media__1782435302120.png', description: 'Lightweight performance jackets for men.' },
-        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Jackets', image: 'images/media__1782435302120.png', description: 'Lightweight performance jackets designed for women.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Cotton Sleep Suit', imageA: 'images/products/mens-cotton-sleep-suit-a.jpg', imageB: 'images/products/mens-cotton-sleep-suit-b.jpg', description: 'Two-piece breathable cotton sleepwear set for men.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Womens Cotton Sleep Suit', imageA: 'images/products/womens-cotton-sleep-suit-a.jpg', imageB: 'images/products/womens-cotton-sleep-suit-b.jpg', description: 'Soft and comfortable cotton sleepwear set for women.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Flannel Sleep Suit', imageA: 'images/products/mens-flannel-sleep-suit-a.jpg', imageB: 'images/products/mens-flannel-sleep-suit-b.jpg', description: 'Warm two-piece flannel sleepwear set for men.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Womens Flannel Sleep Suit', image: 'images/products/womens-flannel-sleep-suit-a.jpg', imageB: 'images/products/womens-flannel-sleep-suit-b.jpg', description: 'Cozy two-piece flannel sleepwear set for women.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Tops', imageA: 'images/products/mens-sweat-tops-a.jpg', imageB: 'images/products/mens-sweat-tops-b.jpg', description: 'Moisture-wicking athletic tops for men.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Tops', imageA: 'images/products/ladies-sweat-tops-a.jpg', imageB: 'images/products/ladies-sweat-tops-b.jpg', description: 'Moisture-wicking athletic tops for women.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Bottoms', imageA: 'images/products/mens-sweat-bottoms-a.jpg', imageB: 'images/products/mens-sweat-bottoms-b.jpg', description: 'Moisture-wicking athletic pants and shorts for men.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Bottoms', imageA: 'images/products/ladies-sweat-bottoms-a.jpg', imageB: 'images/products/ladies-sweat-bottoms-b.jpg', description: 'Moisture-wicking athletic pants and shorts for women.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Mens Sweat Absorbent Jackets', imageA: 'images/products/mens-sweat-jackets-a.jpg', imageB: 'images/products/mens-sweat-jackets-b.jpg', description: 'Lightweight performance jackets for men.' },
+        { category: 'apparel', subcategory: 'sportswear-sleepwear', name: 'Ladies Sweat Absorbent Jackets', imageA: 'images/products/ladies-sweat-jackets-a.jpg', imageB: 'images/products/ladies-sweat-jackets-b.jpg', description: 'Lightweight performance jackets designed for women.' },
 
         // TAB 1: APPAREL - Kids Wear
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Infant Rompers', image: 'images/category_kids.png', description: 'Ultra-soft and safe cotton rompers for babies.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Shorts', image: 'images/media__1781975146655.jpg', description: 'Comfortable and durable shorts for active children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids T-Shirt', image: 'images/media__1781974055940.png', description: 'Soft, breathable cotton tees with kid-friendly dyes.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Pajamas', image: 'images/media__1781974043840.jpg', description: 'Cozy sleepwear bottoms for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Pajama Suits', image: 'images/media__1781974043836.jpg', description: 'Two-piece matching pajama sets for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Shorts Suits', image: 'images/media__1781973768137.jpg', description: 'Matching t-shirt and shorts sets for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Jeans', image: 'images/media__1781973767944.jpg', description: 'Durable stretch denim jeans for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Shorts', image: 'images/media__1782437098398.png', description: 'Sturdy and stylish denim shorts for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Jackets', image: 'images/apparel_fleece_1781974178339.png', description: 'Classic denim jackets scaled for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Hoodie', image: 'images/prod_fleece_pullover.png', description: 'Warm and cozy fleece hoodies for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Sweatshirt', image: 'images/prod_fleece_sweatshirt.png', description: 'Soft crewneck sweatshirts for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Fleece Pajamas', image: 'images/prod_fleece_pajamas.png', description: 'Warm fleece sleepwear bottoms for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Infant Rompers', imageA: 'images/products/kids-infant-rompers-a.jpg', imageB: 'images/products/kids-infant-rompers-b.jpg', description: 'Ultra-soft and safe cotton rompers for babies.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Shorts', imageA: 'images/products/kids-shorts-a.jpg', imageB: 'images/products/kids-shorts-b.jpg', description: 'Comfortable and durable shorts for active children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids T-Shirt', imageA: 'images/products/kids-tshirt-a.jpg', imageB: 'images/products/kids-tshirt-b.jpg', description: 'Soft, breathable cotton tees with kid-friendly dyes.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Pajamas', imageA: 'images/products/kids-pajamas-a.jpg', imageB: 'images/products/kids-pajamas-b.jpg', description: 'Cozy sleepwear bottoms for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Pajama Suits', imageA: 'images/products/kids-pajama-suits-a.jpg', imageB: 'images/products/kids-pajama-suits-b.jpg', description: 'Two-piece matching pajama sets for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Shorts Suits', imageA: 'images/products/kids-shorts-suits-a.jpg', imageB: 'images/products/kids-shorts-suits-b.jpg', description: 'Matching t-shirt and shorts sets for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Jeans', imageA: 'images/products/kids-jeans-a.jpg', imageB: 'images/products/kids-jeans-b.jpg', description: 'Durable stretch denim jeans for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Shorts', imageA: 'images/products/kids-denim-shorts-a.jpg', imageB: 'images/products/kids-denim-shorts-b.jpg', description: 'Sturdy and stylish denim shorts for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Jackets', imageA: 'images/products/kids-denim-jacket-a.jpg', imageB: 'images/products/kids-denim-jacket-b.jpg', description: 'Classic denim jackets scaled for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Hoodie', imageA: 'images/products/kids-hoodie-a.jpg', imageB: 'images/products/kids-hoodie-b.jpg', description: 'Warm and cozy fleece hoodies for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Sweatshirt', imageA: 'images/products/kids-sweatshirt-a.jpg', imageB: 'images/products/kids-sweatshirt-b.jpg', description: 'Soft crewneck sweatshirts for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Fleece Pajamas', imageA: 'images/products/kids-fleece-pajamas-a.jpg', imageB: 'images/products/kids-fleece-pajamas-b.jpg', description: 'Warm fleece sleepwear bottoms for kids.' },
 
         // TAB 2: ACCESSORIES - Caps & Headwear
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Baseball Caps', image: 'images/apparel_tshirts_1781974139253.png', description: 'Custom baseball caps for brands and promotions.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Snapbacks', image: 'images/apparel_tshirts_1781974139253.png', description: 'Flat-brim snapback caps with customizable embroidery.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Beanies', image: 'images/apparel_tshirts_1781974139253.png', description: 'Warm knitted beanies for winter wear.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Bucket Hats', image: 'images/apparel_tshirts_1781974139253.png', description: 'Trendy cotton bucket hats for sun protection.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Visors', image: 'images/apparel_tshirts_1781974139253.png', description: 'Sporty sun visors with adjustable straps.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Baseball Caps', imageA: 'images/products/baseball-caps-a.jpg', imageB: 'images/products/baseball-caps-b.jpg', description: 'Custom baseball caps for brands and promotions.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Snapbacks', imageA: 'images/products/snapbacks-a.jpg', imageB: 'images/products/snapbacks-b.jpg', description: 'Flat-brim snapback caps with customizable embroidery.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Beanies', imageA: 'images/products/beanies-a.jpg', imageB: 'images/products/beanies-b.jpg', description: 'Warm knitted beanies for winter wear.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Bucket Hats', imageA: 'images/products/bucket-hats-a.jpg', imageB: 'images/products/bucket-hats-b.jpg', description: 'Trendy cotton bucket hats for sun protection.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Visors', imageA: 'images/products/visors-a.jpg', imageB: 'images/products/visors-b.jpg', description: 'Sporty sun visors with adjustable straps.' },
 
         // TAB 2: ACCESSORIES - Face Masks
-        { category: 'accessories', subcategory: 'face-masks', name: 'Reusable Fabric Masks', image: 'images/apparel_tshirts_1781974139253.png', description: 'Washable and breathable multi-layer cotton face masks.' },
-        { category: 'accessories', subcategory: 'face-masks', name: 'Disposable Masks', image: 'images/apparel_tshirts_1781974139253.png', description: 'Lightweight protective disposable face masks.' },
-        { category: 'accessories', subcategory: 'face-masks', name: 'Kids Masks', image: 'images/apparel_tshirts_1781974139253.png', description: 'Soft fabric masks scaled and designed for children.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Reusable Fabric Masks', imageA: 'images/products/reusable-masks-a.jpg', imageB: 'images/products/reusable-masks-b.jpg', description: 'Washable and breathable multi-layer cotton face masks.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Disposable Masks', imageA: 'images/products/disposable-masks-a.jpg', imageB: 'images/products/disposable-masks-b.jpg', description: 'Lightweight protective disposable face masks.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Kids Masks', imageA: 'images/products/kids-masks-a.jpg', imageB: 'images/products/kids-masks-b.jpg', description: 'Soft fabric masks scaled and designed for children.' },
 
         // TAB 3: HOME TEXTILES - Kitchen & Bath Textiles
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Kitchen Towels', image: 'images/category_kitchen_bath.png', description: 'Highly absorbent cotton towels for kitchen use.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Wash Towels', image: 'images/about_bg_1781974126615.png', description: 'Soft and durable washcloths for daily cleansing.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Towels', image: 'images/category_kitchen_bath.png', description: 'Plush, high-pile cotton towels for bath use.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Mats', image: 'images/category_kitchen_bath.png', description: 'Thick, slip-resistant woven cotton bath mats.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Hand Towels', image: 'images/category_kitchen_bath.png', description: 'Soft hand towels in custom weaves and border designs.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Aprons', image: 'images/category_kitchen_bath.png', description: 'Protective kitchen aprons in durable twill or canvas.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Kitchen Towels', imageA: 'images/products/kitchen-towels-a.jpg', imageB: 'images/products/kitchen-towels-b.jpg', description: 'Highly absorbent cotton towels for kitchen use.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Wash Towels', imageA: 'images/products/wash-towels-a.jpg', imageB: 'images/products/wash-towels-b.jpg', description: 'Soft and durable washcloths for daily cleansing.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Towels', imageA: 'images/products/bath-towels-a.jpg', imageB: 'images/products/bath-towels-b.jpg', description: 'Plush, high-pile cotton towels for bath use.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Mats', imageA: 'images/products/bath-mats-a.jpg', imageB: 'images/products/bath-mats-b.jpg', description: 'Thick, slip-resistant woven cotton bath mats.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Hand Towels', imageA: 'images/products/hand-towels-a.jpg', imageB: 'images/products/hand-towels-b.jpg', description: 'Soft hand towels in custom weaves and border designs.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Aprons', imageA: 'images/products/aprons-a.jpg', imageB: 'images/products/aprons-b.jpg', description: 'Protective kitchen aprons in durable twill or canvas.' },
 
         // TAB 3: HOME TEXTILES - Bedding & Linen
-        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Bed Sheet Sets', image: 'images/category_bedding.png', description: 'Flat sheets, fitted sheets, and pillowcase sets in premium thread counts.' },
-        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Fitted Sheets', image: 'images/category_bedding.png', description: 'Deep-pocket elasticized fitted sheets.' },
-        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Duvet Covers', image: 'images/category_bedding.png', description: 'Elegant duvet covers with button or zipper closures.' },
-        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Pillow Cases & Comforter Sets', image: 'images/category_bedding.png', description: 'Matching comforters and decorative pillow shams.' },
+        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Bed Sheet Sets', imageA: 'images/products/bed-sheet-sets-a.jpg', imageB: 'images/products/bed-sheet-sets-b.jpg', description: 'Flat sheets, fitted sheets, and pillowcase sets in premium thread counts.' },
+        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Fitted Sheets', imageA: 'images/products/fitted-sheets-a.jpg', imageB: 'images/products/fitted-sheets-b.jpg', description: 'Deep-pocket elasticized fitted sheets.' },
+        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Duvet Covers', imageA: 'images/products/duvet-covers-a.jpg', imageB: 'images/products/duvet-covers-b.jpg', description: 'Elegant duvet covers with button or zipper closures.' },
+        { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Pillow Cases & Comforter Sets', imageA: 'images/products/pillowcases-comforter-a.jpg', imageB: 'images/products/pillowcases-comforter-b.jpg', description: 'Matching comforters and decorative pillow shams.' },
 
         // TAB 3: HOME TEXTILES - Rags
-        { category: 'home-textiles', subcategory: 'rags', name: 'White Cotton Rags', image: 'images/category_rags.png', description: 'Premium metal-free white cotton cleaning rags for industrial use.' },
-        { category: 'home-textiles', subcategory: 'rags', name: 'Multi Color Cotton Rags', image: 'images/category_rags.png', description: 'Eco-friendly colored cotton rags for general cleaning.' },
-        { category: 'home-textiles', subcategory: 'rags', name: 'Assorted Rags', image: 'images/category_rags.png', description: 'Absorbent mixed fabric rags for industrial spills.' }
+        { category: 'home-textiles', subcategory: 'rags', name: 'White Cotton Rags', imageA: 'images/products/white-cotton-rags-a.jpg', imageB: 'images/products/white-cotton-rags-b.jpg', description: 'Premium metal-free white cotton cleaning rags for industrial use.' },
+        { category: 'home-textiles', subcategory: 'rags', name: 'Multi Color Cotton Rags', imageA: 'images/products/multi-color-rags-a.jpg', imageB: 'images/products/multi-color-rags-b.jpg', description: 'Eco-friendly colored cotton rags for general cleaning.' },
+        { category: 'home-textiles', subcategory: 'rags', name: 'Assorted Rags', imageA: 'images/products/assorted-rags-a.jpg', imageB: 'images/products/assorted-rags-b.jpg', description: 'Absorbent mixed fabric rags for industrial spills.' }
     ];
 
     // Selectors
@@ -215,9 +215,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const card = document.createElement('div');
             card.className = 'product-card show';
 
+            // Fixed: Use imageA and imageB inside a wrapper for hover swap effect
             card.innerHTML = `
-                <div class="product-image-container">
-                    <img src="${product.image}" alt="${product.name}" loading="lazy" width="300" height="225">
+                <div class="product-image-wrapper">
+                    <img class="img-default" src="${product.imageA || product.image}" alt="${product.name}" loading="lazy" width="300" height="225">
+                    <img class="img-hover" src="${product.imageB || product.image}" alt="${product.name} folded" loading="lazy" width="300" height="225">
                 </div>
                 <div class="product-info">
                     <h4>${product.name}</h4>
