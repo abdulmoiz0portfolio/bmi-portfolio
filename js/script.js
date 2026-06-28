@@ -278,11 +278,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             filterProducts();
 
-            // Scroll to the top of the products section to prevent layout shift jumping
-            const productsSection = document.getElementById('products');
-            if (productsSection) {
-                const headerOffset = 60;
-                const elementPosition = productsSection.getBoundingClientRect().top;
+            // Scroll slightly above the products content area to prevent layout shift jumping
+            const productsContainer = document.querySelector('.products-container');
+            if (productsContainer) {
+                const headerOffset = 90; // lands 90px above the container
+                const elementPosition = productsContainer.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({
                     top: offsetPosition,
@@ -308,11 +308,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.classList.add('active');
             filterProducts();
 
-            // Scroll to the top of the products section to prevent layout shift jumping
-            const productsSection = document.getElementById('products');
-            if (productsSection) {
-                const headerOffset = 60;
-                const elementPosition = productsSection.getBoundingClientRect().top;
+            // Scroll slightly above the products content area to prevent layout shift jumping
+            const productsContainer = document.querySelector('.products-container');
+            if (productsContainer) {
+                const headerOffset = 90; // lands 90px above the container
+                const elementPosition = productsContainer.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
                 window.scrollTo({
                     top: offsetPosition,
