@@ -314,7 +314,7 @@ img {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -485,8 +485,8 @@ img {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+    gap: 16px;
 }
 
 .product-card {
@@ -497,7 +497,7 @@ img {
     flex-direction: column;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02); /* Subtle shadow */
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -506,15 +506,15 @@ img {
 }
 
 .product-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
     border-color: #1B3A6B;
-    box-shadow: 0 8px 20px rgba(27, 58, 107, 0.12);
+    box-shadow: 0 6px 15px rgba(27, 58, 107, 0.08);
 }
 
 .product-image-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 160px; /* Slightly smaller image height for compact feel */
     overflow: hidden;
     background-color: #F1F5F9;
     border-radius: 0;
@@ -533,7 +533,7 @@ img {
 }
 
 .product-info {
-    padding: 16px;
+    padding: 12px; /* More compact padding */
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -541,19 +541,19 @@ img {
 }
 
 .product-info h4 {
-    margin-bottom: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #1a1a1a;
+    margin-bottom: 4px;
+    font-size: 13.5px;
+    font-weight: 700; /* Bold */
+    color: var(--dark-navy);
     line-height: 1.3;
 }
 
 .product-info p {
-    font-size: 12px;
+    font-size: 11.5px; /* Small/gray description */
     font-weight: 400;
-    color: #666666;
-    margin-top: 4px;
-    line-height: 1.6;
+    color: #777777;
+    margin-top: 2px;
+    line-height: 1.5;
 }
 
 /* Why Choose Us */
@@ -1260,7 +1260,9 @@ img {
         grid-template-columns: 1fr;
     }
     
-    /* products-grid stays 2 columns as per user spec */
+    .products-grid {
+        grid-template-columns: 1fr !important;
+    }
     
     .why-grid, .reach-grid {
         grid-template-columns: 1fr;
