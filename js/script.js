@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Category Tabs click navigation
     tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
@@ -274,6 +275,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             filterProducts();
+
+            // Scroll to the top of the products section to prevent layout shift jumping
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                const headerOffset = 60;
+                const elementPosition = productsSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'auto'
+                });
+            }
         });
     });
 
@@ -284,12 +297,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = e.target.closest('.sub-btn');
             if (!btn) return;
             
+            e.preventDefault();
+            
             const parentGroup = btn.closest('.subcategory-group');
             if (parentGroup) {
                 parentGroup.querySelectorAll('.sub-btn').forEach(b => b.classList.remove('active'));
             }
             btn.classList.add('active');
             filterProducts();
+
+            // Scroll to the top of the products section to prevent layout shift jumping
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                const headerOffset = 60;
+                const elementPosition = productsSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'auto'
+                });
+            }
         });
     }
 
