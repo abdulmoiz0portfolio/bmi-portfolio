@@ -514,7 +514,7 @@ img {
 .product-image-wrapper {
     position: relative;
     width: 100%;
-    height: 160px; /* Consistent equal height */
+    aspect-ratio: 1 / 1; /* Square 1:1 aspect ratio */
     overflow: hidden;
     background-color: #F8FAFC; /* Clean light grey background */
     border-radius: 0;
