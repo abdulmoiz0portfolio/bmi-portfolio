@@ -95,14 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Products Database containing all sub-products with hover image pairs
     const productsData = [
         // TAB 1: APPAREL - Flannel Shirts & Jackets
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Flannel Shirts', imageA: 'images/products/mens-flannel-shirt-a.jpg', imageB: 'images/products/mens-flannel-shirt-b.jpg', description: 'Premium cotton flannel shirts in customizable plaid patterns for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Flannel Shirts', imageA: 'images/products/ladies-flannel-shirt-a.jpg', imageB: 'images/products/ladies-flannel-shirt-b.jpg', description: 'Soft, tailored flannel shirts in elegant plaid patterns for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Line Jacket', imageA: 'images/products/mens-line-jacket-a.jpg', imageB: 'images/products/mens-line-jacket-b.jpg', description: 'Lightweight lined plaid flannel jackets for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Line Jacket', imageA: 'images/products/ladies-line-jacket-a.jpg', imageB: 'images/products/ladies-line-jacket-b.jpg', description: 'Comfortable and stylish lined flannel jackets for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Padded Lined Flannel Jackets', imageA: 'images/products/mens-padded-flannel-jacket-a.jpg', imageB: 'images/products/mens-padded-flannel-jacket-b.jpg', description: 'Quilted padded lining providing extra warmth for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Padded Lined Flannel Jackets', imageA: 'images/products/ladies-padded-flannel-jacket-a.jpg', imageB: 'images/products/ladies-padded-flannel-jacket-b.jpg', description: 'Quilted padded lining flannel jackets tailored for women.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Sherpa Lined Flannel Jackets', imageA: 'images/products/mens-sherpa-flannel-jacket-a.jpg', imageB: 'images/products/mens-sherpa-flannel-jacket-b.jpg', description: 'Warm sherpa fleece lining for maximum cold weather protection for men.' },
-        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Sherpa Lined Flannel Jackets', imageA: 'images/products/ladies-sherpa-flannel-jacket-a.jpg', imageB: 'images/products/ladies-sherpa-flannel-jacket-b.jpg', description: 'Cozy sherpa fleece lining flannel jackets designed for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Flannel Shirts', imageA: 'images/products/Mens Flannel Shirt 1.webp', imageB: 'images/products/Mens Flannel Shirt  2.webp', description: 'Premium cotton flannel shirts in customizable plaid patterns for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Flannel Shirts', imageA: 'images/products/Ladies Flannel Shirt (1).webp', imageB: 'images/products/Ladies Flannel Shirt (2).webp', description: 'Soft, tailored flannel shirts in elegant plaid patterns for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Line Jacket', imageA: 'images/products/Mens Line Jacket 1.webp', imageB: 'images/products/Mens Line Jacket 2.webp', description: 'Lightweight lined plaid flannel jackets for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Line Jacket', imageA: 'images/products/Ladies Line Jacket 1.webp', imageB: 'images/products/Ladies Line Jacket 2.webp', description: 'Comfortable and stylish lined flannel jackets for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Padded Lined Flannel Jackets', imageA: 'images/products/Mens Padded Lined Flannel Jacket 1.webp', imageB: 'images/products/Mens Padded Lined Flannel Jacket 2.webp', description: 'Quilted padded lining providing extra warmth for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Padded Lined Flannel Jackets', imageA: 'images/products/Ladies Padded Lined Flannel Jacket 1.webp', imageB: 'images/products/Ladies Padded Lined Flannel Jacket 2.webp', description: 'Quilted padded lining flannel jackets tailored for women.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Mens Sherpa Lined Flannel Jackets', imageA: 'images/products/Mens Sherpa Lined Flannel Jacket 1.webp', imageB: 'images/products/Mens Sherpa Lined Flannel Jacket 2.webp', description: 'Warm sherpa fleece lining for maximum cold weather protection for men.' },
+        { category: 'apparel', subcategory: 'flannel-shirts-jackets', name: 'Ladies Sherpa Lined Flannel Jackets', imageA: 'images/products/Ladies Sherpa Lined Flannel Jacket 1.webp', imageB: 'images/products/Ladies Sherpa Lined Flannel Jacket 2.webp', description: 'Cozy sherpa fleece lining flannel jackets designed for women.' },
 
         // TAB 1: APPAREL - Fleece & Knitwear
         { category: 'apparel', subcategory: 'fleece-knitwear', name: 'Fleece Pullover Hoodie', imageA: 'images/products/fleece-pullover-hoodie-a.jpg', imageB: 'images/products/fleece-pullover-hoodie-b.jpg', description: 'Cozy and warm pullover hoodies made from premium fleece.' },
@@ -220,6 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="product-image-wrapper">
                     <img class="img-default" src="${product.imageA || product.image}" alt="${product.name}" loading="lazy" width="300" height="225">
                     <img class="img-hover" src="${product.imageB || product.image}" alt="${product.name} folded" loading="lazy" width="300" height="225">
+                    ${product.imageB ? '<button class="mobile-toggle-btn" aria-label="Toggle image"><i class="fas fa-chevron-right"></i></button>' : ''}
                 </div>
                 <div class="product-info">
                     <h4>${product.name}</h4>
@@ -318,6 +319,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: offsetPosition,
                     behavior: 'auto'
                 });
+            }
+        });
+    }
+
+    // Event delegation for mobile image toggle button
+    const grid = document.getElementById('products-grid');
+    if (grid) {
+        grid.addEventListener('click', (e) => {
+            const toggleBtn = e.target.closest('.mobile-toggle-btn');
+            if (!toggleBtn) return;
+            
+            e.stopPropagation();
+            
+            const wrapper = toggleBtn.closest('.product-image-wrapper');
+            if (wrapper) {
+                wrapper.classList.toggle('show-hover');
             }
         });
     }

@@ -540,12 +540,67 @@ img {
     transition: opacity 0.3s ease;
 }
 
-.product-card:hover .img-hover {
-    opacity: 1;
+/* Desktop hover behavior */
+@media (min-width: 769px) {
+    .product-card:hover .img-hover {
+        opacity: 1;
+    }
+    .product-card:hover .img-default {
+        opacity: 0;
+    }
+    .mobile-toggle-btn {
+        display: none !important;
+    }
 }
 
-.product-card:hover .img-default {
-    opacity: 0;
+/* Mobile behavior */
+@media (max-width: 768px) {
+    .mobile-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        width: 38px;
+        height: 22px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 11px; /* Pill shape */
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        color: var(--dark-navy);
+        font-size: 10px;
+        transition: background-color 0.2s, color 0.2s, transform 0.1s;
+    }
+    
+    .mobile-toggle-btn:active {
+        transform: scale(0.95);
+    }
+    
+    .mobile-toggle-btn i {
+        transition: transform 0.3s ease;
+    }
+    
+    /* Toggle states */
+    .product-image-wrapper.show-hover .img-hover {
+        opacity: 1;
+    }
+    
+    .product-image-wrapper.show-hover .img-default {
+        opacity: 0;
+    }
+    
+    .product-image-wrapper.show-hover .mobile-toggle-btn {
+        background-color: rgba(27, 58, 107, 0.85);
+        color: var(--white);
+        border-color: transparent;
+    }
+    
+    .product-image-wrapper.show-hover .mobile-toggle-btn i {
+        transform: rotate(180deg);
+    }
 }
 
 .product-info {
