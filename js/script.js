@@ -163,20 +163,20 @@
         { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Fleece Pajamas', imageA: 'images/products/kids-fleece-pajamas-a.webp', imageB: 'images/products/kids-fleece-pajamas-b.webp', description: 'Warm fleece sleepwear bottoms for kids.' },
 
         // TAB 2: ACCESSORIES - Caps & Headwear
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Baseball Caps', imageA: 'images/products/baseball-caps-a.jpg', imageB: 'images/products/baseball-caps-b.jpg', description: 'Custom baseball caps for brands and promotions.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Snapbacks', imageA: 'images/products/snapbacks-a.jpg', imageB: 'images/products/snapbacks-b.jpg', description: 'Flat-brim snapback caps with customizable embroidery.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Beanies', imageA: 'images/products/beanies-a.jpg', imageB: 'images/products/beanies-b.jpg', description: 'Warm knitted beanies for winter wear.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Bucket Hats', imageA: 'images/products/bucket-hats-a.jpg', imageB: 'images/products/bucket-hats-b.jpg', description: 'Trendy cotton bucket hats for sun protection.' },
-        { category: 'accessories', subcategory: 'caps-headwear', name: 'Visors', imageA: 'images/products/visors-a.jpg', imageB: 'images/products/visors-b.jpg', description: 'Sporty sun visors with adjustable straps.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Baseball Caps', imageA: 'images/products/baseball-caps-a.webp', imageB: 'images/products/baseball-caps-b.jpg', description: 'Custom baseball caps for brands and promotions.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Snapbacks', imageA: 'images/products/snapbacks-a.webp', imageB: 'images/products/snapbacks-b.webp', description: 'Flat-brim snapback caps with customizable embroidery.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Beanies', imageA: 'images/products/beanies-a.webp', imageB: 'images/products/beanies-b.webp', description: 'Warm knitted beanies for winter wear.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Bucket Hats', imageA: 'images/products/bucket-hats-a.webp', imageB: 'images/products/bucket-hats-b.webp', description: 'Trendy cotton bucket hats for sun protection.' },
+        { category: 'accessories', subcategory: 'caps-headwear', name: 'Visors', imageA: 'images/products/visors-a.webp', imageB: 'images/products/visors-b.webp', description: 'Sporty sun visors with adjustable straps.' },
 
         // TAB 2: ACCESSORIES - Face Masks
-        { category: 'accessories', subcategory: 'face-masks', name: 'Reusable Fabric Masks', imageA: 'images/products/reusable-masks-a.jpg', imageB: 'images/products/reusable-masks-b.jpg', description: 'Washable and breathable multi-layer cotton face masks.' },
-        { category: 'accessories', subcategory: 'face-masks', name: 'Disposable Masks', imageA: 'images/products/disposable-masks-a.jpg', imageB: 'images/products/disposable-masks-b.jpg', description: 'Lightweight protective disposable face masks.' },
-        { category: 'accessories', subcategory: 'face-masks', name: 'Kids Masks', imageA: 'images/products/kids-masks-a.jpg', imageB: 'images/products/kids-masks-b.jpg', description: 'Soft fabric masks scaled and designed for children.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Reusable Fabric Masks', imageA: 'images/products/reusable-masks-a.webp', imageB: 'images/products/reusable-masks-b.webp', description: 'Washable and breathable multi-layer cotton face masks.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Disposable Masks', imageA: 'images/products/disposable-masks-a.webp', imageB: 'images/products/disposable-masks-b.webp', description: 'Lightweight protective disposable face masks.' },
+        { category: 'accessories', subcategory: 'face-masks', name: 'Kids Masks', imageA: 'images/products/kids-masks-a.webp', imageB: 'images/products/kids-masks-b.webp', description: 'Soft fabric masks scaled and designed for children.' },
 
         // TAB 3: HOME TEXTILES - Kitchen & Bath Textiles
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Kitchen Towels', imageA: 'images/products/kitchen-towels-a.jpg', imageB: 'images/products/kitchen-towels-b.jpg', description: 'Highly absorbent cotton towels for kitchen use.' },
-        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Wash Towels', imageA: 'images/products/wash-towels-a.jpg', imageB: 'images/products/wash-towels-b.jpg', description: 'Soft and durable washcloths for daily cleansing.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Kitchen Towels', imageA: 'images/products/kitchen-towels-a.webp', imageB: 'images/products/kitchen-towels-b.webp', description: 'Highly absorbent cotton towels for kitchen use.' },
+        { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Wash Towels', imageA: 'images/products/wash-towels-a.webp', imageB: 'images/products/wash-towels-b.webp', description: 'Soft and durable washcloths for daily cleansing.' },
         { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Towels', imageA: 'images/products/bath-towels-a.jpg', imageB: 'images/products/bath-towels-b.jpg', description: 'Plush, high-pile cotton towels for bath use.' },
         { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Bath Mats', imageA: 'images/products/bath-mats-a.jpg', imageB: 'images/products/bath-mats-b.jpg', description: 'Thick, slip-resistant woven cotton bath mats.' },
         { category: 'home-textiles', subcategory: 'kitchen-bath-textiles', name: 'Hand Towels', imageA: 'images/products/hand-towels-a.jpg', imageB: 'images/products/hand-towels-b.jpg', description: 'Soft hand towels in custom weaves and border designs.' },
@@ -342,6 +342,7 @@
     // Run on initial load
     filterProducts();
 });
+
 
 
 
