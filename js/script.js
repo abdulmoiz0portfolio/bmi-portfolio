@@ -157,10 +157,10 @@
         { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Shorts Suits', imageA: 'images/products/kids-shorts-suits-a.webp', imageB: 'images/products/kids-shorts-suits-b.webp', description: 'Matching t-shirt and shorts sets for kids.' },
         { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Jeans', imageA: 'images/products/kids-jeans-a.webp', imageB: 'images/products/kids-jeans-b.webp', description: 'Durable stretch denim jeans for children.' },
         { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Shorts', imageA: 'images/products/kids-denim-shorts-a.webp', imageB: 'images/products/kids-denim-shorts-b.webp', description: 'Sturdy and stylish denim shorts for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Jackets', imageA: 'images/products/kids-denim-jacket-a.webp', imageB: 'images/products/kids-denim-jacket-b.jpg', description: 'Classic denim jackets scaled for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Hoodie', imageA: 'images/products/kids-hoodie-a.jpg', imageB: 'images/products/kids-hoodie-b.jpg', description: 'Warm and cozy fleece hoodies for kids.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Sweatshirt', imageA: 'images/products/kids-sweatshirt-a.jpg', imageB: 'images/products/kids-sweatshirt-b.jpg', description: 'Soft crewneck sweatshirts for children.' },
-        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Fleece Pajamas', imageA: 'images/products/kids-fleece-pajamas-a.jpg', imageB: 'images/products/kids-fleece-pajamas-b.jpg', description: 'Warm fleece sleepwear bottoms for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Denim Jackets', imageA: 'images/products/kids-denim-jacket-a.webp', imageB: 'images/products/kids-denim-jacket-b.webp', description: 'Classic denim jackets scaled for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Hoodie', imageA: 'images/products/kids-hoodie-a.webp', imageB: 'images/products/kids-hoodie-b.webp', description: 'Warm and cozy fleece hoodies for kids.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Sweatshirt', imageA: 'images/products/kids-sweatshirt-a.webp', imageB: 'images/products/kids-sweatshirt-b.webp', description: 'Soft crewneck sweatshirts for children.' },
+        { category: 'apparel', subcategory: 'kids-wear', name: 'Kids Fleece Pajamas', imageA: 'images/products/kids-fleece-pajamas-a.webp', imageB: 'images/products/kids-fleece-pajamas-b.webp', description: 'Warm fleece sleepwear bottoms for kids.' },
 
         // TAB 2: ACCESSORIES - Caps & Headwear
         { category: 'accessories', subcategory: 'caps-headwear', name: 'Baseball Caps', imageA: 'images/products/baseball-caps-a.jpg', imageB: 'images/products/baseball-caps-b.jpg', description: 'Custom baseball caps for brands and promotions.' },
@@ -342,6 +342,7 @@
     // Run on initial load
     filterProducts();
 });
+
 
 
 
