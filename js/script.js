@@ -189,8 +189,8 @@
         { category: 'home-textiles', subcategory: 'bedding-linen', name: 'Pillow Cases & Comforter Sets', imageA: 'images/products/pillowcases-comforter-a.jpg', imageB: 'images/products/pillowcases-comforter-b.jpg', description: 'Matching comforters and decorative pillow shams.' },
 
         // TAB 3: HOME TEXTILES - Rags
-        { category: 'home-textiles', subcategory: 'rags', name: 'White Cotton Rags', imageA: 'images/products/white-cotton-rags-a.jpg', imageB: 'images/products/white-cotton-rags-b.jpg', description: 'Premium metal-free white cotton cleaning rags for industrial use.' },
-        { category: 'home-textiles', subcategory: 'rags', name: 'Multi Color Cotton Rags', imageA: 'images/products/multi-color-rags-a.jpg', imageB: 'images/products/multi-color-rags-b.jpg', description: 'Eco-friendly colored cotton rags for general cleaning.' },
+        { category: 'home-textiles', subcategory: 'rags', name: 'White Cotton Rags', imageA: 'images/products/white-cotton-rags-a.webp', imageB: 'images/products/white-cotton-rags-b.webp', description: 'Premium metal-free white cotton cleaning rags for industrial use.' },
+        { category: 'home-textiles', subcategory: 'rags', name: 'Multi Color Cotton Rags', imageA: 'images/products/multi-color-rags-a.webp', imageB: 'images/products/multi-color-rags-b.webp', description: 'Eco-friendly colored cotton rags for general cleaning.' },
         { category: 'home-textiles', subcategory: 'rags', name: 'Assorted Rags', imageA: 'images/products/assorted-rags-a.jpg', imageB: 'images/products/assorted-rags-b.jpg', description: 'Absorbent mixed fabric rags for industrial spills.' }
     ];
 
@@ -342,6 +342,7 @@
     // Run on initial load
     filterProducts();
 });
+
 
 
 
