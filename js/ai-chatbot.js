@@ -660,7 +660,7 @@
         if (contactEl) contactEl.scrollIntoView({ behavior: 'smooth' });
         break;
       case 'openWhatsApp':
-        window.open('https://w.app/lhwmyi', '_blank');
+        window.open('https://wa.me/923312859323', '_blank');
         break;
       default:
         break;
