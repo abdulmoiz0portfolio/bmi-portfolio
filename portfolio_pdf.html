@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>BM International – Company Profile & Product Portfolio 2026</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     @page {
       size: A4 portrait;
@@ -15,7 +14,7 @@
       padding: 0;
     }
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Segoe UI', 'Inter', system-ui, -apple-system, sans-serif;
       background-color: #FFFFFF;
       color: #0F172A;
       -webkit-print-color-adjust: exact !important;
@@ -28,7 +27,7 @@
       position: relative;
       page-break-after: always;
       overflow: hidden;
-      padding: 16mm 16mm 20mm 16mm;
+      padding: 14mm 14mm 14mm 14mm;
       background: #FFFFFF;
       display: flex;
       flex-direction: column;
@@ -36,70 +35,75 @@
 
     /* COVER PAGE */
     .cover-page {
-      background: linear-gradient(135deg, #0F2847 0%, #1A4D8F 100%);
+      background: linear-gradient(135deg, #0B1E36 0%, #153E75 100%);
       color: #FFFFFF;
       justify-content: space-between;
+      align-items: center;
+      text-align: center;
       padding: 25mm 20mm;
     }
 
-    .cover-header {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .cover-logo-img {
-      height: 90px;
-      width: auto;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
-    }
-    .cover-brand-title {
-      font-size: 28px;
-      font-weight: 900;
-      letter-spacing: 1px;
-      color: #FFFFFF;
+    .cover-hero-logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      background: #FFFFFF;
+      padding: 16px;
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+      margin-bottom: 20px;
     }
 
-    .cover-center {
-      margin-top: 30px;
+    .cover-brand-title {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #FFFFFF;
+      margin-bottom: 15px;
     }
+
     .cover-tag {
       display: inline-block;
       background: rgba(59, 130, 246, 0.25);
       border: 1px solid rgba(59, 130, 246, 0.5);
       color: #93C5FD;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      padding: 6px 16px;
+      padding: 6px 18px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 20px;
+      border-radius: 30px;
+      margin-bottom: 25px;
     }
     .cover-main-heading {
-      font-size: 42px;
+      font-size: 40px;
       font-weight: 900;
       line-height: 1.15;
       color: #FFFFFF;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .cover-sub-heading {
-      font-size: 16px;
+      font-size: 15px;
       color: #CBD5E1;
       line-height: 1.6;
       max-width: 580px;
+      margin: 0 auto;
     }
 
     .cover-footer {
+      width: 100%;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding-top: 20px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      font-size: 12px;
+      font-size: 11.5px;
       color: #94A3B8;
+      text-align: left;
     }
     .cover-contact-info h4 {
       color: #FFFFFF;
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 4px;
     }
 
@@ -108,18 +112,30 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #1A4D8F;
-      padding-bottom: 10px;
-      margin-bottom: 15px;
+      border-bottom: 2px solid #153E75;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
       flex-shrink: 0;
     }
+    .page-header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
     .page-header-logo {
-      height: 40px;
+      height: 34px;
+      width: auto;
+    }
+    .page-header-brand-name {
+      font-size: 14px;
+      font-weight: 900;
+      color: #0B1E36;
+      letter-spacing: 0.5px;
     }
     .page-header-title {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
-      color: #1A4D8F;
+      color: #153E75;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -137,10 +153,10 @@
 
     /* ABOUT PAGE */
     .section-title {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
-      color: #0F2847;
-      margin-bottom: 15px;
+      color: #0B1E36;
+      margin-bottom: 12px;
       position: relative;
     }
     .section-title::after {
@@ -148,71 +164,73 @@
       display: block;
       width: 40px;
       height: 3px;
-      background: #1A4D8F;
-      margin-top: 6px;
+      background: #153E75;
+      margin-top: 5px;
     }
 
     .about-text {
-      font-size: 13px;
-      line-height: 1.7;
+      font-size: 12.5px;
+      line-height: 1.65;
       color: #334155;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 15px;
+      gap: 12px;
+      margin-top: 10px;
     }
 
     .info-box {
       background: #F8FAFC;
-      border-left: 4px solid #1A4D8F;
-      padding: 14px;
+      border-left: 4px solid #153E75;
+      padding: 12px;
     }
     .info-box h4 {
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
-      color: #0F2847;
-      margin-bottom: 4px;
+      color: #0B1E36;
+      margin-bottom: 3px;
     }
     .info-box p {
-      font-size: 11.5px;
+      font-size: 11px;
       color: #475569;
-      line-height: 1.45;
+      line-height: 1.4;
     }
 
     .founder-box {
-      background: #0F2847;
+      background: #0B1E36;
       color: #FFFFFF;
-      padding: 18px;
-      margin-top: 20px;
+      padding: 16px;
+      margin-top: 16px;
       display: flex;
-      gap: 18px;
+      gap: 16px;
       align-items: center;
+      border-radius: 8px;
     }
     .founder-box img {
-      width: 95px;
-      height: 95px;
+      width: 85px;
+      height: 85px;
       object-fit: cover;
-      border: 2px solid #3B82F6;
+      border-radius: 50%;
+      border: 3px solid #3B82F6;
     }
     .founder-box-content h3 {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 800;
       color: #FFFFFF;
     }
     .founder-box-content .title {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #38BDF8;
       font-weight: 600;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .founder-box-content p {
       font-size: 11px;
       color: #CBD5E1;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     /* TESTIMONIALS & GLOBAL REACH STYLES */
@@ -220,83 +238,87 @@
       background: #F8FAFC;
       border: 1px solid #E2E8F0;
       border-left: 4px solid #3B82F6;
-      padding: 16px;
-      margin-bottom: 15px;
+      padding: 14px;
+      margin-bottom: 12px;
+      border-radius: 6px;
     }
     .stars {
       color: #F59E0B;
-      font-size: 14px;
-      margin-bottom: 8px;
+      font-size: 13px;
+      margin-bottom: 6px;
       letter-spacing: 2px;
     }
     .testimonial-quote {
-      font-size: 12px;
+      font-size: 11.5px;
       font-style: italic;
       color: #334155;
       line-height: 1.5;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .testimonial-author {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 800;
-      color: #0F2847;
+      color: #0B1E36;
     }
     .testimonial-author span {
       font-weight: 500;
       color: #64748B;
-      font-size: 11px;
-
+      font-size: 10.5px;
     }
 
     .reach-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-top: 15px;
+      gap: 10px;
+      margin-top: 12px;
     }
     .reach-card {
-      background: #0F2847;
+      background: #0B1E36;
       color: #FFFFFF;
-      padding: 14px;
+      padding: 12px;
       text-align: center;
+      border-radius: 6px;
     }
     .reach-card h4 {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
       color: #38BDF8;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .reach-card p {
-      font-size: 10.5px;
+      font-size: 10px;
       color: #E2E8F0;
-      line-height: 1.4;
+      line-height: 1.35;
     }
 
-    /* FULL PRODUCT GRID (6 ITEMS PER PAGE TO FILL SPACE EVENLY) */
+    /* PRODUCT GRID - 9 ITEMS PER PAGE FILLS 100% HEIGHT PERFECTLY */
     .pdf-product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      gap: 14px;
-      flex-grow: 1;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 12px;
+      flex: 1;
+      height: 100%;
     }
 
     .pdf-product-card {
       border: 1px solid #CBD5E1;
       background: #FFFFFF;
-      padding: 12px;
+      padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      height: 100%;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
     .pdf-card-img-wrapper {
       width: 100%;
-      height: 155px;
+      height: 135px;
       background: #F8FAFC;
       overflow: hidden;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       border: 1px solid #F1F5F9;
+      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -307,36 +329,35 @@
       object-fit: contain;
     }
     .pdf-card-category {
-      font-size: 8.5px;
+      font-size: 8px;
       font-weight: 800;
-      color: #1A4D8F;
+      color: #153E75;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
     .pdf-card-title {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 800;
       color: #0F172A;
-      margin-bottom: 5px;
-      line-height: 1.25;
+      margin-bottom: 4px;
+      line-height: 1.2;
     }
     .pdf-card-desc {
-      font-size: 9.5px;
+      font-size: 9px;
       color: #475569;
-      line-height: 1.4;
+      line-height: 1.35;
     }
   </style>
 </head>
 <body>
 
-  <!-- PAGE 1: COVER PAGE -->
+  <!-- PAGE 1: COVER PAGE WITH PROMINENT CENTERED HEXAGON LOGO -->
   <div class="page cover-page">
-    <div class="cover-header">
-      <img src="images/bmi_hexagon_logo.png" class="cover-logo-img" alt="BM International Hexagon Logo" />
-      <span class="cover-brand-title">BM INTERNATIONAL</span>
-    </div>
-    <div class="cover-center">
+    <div></div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <img src="images/bmi_hexagon_logo.png" class="cover-hero-logo" alt="BM International Hexagon Logo" />
+      <div class="cover-brand-title">BM INTERNATIONAL</div>
       <span class="cover-tag">OFFICIAL CORPORATE PORTFOLIO 2026</span>
       <h1 class="cover-main-heading">Textile Sourcing & Export Partner</h1>
       <p class="cover-sub-heading">Connecting Foreign Buyers & Global Apparel Brands with Premium Garments, Denim, Home Textiles, and Manufacturing Factories in Pakistan.</p>
@@ -357,8 +378,11 @@
   <!-- PAGE 2: ABOUT COMPANY & FOUNDER -->
   <div class="page">
     <div class="page-header">
-      <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-      <span class="page-header-title">About BM International</span>
+      <div class="page-header-brand">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-brand-name">BM INTERNATIONAL</span>
+      </div>
+      <span class="page-header-title">About Company</span>
     </div>
     
     <h2 class="section-title">Your Sourcing Partner in Pakistan</h2>
@@ -403,7 +427,10 @@
   <!-- PAGE 3: CLIENT TESTIMONIALS & GLOBAL REACH -->
   <div class="page">
     <div class="page-header">
-      <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+      <div class="page-header-brand">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-brand-name">BM INTERNATIONAL</span>
+      </div>
       <span class="page-header-title">Client Trust & Testimonials</span>
     </div>
 
@@ -427,7 +454,7 @@
       <div class="testimonial-author">Ahmed S. — <span>Import Manager, UAE</span></div>
     </div>
 
-    <h2 class="section-title" style="margin-top:20px;">Global Market Reach</h2>
+    <h2 class="section-title" style="margin-top:16px;">Global Market Reach</h2>
     <div class="reach-grid">
       <div class="reach-card">
         <h4>North America</h4>
@@ -453,12 +480,15 @@
     </div>
   </div>
 
-  <!-- DYNAMIC CATALOG PAGES (6 ITEMS PER PAGE) -->
+  <!-- DYNAMIC CATALOG PAGES (9 ITEMS PER PAGE FILLS 100% HEIGHT PERFECTLY) -->
   
     <div class="page">
       <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 1)</span>
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 1)</span>
       </div>
 
       <div class="pdf-product-grid">
@@ -529,22 +559,6 @@
             <div class="pdf-card-desc">Quilted padded lining flannel jackets tailored for women.</div>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 2)</span>
-      </div>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -578,6 +592,25 @@
             <div class="pdf-card-desc">Cozy and warm pullover hoodies made from premium fleece.</div>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 2)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -610,22 +643,6 @@
             </div>
             <div class="pdf-card-desc">Comfortable fleece pajama bottoms for loungewear.</div>
           </div>
-        
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 3)</span>
-      </div>
-
-      <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
             <div>
@@ -703,8 +720,11 @@
   
     <div class="page">
       <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 4)</span>
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 3)</span>
       </div>
 
       <div class="pdf-product-grid">
@@ -775,22 +795,6 @@
             <div class="pdf-card-desc">Full-zip hoodies, perfect for layering.</div>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 5)</span>
-      </div>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -824,6 +828,25 @@
             <div class="pdf-card-desc">Durable and breathable cotton twill trousers for men.</div>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 4)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -856,22 +879,6 @@
             </div>
             <div class="pdf-card-desc">Flexible stretch twill pants designed for women.</div>
           </div>
-        
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 6)</span>
-      </div>
-
-      <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
             <div>
@@ -949,8 +956,11 @@
   
     <div class="page">
       <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 7)</span>
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 5)</span>
       </div>
 
       <div class="pdf-product-grid">
@@ -1021,22 +1031,6 @@
             <div class="pdf-card-desc">Lightweight performance jackets designed for women.</div>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 8)</span>
-      </div>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -1070,6 +1064,25 @@
             <div class="pdf-card-desc">Soft, breathable cotton tees with kid-friendly dyes.</div>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 6)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -1102,22 +1115,6 @@
             </div>
             <div class="pdf-card-desc">Matching t-shirt and shorts sets for kids.</div>
           </div>
-        
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 9)</span>
-      </div>
-
-      <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
             <div>
@@ -1195,8 +1192,11 @@
   
     <div class="page">
       <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 10)</span>
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 7)</span>
       </div>
 
       <div class="pdf-product-grid">
@@ -1267,22 +1267,6 @@
             <div class="pdf-card-desc">Washable and breathable multi-layer cotton face masks.</div>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 11)</span>
-      </div>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -1316,6 +1300,25 @@
             <div class="pdf-card-desc">Highly absorbent cotton towels for kitchen use.</div>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 8)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
             <div>
               <div class="pdf-card-img-wrapper">
@@ -1348,22 +1351,6 @@
             </div>
             <div class="pdf-card-desc">Thick, slip-resistant woven cotton bath mats.</div>
           </div>
-        
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Portfolio Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-  
-    <div class="page">
-      <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 12)</span>
-      </div>
-
-      <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
             <div>
@@ -1441,8 +1428,11 @@
   
     <div class="page">
       <div class="page-header">
-        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase (Page 13)</span>
+        <div class="page-header-brand">
+          <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+          <span class="page-header-brand-name">BM INTERNATIONAL</span>
+        </div>
+        <span class="page-header-title">Product Catalog (Page 9)</span>
       </div>
 
       <div class="pdf-product-grid">
