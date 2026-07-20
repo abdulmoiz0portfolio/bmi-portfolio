@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BM International – Executive Company Portfolio 2026</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+      padding: 16mm;
+      background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* COVER PAGE */
+    .cover-page {
+      background: linear-gradient(135deg, #0A192F 0%, #1E3A8A 100%);
+      color: #FFFFFF;
+      padding: 24mm 20mm;
+      text-align: center;
+      align-items: center;
+    }
+
+    .cover-logo-wrapper {
+      background: #FFFFFF;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+    .cover-logo-img {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .cover-brand-name {
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+    }
+
+    .cover-badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.2);
+      border: 1px solid #3B82F6;
+      color: #93C5FD;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 20px;
+      border-radius: 50px;
+      margin-bottom: 30px;
+    }
+
+    .cover-title {
+      font-size: 42px;
+      font-weight: 900;
+      line-height: 1.15;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+    }
+
+    .cover-subtitle {
+      font-size: 15px;
+      color: #94A3B8;
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .cover-footer {
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 11px;
+      color: #CBD5E1;
+      text-align: left;
+    }
+    .cover-footer h4 {
+      font-size: 14px;
+      color: #FFFFFF;
+      margin-bottom: 4px;
+    }
+
+    /* HEADER & FOOTER FOR INSIDE PAGES */
+    .header-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #1E3A8A;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .header-logo {
+      height: 36px;
+      width: auto;
+    }
+    .header-brand {
+      font-size: 14px;
+      font-weight: 900;
+      color: #0A192F;
+    }
+    .header-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: #1E3A8A;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-bar {
+      border-top: 1px solid #E2E8F0;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #64748B;
+    }
+
+    /* ABOUT US PAGE */
+    .section-heading {
+      font-size: 24px;
+      font-weight: 800;
+      color: #0A192F;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .section-heading::after {
+      content: '';
+      display: block;
+      width: 45px;
+      height: 3.5px;
+      background: #1E3A8A;
+      margin-top: 6px;
+    }
+
+    .about-lead {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 18px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .service-card {
+      background: #F8FAFC;
+      border-left: 4px solid #1E3A8A;
+      padding: 14px;
+      border-radius: 4px;
+    }
+    .service-card h4 {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0A192F;
+      margin-bottom: 4px;
+    }
+    .service-card p {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .ceo-card {
+      background: #0A192F;
+      color: #FFFFFF;
+      padding: 18px;
+      border-radius: 10px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+    }
+    .ceo-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3B82F6;
+    }
+    .ceo-info h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+    }
+    .ceo-info .role {
+      font-size: 12px;
+      color: #38BDF8;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .ceo-info p {
+      font-size: 11px;
+      color: #CBD5E1;
+      line-height: 1.5;
+    }
+
+    /* TESTIMONIALS PAGE */
+    .testimonial-box {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #2563EB;
+      padding: 16px;
+      margin-bottom: 14px;
+      border-radius: 6px;
+    }
+    .stars-rating {
+      color: #F59E0B;
+      font-size: 14px;
+      margin-bottom: 6px;
+      letter-spacing: 2px;
+    }
+    .testimonial-body {
+      font-size: 12px;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .testimonial-client {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0A192F;
+    }
+    .testimonial-client span {
+      font-size: 11px;
+      font-weight: 500;
+      color: #64748B;
+    }
+
+    .markets-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .market-box {
+      background: #0A192F;
+      color: #FFFFFF;
+      padding: 14px 10px;
+      text-align: center;
+      border-radius: 6px;
+    }
+    .market-box h4 {
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #38BDF8;
+      margin-bottom: 4px;
+    }
+    .market-box p {
+      font-size: 10.5px;
+      color: #E2E8F0;
+      line-height: 1.35;
+    }
+
+    /* PRODUCT CATALOG GRID - 6 ITEMS PER PAGE WITH TALL CARDS FILLING 100% HEIGHT */
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 16px;
+      flex: 1;
+      margin: 10px 0;
+    }
+
+    .product-card {
+      border: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      padding: 12px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .product-image-box {
+      width: 100%;
+      height: 185px;
+      background: #F8FAFC;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      border: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .product-cat {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #1E3A8A;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    .product-name {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .product-desc {
+      font-size: 10px;
+      color: #475569;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- COVER PAGE -->
+  <div class="page cover-page">
+    <div></div>
+    <div>
+      <div class="cover-logo-wrapper">
+        <img src="images/bmi_hexagon_logo.png" class="cover-logo-img" alt="BMI Hexagon Logo" />
+      </div>
+      <div class="cover-brand-name">BM INTERNATIONAL</div>
+      <div class="cover-badge">OFFICIAL CORPORATE PORTFOLIO 2026</div>
+      <h1 class="cover-title">Textile & Apparel Sourcing Partner</h1>
+      <p class="cover-subtitle">Connecting International Buyers with Premier Garments, Denim, Workwear, Home Textiles & Certified Manufacturers in Pakistan.</p>
+    </div>
+    <div class="cover-footer">
+      <div>
+        <h4>BM International (Pvt) Ltd.</h4>
+        <p>Suit # B2, Ground Floor, Abuzar Apartment, Block N, North Nazimabad, Karachi, Pakistan</p>
+        <p>Email: ceo@bminternational.com.pk | bmi.imp.exp@gmail.com</p>
+      </div>
+      <div style="text-align: right;">
+        <p>WhatsApp: +92 331 285 9323</p>
+        <p>Website: bminternational.com.pk</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div class="page">
+    <div class="header-bar">
+      <div class="header-left">
+        <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+        <span class="header-brand">BM INTERNATIONAL</span>
+      </div>
+      <span class="header-title">About Company</span>
+    </div>
+
+    <div>
+      <h2 class="section-heading">Your Trusted Partner in Pakistan</h2>
+      <p class="about-lead">
+        BM International (BMI) is a premier textile sourcing, export management, and buying house based in Karachi, Pakistan. We bridge global fashion brands, retail chains, and wholesale importers with compliance-audited manufacturing plants across Pakistan.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Factory Sourcing & Audit</h4>
+          <p>Strict vetting of WRAP, BSCI, and ISO certified factories tailored to your product line.</p>
+        </div>
+        <div class="service-card">
+          <h4>AQL Quality Assurance</h4>
+          <p>Inline, pre-shipment, and final AQL 2.5 quality control inspections by on-ground engineers.</p>
+        </div>
+        <div class="service-card">
+          <h4>Price Negotiation</h4>
+          <p>Direct yarn-to-garment cost breakdown to secure competitive volume pricing.</p>
+        </div>
+        <div class="service-card">
+          <h4>Export Logistics</h4>
+          <p>Complete customs clearance, shipping documentation, and container loading supervision.</p>
+        </div>
+      </div>
+
+      <div class="ceo-card">
+        <img src="images/founder.jpg" class="ceo-img" alt="Muhammad Moeen Baig" />
+        <div class="ceo-info">
+          <h3>Muhammad Moeen Baig</h3>
+          <div class="role">Founder & CEO</div>
+          <p>"Our commitment is simple — deliver uncompromising quality, competitive prices, and on-time shipment. With BMI as your local eyes and ears, sourcing from Pakistan is seamless."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>BM International | Executive Profile 2026</span>
+      <span>bminternational.com.pk</span>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS & GLOBAL REACH PAGE -->
+  <div class="page">
+    <div class="header-bar">
+      <div class="header-left">
+        <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+        <span class="header-brand">BM INTERNATIONAL</span>
+      </div>
+      <span class="header-title">Client Trust & Global Reach</span>
+    </div>
+
+    <div>
+      <h2 class="section-heading">Client Testimonials</h2>
+
+      <div class="testimonial-box">
+        <div class="stars-rating">★★★★★</div>
+        <p class="testimonial-body">"BM International has been our go-to sourcing agent in Pakistan for over 4 years. Moeen and his team handle quality inspection so rigorously that our defect rate dropped to near zero."</p>
+        <div class="testimonial-client">David M. — <span>Sourcing Director, USA</span></div>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="stars-rating">★★★★★</div>
+        <p class="testimonial-body">"Finding reliable garment factories in Pakistan was a challenge until we partnered with BMI. They managed our entire flannel line from sampling to final container loading smoothly."</p>
+        <div class="testimonial-client">Sophie L. — <span>Brand Owner, UK</span></div>
+      </div>
+
+      <div class="testimonial-box">
+        <div class="stars-rating">★★★★★</div>
+        <p class="testimonial-body">"We've sourced cancellation lots and home textiles through BMI several times. Excellent value, transparent communication, and flawless AQL inspection process every time."</p>
+        <div class="testimonial-client">Ahmed S. — <span>Import Manager, UAE</span></div>
+      </div>
+
+      <h2 class="section-heading" style="margin-top: 18px;">Global Export Footprint</h2>
+      <div class="markets-grid">
+        <div class="market-box">
+          <h4>North America</h4>
+          <p>USA, Canada</p>
+        </div>
+        <div class="market-box">
+          <h4>Europe</h4>
+          <p>UK, Germany, France, Netherlands, Italy</p>
+        </div>
+        <div class="market-box">
+          <h4>Middle East</h4>
+          <p>UAE, Saudi Arabia, Qatar, Kuwait</p>
+        </div>
+        <div class="market-box">
+          <h4>Asia Pacific</h4>
+          <p>Australia, Japan, South Korea</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>BM International | Client Trust & Global Footprint</span>
+      <span>bminternational.com.pk</span>
+    </div>
+  </div>
+
+  <!-- PRODUCT CATALOG PAGES (6 ITEMS PER PAGE WITH LARGE CARDS FILLING PAGE TOP-TO-BOTTOM) -->
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 1)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Mens Flannel Shirt 1.webp" alt="Mens Flannel Shirts" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Mens Flannel Shirts</div>
+            </div>
+            <div class="product-desc">Premium cotton flannel shirts in customizable plaid patterns for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Ladies Flannel Shirt (1).webp" alt="Ladies Flannel Shirts" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Ladies Flannel Shirts</div>
+            </div>
+            <div class="product-desc">Soft, tailored flannel shirts in elegant plaid patterns for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Mens Line Jacket 1.webp" alt="Mens Line Jacket" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Mens Line Jacket</div>
+            </div>
+            <div class="product-desc">Lightweight lined plaid flannel jackets for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Ladies Line Jacket 1.webp" alt="Ladies Line Jacket" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Ladies Line Jacket</div>
+            </div>
+            <div class="product-desc">Comfortable and stylish lined flannel jackets for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Mens Padded Lined Flannel Jacket 1.webp" alt="Mens Padded Lined Flannel Jackets" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Mens Padded Lined Flannel Jackets</div>
+            </div>
+            <div class="product-desc">Quilted padded lining providing extra warmth for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Ladies Padded Lined Flannel Jacket 1.webp" alt="Ladies Padded Lined Flannel Jackets" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Ladies Padded Lined Flannel Jackets</div>
+            </div>
+            <div class="product-desc">Quilted padded lining flannel jackets tailored for women.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 2)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Mens Sherpa Lined Flannel Jacket 1.webp" alt="Mens Sherpa Lined Flannel Jackets" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Mens Sherpa Lined Flannel Jackets</div>
+            </div>
+            <div class="product-desc">Warm sherpa fleece lining for maximum cold weather protection for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Ladies Sherpa Lined Flannel Jacket 1.webp" alt="Ladies Sherpa Lined Flannel Jackets" />
+              </div>
+              <div class="product-cat">flannel shirts jackets</div>
+              <div class="product-name">Ladies Sherpa Lined Flannel Jackets</div>
+            </div>
+            <div class="product-desc">Cozy sherpa fleece lining flannel jackets designed for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Fleece Pullover Hoodie 1.webp" alt="Fleece Pullover Hoodie" />
+              </div>
+              <div class="product-cat">fleece knitwear</div>
+              <div class="product-name">Fleece Pullover Hoodie</div>
+            </div>
+            <div class="product-desc">Cozy and warm pullover hoodies made from premium fleece.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Fleece Mock Neck Zipper Jacket 1.webp" alt="Fleece Mock Neck Zipper Jacket" />
+              </div>
+              <div class="product-cat">fleece knitwear</div>
+              <div class="product-name">Fleece Mock Neck Zipper Jacket</div>
+            </div>
+            <div class="product-desc">Premium fleece jackets featuring a stylish mock neck and full zipper.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Fleece Sweatshirt 1.webp" alt="Fleece Sweatshirt" />
+              </div>
+              <div class="product-cat">fleece knitwear</div>
+              <div class="product-name">Fleece Sweatshirt</div>
+            </div>
+            <div class="product-desc">Classic crewneck sweatshirts in soft fleece fabrics.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Fleece Pajamas 1.webp" alt="Fleece Pajamas" />
+              </div>
+              <div class="product-cat">fleece knitwear</div>
+              <div class="product-name">Fleece Pajamas</div>
+            </div>
+            <div class="product-desc">Comfortable fleece pajama bottoms for loungewear.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 3)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Fleece Joggers 1.webp" alt="Fleece Joggers" />
+              </div>
+              <div class="product-cat">fleece knitwear</div>
+              <div class="product-name">Fleece Joggers</div>
+            </div>
+            <div class="product-desc">Athletic-cut fleece joggers with drawstring waist.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Skinny Jeans 1.webp" alt="Skinny Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Skinny Jeans</div>
+            </div>
+            <div class="product-desc">Snug-fit stretch denim jeans in various washes.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Slim Fit Jeans 1.webp" alt="Slim Fit Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Slim Fit Jeans</div>
+            </div>
+            <div class="product-desc">Modern slim-cut jeans balancing style and comfort.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Straight Cut Jeans 1.webp" alt="Straight Cut Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Straight Cut Jeans</div>
+            </div>
+            <div class="product-desc">Classic straight-leg denim jeans for everyday wear.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Bootcut Jeans 1.webp" alt="Bootcut Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Bootcut Jeans</div>
+            </div>
+            <div class="product-desc">Slightly flared hems designed to fit comfortably over boots.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Flapper Jeans 1.webp" alt="Flapper Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Flapper Jeans</div>
+            </div>
+            <div class="product-desc">Trendy wide-leg cropped denim pants.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 4)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Cargo Jeans 1.webp" alt="Cargo Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Cargo Jeans</div>
+            </div>
+            <div class="product-desc">Utility-focused denim featuring multiple cargo pockets.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Carpenter Jeans 1.webp" alt="Carpenter Jeans" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Carpenter Jeans</div>
+            </div>
+            <div class="product-desc">Durable utility jeans with tool pockets and hammer loops.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Regular Denim 1.webp" alt="Regular Denim" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Regular Denim</div>
+            </div>
+            <div class="product-desc">Standard fit durable denim trousers.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/Short Body Denim Jacket 1.webp" alt="Short Body Denim Jacket" />
+              </div>
+              <div class="product-cat">denim jeans</div>
+              <div class="product-name">Short Body Denim Jacket</div>
+            </div>
+            <div class="product-desc">Cropped-style denim jackets in premium washes.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/pullover-hoodie-a.webp" alt="Pullover Hoodie" />
+              </div>
+              <div class="product-cat">hoodies sweatshirts</div>
+              <div class="product-name">Pullover Hoodie</div>
+            </div>
+            <div class="product-desc">Comfortable pullover hoodies in custom weights.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/zipper-hoodie-a.webp" alt="Zipper Hoodie" />
+              </div>
+              <div class="product-cat">hoodies sweatshirts</div>
+              <div class="product-name">Zipper Hoodie</div>
+            </div>
+            <div class="product-desc">Full-zip hoodies, perfect for layering.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 5)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/crewneck-sweatshirt-a.webp" alt="Crewneck Sweatshirt" />
+              </div>
+              <div class="product-cat">hoodies sweatshirts</div>
+              <div class="product-name">Crewneck Sweatshirt</div>
+            </div>
+            <div class="product-desc">Classic crewneck sweatshirts in soft cotton fleece.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/oversized-hoodie-a.webp" alt="Oversized Hoodie" />
+              </div>
+              <div class="product-cat">hoodies sweatshirts</div>
+              <div class="product-name">Oversized Hoodie</div>
+            </div>
+            <div class="product-desc">Trendy oversized baggy hoodies in heavy fabrics.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-cotton-twill-pants-a.webp" alt="Mens Cotton Twill Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Mens Cotton Twill Pants</div>
+            </div>
+            <div class="product-desc">Durable and breathable cotton twill trousers for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/ladies-cotton-twill-pants-a.webp" alt="Ladies Cotton Twill Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Ladies Cotton Twill Pants</div>
+            </div>
+            <div class="product-desc">Comfortable and stylish cotton twill trousers for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-stretch-twill-pants-a.webp" alt="Mens Stretch Comfort Twill Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Mens Stretch Comfort Twill Pants</div>
+            </div>
+            <div class="product-desc">Flexible stretch twill pants for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/ladies-stretch-twill-pants-a.webp" alt="Ladies Stretch Comfort Twill Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Ladies Stretch Comfort Twill Pants</div>
+            </div>
+            <div class="product-desc">Flexible stretch twill pants designed for women.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 6)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/cotton-lounge-pants-a.webp" alt="Cotton Lounge Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Cotton Lounge Pants</div>
+            </div>
+            <div class="product-desc">Lightweight, breathable cotton loungewear pants.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/flannel-lounge-pants-a.webp" alt="Flannel Lounge Pants" />
+              </div>
+              <div class="product-cat">trousers bottoms</div>
+              <div class="product-name">Flannel Lounge Pants</div>
+            </div>
+            <div class="product-desc">Warm and cozy flannel loungewear pants.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-cotton-sleep-suit-a.webp" alt="Mens Cotton Sleep Suit" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Mens Cotton Sleep Suit</div>
+            </div>
+            <div class="product-desc">Two-piece breathable cotton sleepwear set for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/womens-cotton-sleep-suit-a.webp" alt="Womens Cotton Sleep Suit" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Womens Cotton Sleep Suit</div>
+            </div>
+            <div class="product-desc">Soft and comfortable cotton sleepwear set for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-flannel-sleep-suit-a.webp" alt="Mens Flannel Sleep Suit" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Mens Flannel Sleep Suit</div>
+            </div>
+            <div class="product-desc">Warm two-piece flannel sleepwear set for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/womens-flannel-sleep-suit-a.webp" alt="Womens Flannel Sleep Suit" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Womens Flannel Sleep Suit</div>
+            </div>
+            <div class="product-desc">Cozy two-piece flannel sleepwear set for women.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 7)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-sweat-tops-a.webp" alt="Mens Sweat Absorbent Tops" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Mens Sweat Absorbent Tops</div>
+            </div>
+            <div class="product-desc">Moisture-wicking athletic tops for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/ladies-sweat-tops-a.webp" alt="Ladies Sweat Absorbent Tops" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Ladies Sweat Absorbent Tops</div>
+            </div>
+            <div class="product-desc">Moisture-wicking athletic tops for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-sweat-bottoms-a.webp" alt="Mens Sweat Absorbent Bottoms" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Mens Sweat Absorbent Bottoms</div>
+            </div>
+            <div class="product-desc">Moisture-wicking athletic pants and shorts for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/ladies-sweat-bottoms-a.webp" alt="Ladies Sweat Absorbent Bottoms" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Ladies Sweat Absorbent Bottoms</div>
+            </div>
+            <div class="product-desc">Moisture-wicking athletic pants and shorts for women.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/mens-sweat-jackets-a.webp" alt="Mens Sweat Absorbent Jackets" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Mens Sweat Absorbent Jackets</div>
+            </div>
+            <div class="product-desc">Lightweight performance jackets for men.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/ladies-sweat-jackets-a.webp" alt="Ladies Sweat Absorbent Jackets" />
+              </div>
+              <div class="product-cat">sportswear sleepwear</div>
+              <div class="product-name">Ladies Sweat Absorbent Jackets</div>
+            </div>
+            <div class="product-desc">Lightweight performance jackets designed for women.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 8)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-infant-rompers-a.webp" alt="Kids Infant Rompers" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Infant Rompers</div>
+            </div>
+            <div class="product-desc">Ultra-soft and safe cotton rompers for babies.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-shorts-a.webp" alt="Kids Shorts" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Shorts</div>
+            </div>
+            <div class="product-desc">Comfortable and durable shorts for active children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-tshirt-a.webp" alt="Kids T-Shirt" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids T-Shirt</div>
+            </div>
+            <div class="product-desc">Soft, breathable cotton tees with kid-friendly dyes.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-pajamas-a.webp" alt="Kids Pajamas" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Pajamas</div>
+            </div>
+            <div class="product-desc">Cozy sleepwear bottoms for kids.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-pajama-suits-a.webp" alt="Kids Pajama Suits" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Pajama Suits</div>
+            </div>
+            <div class="product-desc">Two-piece matching pajama sets for children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-shorts-suits-a.webp" alt="Kids Shorts Suits" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Shorts Suits</div>
+            </div>
+            <div class="product-desc">Matching t-shirt and shorts sets for kids.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 9)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-jeans-a.webp" alt="Kids Jeans" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Jeans</div>
+            </div>
+            <div class="product-desc">Durable stretch denim jeans for children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-denim-shorts-a.webp" alt="Kids Denim Shorts" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Denim Shorts</div>
+            </div>
+            <div class="product-desc">Sturdy and stylish denim shorts for kids.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-denim-jacket-a.webp" alt="Kids Denim Jackets" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Denim Jackets</div>
+            </div>
+            <div class="product-desc">Classic denim jackets scaled for children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-hoodie-a.webp" alt="Kids Hoodie" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Hoodie</div>
+            </div>
+            <div class="product-desc">Warm and cozy fleece hoodies for kids.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-sweatshirt-a.webp" alt="Kids Sweatshirt" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Sweatshirt</div>
+            </div>
+            <div class="product-desc">Soft crewneck sweatshirts for children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-fleece-pajamas-a.webp" alt="Kids Fleece Pajamas" />
+              </div>
+              <div class="product-cat">kids wear</div>
+              <div class="product-name">Kids Fleece Pajamas</div>
+            </div>
+            <div class="product-desc">Warm fleece sleepwear bottoms for kids.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 10)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/baseball-caps-a.webp" alt="Baseball Caps" />
+              </div>
+              <div class="product-cat">caps headwear</div>
+              <div class="product-name">Baseball Caps</div>
+            </div>
+            <div class="product-desc">Custom baseball caps for brands and promotions.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/snapbacks-a.webp" alt="Snapbacks" />
+              </div>
+              <div class="product-cat">caps headwear</div>
+              <div class="product-name">Snapbacks</div>
+            </div>
+            <div class="product-desc">Flat-brim snapback caps with customizable embroidery.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/beanies-a.webp" alt="Beanies" />
+              </div>
+              <div class="product-cat">caps headwear</div>
+              <div class="product-name">Beanies</div>
+            </div>
+            <div class="product-desc">Warm knitted beanies for winter wear.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/bucket-hats-a.webp" alt="Bucket Hats" />
+              </div>
+              <div class="product-cat">caps headwear</div>
+              <div class="product-name">Bucket Hats</div>
+            </div>
+            <div class="product-desc">Trendy cotton bucket hats for sun protection.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/visors-a.webp" alt="Visors" />
+              </div>
+              <div class="product-cat">caps headwear</div>
+              <div class="product-name">Visors</div>
+            </div>
+            <div class="product-desc">Sporty sun visors with adjustable straps.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/reusable-masks-a.webp" alt="Reusable Fabric Masks" />
+              </div>
+              <div class="product-cat">face masks</div>
+              <div class="product-name">Reusable Fabric Masks</div>
+            </div>
+            <div class="product-desc">Washable and breathable multi-layer cotton face masks.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 11)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/disposable-masks-a.webp" alt="Disposable Masks" />
+              </div>
+              <div class="product-cat">face masks</div>
+              <div class="product-name">Disposable Masks</div>
+            </div>
+            <div class="product-desc">Lightweight protective disposable face masks.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kids-masks-a.webp" alt="Kids Masks" />
+              </div>
+              <div class="product-cat">face masks</div>
+              <div class="product-name">Kids Masks</div>
+            </div>
+            <div class="product-desc">Soft fabric masks scaled and designed for children.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/kitchen-towels-a.webp" alt="Kitchen Towels" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Kitchen Towels</div>
+            </div>
+            <div class="product-desc">Highly absorbent cotton towels for kitchen use.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/wash-towels-a.webp" alt="Wash Towels" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Wash Towels</div>
+            </div>
+            <div class="product-desc">Soft and durable washcloths for daily cleansing.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bath-towels-1.webp" alt="Bath Towels" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Bath Towels</div>
+            </div>
+            <div class="product-desc">Plush, high-pile cotton towels for bath use.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bath-mats-1.webp" alt="Bath Mats" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Bath Mats</div>
+            </div>
+            <div class="product-desc">Thick, slip-resistant woven cotton bath mats.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 12)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-hand-towels-1.webp" alt="Hand Towels" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Hand Towels</div>
+            </div>
+            <div class="product-desc">Soft hand towels in custom weaves and border designs.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-aprons-1.webp" alt="Aprons" />
+              </div>
+              <div class="product-cat">kitchen bath textiles</div>
+              <div class="product-name">Aprons</div>
+            </div>
+            <div class="product-desc">Protective kitchen aprons in durable twill or canvas.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bed-sheet-sets-1.webp" alt="Bed Sheet Sets" />
+              </div>
+              <div class="product-cat">bedding linen</div>
+              <div class="product-name">Bed Sheet Sets</div>
+            </div>
+            <div class="product-desc">Flat sheets, fitted sheets, and pillowcase sets in premium thread counts.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-fitted-sheets-1.webp" alt="Fitted Sheets" />
+              </div>
+              <div class="product-cat">bedding linen</div>
+              <div class="product-name">Fitted Sheets</div>
+            </div>
+            <div class="product-desc">Deep-pocket elasticized fitted sheets.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-duvet-covers-1.webp" alt="Duvet Covers" />
+              </div>
+              <div class="product-cat">bedding linen</div>
+              <div class="product-name">Duvet Covers</div>
+            </div>
+            <div class="product-desc">Elegant duvet covers with button or zipper closures.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-pillow-cases-comforter-sets-1.webp" alt="Pillow Cases & Comforter Sets" />
+              </div>
+              <div class="product-cat">bedding linen</div>
+              <div class="product-name">Pillow Cases & Comforter Sets</div>
+            </div>
+            <div class="product-desc">Matching comforters and decorative pillow shams.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="header-bar">
+        <div class="header-left">
+          <img src="images/bmi_hexagon_logo.png" class="header-logo" alt="Logo" />
+          <span class="header-brand">BM INTERNATIONAL</span>
+        </div>
+        <span class="header-title">Product Catalog (Page 13)</span>
+      </div>
+
+      <div class="catalog-grid">
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/white-cotton-rags-a.webp" alt="White Cotton Rags" />
+              </div>
+              <div class="product-cat">rags</div>
+              <div class="product-name">White Cotton Rags</div>
+            </div>
+            <div class="product-desc">Premium metal-free white cotton cleaning rags for industrial use.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/multi-color-rags-a.webp" alt="Multi Color Cotton Rags" />
+              </div>
+              <div class="product-cat">rags</div>
+              <div class="product-name">Multi Color Cotton Rags</div>
+            </div>
+            <div class="product-desc">Eco-friendly colored cotton rags for general cleaning.</div>
+          </div>
+        
+          <div class="product-card">
+            <div>
+              <div class="product-image-box">
+                <img src="images/products/4-rags-assorted-rags-1.webp" alt="Assorted Rags" />
+              </div>
+              <div class="product-cat">rags</div>
+              <div class="product-name">Assorted Rags</div>
+            </div>
+            <div class="product-desc">Absorbent mixed fabric rags for industrial spills.</div>
+          </div>
+        
+      </div>
+
+      <div class="footer-bar">
+        <span>BM International | Product Showcase Catalog</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+
+</body>
+</html>
