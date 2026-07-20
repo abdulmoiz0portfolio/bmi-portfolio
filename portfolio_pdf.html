@@ -28,16 +28,16 @@
       position: relative;
       page-break-after: always;
       overflow: hidden;
-      padding: 20mm 15mm;
+      padding: 16mm 16mm 20mm 16mm;
       background: #FFFFFF;
+      display: flex;
+      flex-direction: column;
     }
 
     /* COVER PAGE */
     .cover-page {
       background: linear-gradient(135deg, #0F2847 0%, #1A4D8F 100%);
       color: #FFFFFF;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
       padding: 25mm 20mm;
     }
@@ -45,21 +45,22 @@
     .cover-header {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 20px;
     }
     .cover-logo-img {
-      height: 60px;
+      height: 90px;
       width: auto;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
     }
     .cover-brand-title {
-      font-size: 24px;
-      font-weight: 800;
-      letter-spacing: 0.5px;
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 1px;
       color: #FFFFFF;
     }
 
     .cover-center {
-      margin-top: 40px;
+      margin-top: 30px;
     }
     .cover-tag {
       display: inline-block;
@@ -84,11 +85,11 @@
       font-size: 16px;
       color: #CBD5E1;
       line-height: 1.6;
-      max-width: 550px;
+      max-width: 580px;
     }
 
     .cover-footer {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
       padding-top: 20px;
       display: flex;
       justify-content: space-between;
@@ -98,7 +99,7 @@
     }
     .cover-contact-info h4 {
       color: #FFFFFF;
-      font-size: 14px;
+      font-size: 15px;
       margin-bottom: 4px;
     }
 
@@ -107,32 +108,31 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 2px solid #E2E8F0;
-      padding-bottom: 12px;
-      margin-bottom: 20px;
+      border-bottom: 2px solid #1A4D8F;
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      flex-shrink: 0;
     }
     .page-header-logo {
-      height: 35px;
+      height: 40px;
     }
     .page-header-title {
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       color: #1A4D8F;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .page-footer {
-      position: absolute;
-      bottom: 15mm;
-      left: 15mm;
-      right: 15mm;
+      margin-top: auto;
       border-top: 1px solid #E2E8F0;
-      padding-top: 10px;
+      padding-top: 8px;
       display: flex;
       justify-content: space-between;
       font-size: 10px;
       color: #64748B;
+      flex-shrink: 0;
     }
 
     /* ABOUT PAGE */
@@ -162,39 +162,39 @@
     .grid-2 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 20px;
+      gap: 15px;
+      margin-top: 15px;
     }
 
     .info-box {
       background: #F8FAFC;
       border-left: 4px solid #1A4D8F;
-      padding: 15px;
+      padding: 14px;
     }
     .info-box h4 {
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       color: #0F2847;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .info-box p {
-      font-size: 12px;
+      font-size: 11.5px;
       color: #475569;
-      line-height: 1.5;
+      line-height: 1.45;
     }
 
     .founder-box {
       background: #0F2847;
       color: #FFFFFF;
-      padding: 20px;
-      margin-top: 25px;
+      padding: 18px;
+      margin-top: 20px;
       display: flex;
-      gap: 20px;
+      gap: 18px;
       align-items: center;
     }
     .founder-box img {
-      width: 100px;
-      height: 100px;
+      width: 95px;
+      height: 95px;
       object-fit: cover;
       border: 2px solid #3B82F6;
     }
@@ -207,7 +207,7 @@
       font-size: 12px;
       color: #38BDF8;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
     .founder-box-content p {
       font-size: 11px;
@@ -215,72 +215,125 @@
       line-height: 1.5;
     }
 
-    /* CATALOG GRID IN PDF */
-    .cat-heading {
-      font-size: 18px;
-      font-weight: 800;
-      color: #1A4D8F;
+    /* TESTIMONIALS & GLOBAL REACH STYLES */
+    .testimonial-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-left: 4px solid #3B82F6;
+      padding: 16px;
       margin-bottom: 15px;
-      border-bottom: 1px solid #CBD5E1;
-      padding-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+    }
+    .stars {
+      color: #F59E0B;
+      font-size: 14px;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .testimonial-quote {
+      font-size: 12px;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+    .testimonial-author {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0F2847;
+    }
+    .testimonial-author span {
+      font-weight: 500;
+      color: #64748B;
+      font-size: 11px;
+
     }
 
+    .reach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 15px;
+    }
+    .reach-card {
+      background: #0F2847;
+      color: #FFFFFF;
+      padding: 14px;
+      text-align: center;
+    }
+    .reach-card h4 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #38BDF8;
+      margin-bottom: 6px;
+    }
+    .reach-card p {
+      font-size: 10.5px;
+      color: #E2E8F0;
+      line-height: 1.4;
+    }
+
+    /* FULL PRODUCT GRID (6 ITEMS PER PAGE TO FILL SPACE EVENLY) */
     .pdf-product-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 15px;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 14px;
+      flex-grow: 1;
     }
 
     .pdf-product-card {
-      border: 1px solid #E2E8F0;
+      border: 1px solid #CBD5E1;
       background: #FFFFFF;
-      padding: 10px;
+      padding: 12px;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
     }
     .pdf-card-img-wrapper {
       width: 100%;
-      height: 120px;
-      background: #F1F5F9;
+      height: 155px;
+      background: #F8FAFC;
       overflow: hidden;
       margin-bottom: 8px;
+      border: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .pdf-card-img-wrapper img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
+    .pdf-card-category {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #1A4D8F;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
     .pdf-card-title {
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 11.5px;
+      font-weight: 800;
       color: #0F172A;
-      margin-bottom: 4px;
+      margin-bottom: 5px;
+      line-height: 1.25;
     }
     .pdf-card-desc {
       font-size: 9.5px;
-      color: #64748B;
-      line-height: 1.35;
-    }
-    .pdf-badge {
-      display: inline-block;
-      font-size: 8px;
-      font-weight: 700;
-      color: #0284C7;
-      background: #E0F2FE;
-      padding: 2px 6px;
-      margin-top: 6px;
-      align-self: flex-start;
+      color: #475569;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
 
-  <!-- COVER PAGE -->
+  <!-- PAGE 1: COVER PAGE -->
   <div class="page cover-page">
     <div class="cover-header">
-      <img src="images/logo.png" class="cover-logo-img" alt="BM International Logo" />
+      <img src="images/bmi_hexagon_logo.png" class="cover-logo-img" alt="BM International Hexagon Logo" />
       <span class="cover-brand-title">BM INTERNATIONAL</span>
     </div>
     <div class="cover-center">
@@ -301,10 +354,10 @@
     </div>
   </div>
 
-  <!-- ABOUT & COMPANY PROFILE PAGE -->
+  <!-- PAGE 2: ABOUT COMPANY & FOUNDER -->
   <div class="page">
     <div class="page-header">
-      <img src="images/logo.png" class="page-header-logo" alt="Logo" />
+      <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
       <span class="page-header-title">About BM International</span>
     </div>
     
@@ -347,899 +400,1094 @@
     </div>
   </div>
 
-  <!-- PRODUCT CATALOG PAGES -->
+  <!-- PAGE 3: CLIENT TESTIMONIALS & GLOBAL REACH -->
+  <div class="page">
+    <div class="page-header">
+      <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+      <span class="page-header-title">Client Trust & Testimonials</span>
+    </div>
+
+    <h2 class="section-title">What Our Global Clients Say</h2>
+    
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"BM International has been our go-to sourcing agent in Pakistan for over 4 years. Moeen and his team handle quality inspection so rigorously that our defect rate dropped to near zero."</p>
+      <div class="testimonial-author">David M. — <span>Sourcing Director, USA</span></div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"Finding reliable garment factories in Pakistan was a challenge until we partnered with BMI. They managed our entire flannel line from sampling to final container loading smoothly."</p>
+      <div class="testimonial-author">Sophie L. — <span>Brand Owner, UK</span></div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-quote">"We've sourced cancellation lots and home textiles through BMI several times. Excellent value, transparent communication, and flawless AQL inspection process every time."</p>
+      <div class="testimonial-author">Ahmed S. — <span>Import Manager, UAE</span></div>
+    </div>
+
+    <h2 class="section-title" style="margin-top:20px;">Global Market Reach</h2>
+    <div class="reach-grid">
+      <div class="reach-card">
+        <h4>North America</h4>
+        <p>USA, Canada</p>
+      </div>
+      <div class="reach-card">
+        <h4>Europe</h4>
+        <p>UK, Germany, France, Netherlands, Italy</p>
+      </div>
+      <div class="reach-card">
+        <h4>Middle East</h4>
+        <p>UAE, Saudi Arabia, Qatar, Kuwait</p>
+      </div>
+      <div class="reach-card">
+        <h4>Asia Pacific</h4>
+        <p>Australia, Japan, South Korea</p>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>BM International | Client Testimonials & Global Footprint</span>
+      <span>bminternational.com.pk</span>
+    </div>
+  </div>
+
+  <!-- DYNAMIC CATALOG PAGES (6 ITEMS PER PAGE) -->
   
     <div class="page">
       <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 1)</span>
       </div>
-
-      <h3 class="cat-heading">APPAREL - FLANNEL SHIRTS JACKETS</h3>
 
       <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Mens Flannel Shirt 1.webp" alt="Mens Flannel Shirts" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Mens Flannel Shirt 1.webp" alt="Mens Flannel Shirts" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Mens Flannel Shirts</div>
             </div>
-            <div class="pdf-card-title">Mens Flannel Shirts</div>
             <div class="pdf-card-desc">Premium cotton flannel shirts in customizable plaid patterns for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Ladies Flannel Shirt (1).webp" alt="Ladies Flannel Shirts" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Ladies Flannel Shirt (1).webp" alt="Ladies Flannel Shirts" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Ladies Flannel Shirts</div>
             </div>
-            <div class="pdf-card-title">Ladies Flannel Shirts</div>
             <div class="pdf-card-desc">Soft, tailored flannel shirts in elegant plaid patterns for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Mens Line Jacket 1.webp" alt="Mens Line Jacket" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Mens Line Jacket 1.webp" alt="Mens Line Jacket" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Mens Line Jacket</div>
             </div>
-            <div class="pdf-card-title">Mens Line Jacket</div>
             <div class="pdf-card-desc">Lightweight lined plaid flannel jackets for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Ladies Line Jacket 1.webp" alt="Ladies Line Jacket" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Ladies Line Jacket 1.webp" alt="Ladies Line Jacket" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Ladies Line Jacket</div>
             </div>
-            <div class="pdf-card-title">Ladies Line Jacket</div>
             <div class="pdf-card-desc">Comfortable and stylish lined flannel jackets for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Mens Padded Lined Flannel Jacket 1.webp" alt="Mens Padded Lined Flannel Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Mens Padded Lined Flannel Jacket 1.webp" alt="Mens Padded Lined Flannel Jackets" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Mens Padded Lined Flannel Jackets</div>
             </div>
-            <div class="pdf-card-title">Mens Padded Lined Flannel Jackets</div>
             <div class="pdf-card-desc">Quilted padded lining providing extra warmth for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Ladies Padded Lined Flannel Jacket 1.webp" alt="Ladies Padded Lined Flannel Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Ladies Padded Lined Flannel Jacket 1.webp" alt="Ladies Padded Lined Flannel Jackets" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Ladies Padded Lined Flannel Jackets</div>
             </div>
-            <div class="pdf-card-title">Ladies Padded Lined Flannel Jackets</div>
             <div class="pdf-card-desc">Quilted padded lining flannel jackets tailored for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 2)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Mens Sherpa Lined Flannel Jacket 1.webp" alt="Mens Sherpa Lined Flannel Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Mens Sherpa Lined Flannel Jacket 1.webp" alt="Mens Sherpa Lined Flannel Jackets" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Mens Sherpa Lined Flannel Jackets</div>
             </div>
-            <div class="pdf-card-title">Mens Sherpa Lined Flannel Jackets</div>
             <div class="pdf-card-desc">Warm sherpa fleece lining for maximum cold weather protection for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Ladies Sherpa Lined Flannel Jacket 1.webp" alt="Ladies Sherpa Lined Flannel Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Ladies Sherpa Lined Flannel Jacket 1.webp" alt="Ladies Sherpa Lined Flannel Jackets" />
+              </div>
+              <span class="pdf-card-category">flannel shirts jackets</span>
+              <div class="pdf-card-title">Ladies Sherpa Lined Flannel Jackets</div>
             </div>
-            <div class="pdf-card-title">Ladies Sherpa Lined Flannel Jackets</div>
             <div class="pdf-card-desc">Cozy sherpa fleece lining flannel jackets designed for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">APPAREL - FLEECE KNITWEAR</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Fleece Pullover Hoodie 1.webp" alt="Fleece Pullover Hoodie" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Fleece Pullover Hoodie 1.webp" alt="Fleece Pullover Hoodie" />
+              </div>
+              <span class="pdf-card-category">fleece knitwear</span>
+              <div class="pdf-card-title">Fleece Pullover Hoodie</div>
             </div>
-            <div class="pdf-card-title">Fleece Pullover Hoodie</div>
             <div class="pdf-card-desc">Cozy and warm pullover hoodies made from premium fleece.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Fleece Mock Neck Zipper Jacket 1.webp" alt="Fleece Mock Neck Zipper Jacket" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Fleece Mock Neck Zipper Jacket 1.webp" alt="Fleece Mock Neck Zipper Jacket" />
+              </div>
+              <span class="pdf-card-category">fleece knitwear</span>
+              <div class="pdf-card-title">Fleece Mock Neck Zipper Jacket</div>
             </div>
-            <div class="pdf-card-title">Fleece Mock Neck Zipper Jacket</div>
             <div class="pdf-card-desc">Premium fleece jackets featuring a stylish mock neck and full zipper.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Fleece Sweatshirt 1.webp" alt="Fleece Sweatshirt" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Fleece Sweatshirt 1.webp" alt="Fleece Sweatshirt" />
+              </div>
+              <span class="pdf-card-category">fleece knitwear</span>
+              <div class="pdf-card-title">Fleece Sweatshirt</div>
             </div>
-            <div class="pdf-card-title">Fleece Sweatshirt</div>
             <div class="pdf-card-desc">Classic crewneck sweatshirts in soft fleece fabrics.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Fleece Pajamas 1.webp" alt="Fleece Pajamas" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Fleece Pajamas 1.webp" alt="Fleece Pajamas" />
+              </div>
+              <span class="pdf-card-category">fleece knitwear</span>
+              <div class="pdf-card-title">Fleece Pajamas</div>
             </div>
-            <div class="pdf-card-title">Fleece Pajamas</div>
             <div class="pdf-card-desc">Comfortable fleece pajama bottoms for loungewear.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 3)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Fleece Joggers 1.webp" alt="Fleece Joggers" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Fleece Joggers 1.webp" alt="Fleece Joggers" />
+              </div>
+              <span class="pdf-card-category">fleece knitwear</span>
+              <div class="pdf-card-title">Fleece Joggers</div>
             </div>
-            <div class="pdf-card-title">Fleece Joggers</div>
             <div class="pdf-card-desc">Athletic-cut fleece joggers with drawstring waist.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">APPAREL - DENIM JEANS</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Skinny Jeans 1.webp" alt="Skinny Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Skinny Jeans 1.webp" alt="Skinny Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Skinny Jeans</div>
             </div>
-            <div class="pdf-card-title">Skinny Jeans</div>
             <div class="pdf-card-desc">Snug-fit stretch denim jeans in various washes.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Slim Fit Jeans 1.webp" alt="Slim Fit Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Slim Fit Jeans 1.webp" alt="Slim Fit Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Slim Fit Jeans</div>
             </div>
-            <div class="pdf-card-title">Slim Fit Jeans</div>
             <div class="pdf-card-desc">Modern slim-cut jeans balancing style and comfort.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Straight Cut Jeans 1.webp" alt="Straight Cut Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Straight Cut Jeans 1.webp" alt="Straight Cut Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Straight Cut Jeans</div>
             </div>
-            <div class="pdf-card-title">Straight Cut Jeans</div>
             <div class="pdf-card-desc">Classic straight-leg denim jeans for everyday wear.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Bootcut Jeans 1.webp" alt="Bootcut Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Bootcut Jeans 1.webp" alt="Bootcut Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Bootcut Jeans</div>
             </div>
-            <div class="pdf-card-title">Bootcut Jeans</div>
             <div class="pdf-card-desc">Slightly flared hems designed to fit comfortably over boots.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Flapper Jeans 1.webp" alt="Flapper Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Flapper Jeans 1.webp" alt="Flapper Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Flapper Jeans</div>
             </div>
-            <div class="pdf-card-title">Flapper Jeans</div>
             <div class="pdf-card-desc">Trendy wide-leg cropped denim pants.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 4)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Cargo Jeans 1.webp" alt="Cargo Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Cargo Jeans 1.webp" alt="Cargo Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Cargo Jeans</div>
             </div>
-            <div class="pdf-card-title">Cargo Jeans</div>
             <div class="pdf-card-desc">Utility-focused denim featuring multiple cargo pockets.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Carpenter Jeans 1.webp" alt="Carpenter Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Carpenter Jeans 1.webp" alt="Carpenter Jeans" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Carpenter Jeans</div>
             </div>
-            <div class="pdf-card-title">Carpenter Jeans</div>
             <div class="pdf-card-desc">Durable utility jeans with tool pockets and hammer loops.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Regular Denim 1.webp" alt="Regular Denim" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Regular Denim 1.webp" alt="Regular Denim" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Regular Denim</div>
             </div>
-            <div class="pdf-card-title">Regular Denim</div>
             <div class="pdf-card-desc">Standard fit durable denim trousers.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/Short Body Denim Jacket 1.webp" alt="Short Body Denim Jacket" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/Short Body Denim Jacket 1.webp" alt="Short Body Denim Jacket" />
+              </div>
+              <span class="pdf-card-category">denim jeans</span>
+              <div class="pdf-card-title">Short Body Denim Jacket</div>
             </div>
-            <div class="pdf-card-title">Short Body Denim Jacket</div>
             <div class="pdf-card-desc">Cropped-style denim jackets in premium washes.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">APPAREL - HOODIES SWEATSHIRTS</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/pullover-hoodie-a.webp" alt="Pullover Hoodie" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/pullover-hoodie-a.webp" alt="Pullover Hoodie" />
+              </div>
+              <span class="pdf-card-category">hoodies sweatshirts</span>
+              <div class="pdf-card-title">Pullover Hoodie</div>
             </div>
-            <div class="pdf-card-title">Pullover Hoodie</div>
             <div class="pdf-card-desc">Comfortable pullover hoodies in custom weights.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/zipper-hoodie-a.webp" alt="Zipper Hoodie" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/zipper-hoodie-a.webp" alt="Zipper Hoodie" />
+              </div>
+              <span class="pdf-card-category">hoodies sweatshirts</span>
+              <div class="pdf-card-title">Zipper Hoodie</div>
             </div>
-            <div class="pdf-card-title">Zipper Hoodie</div>
             <div class="pdf-card-desc">Full-zip hoodies, perfect for layering.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 5)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/crewneck-sweatshirt-a.webp" alt="Crewneck Sweatshirt" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/crewneck-sweatshirt-a.webp" alt="Crewneck Sweatshirt" />
+              </div>
+              <span class="pdf-card-category">hoodies sweatshirts</span>
+              <div class="pdf-card-title">Crewneck Sweatshirt</div>
             </div>
-            <div class="pdf-card-title">Crewneck Sweatshirt</div>
             <div class="pdf-card-desc">Classic crewneck sweatshirts in soft cotton fleece.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/oversized-hoodie-a.webp" alt="Oversized Hoodie" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/oversized-hoodie-a.webp" alt="Oversized Hoodie" />
+              </div>
+              <span class="pdf-card-category">hoodies sweatshirts</span>
+              <div class="pdf-card-title">Oversized Hoodie</div>
             </div>
-            <div class="pdf-card-title">Oversized Hoodie</div>
             <div class="pdf-card-desc">Trendy oversized baggy hoodies in heavy fabrics.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">APPAREL - TROUSERS BOTTOMS</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-cotton-twill-pants-a.webp" alt="Mens Cotton Twill Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-cotton-twill-pants-a.webp" alt="Mens Cotton Twill Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Mens Cotton Twill Pants</div>
             </div>
-            <div class="pdf-card-title">Mens Cotton Twill Pants</div>
             <div class="pdf-card-desc">Durable and breathable cotton twill trousers for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/ladies-cotton-twill-pants-a.webp" alt="Ladies Cotton Twill Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/ladies-cotton-twill-pants-a.webp" alt="Ladies Cotton Twill Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Ladies Cotton Twill Pants</div>
             </div>
-            <div class="pdf-card-title">Ladies Cotton Twill Pants</div>
             <div class="pdf-card-desc">Comfortable and stylish cotton twill trousers for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-stretch-twill-pants-a.webp" alt="Mens Stretch Comfort Twill Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-stretch-twill-pants-a.webp" alt="Mens Stretch Comfort Twill Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Mens Stretch Comfort Twill Pants</div>
             </div>
-            <div class="pdf-card-title">Mens Stretch Comfort Twill Pants</div>
             <div class="pdf-card-desc">Flexible stretch twill pants for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/ladies-stretch-twill-pants-a.webp" alt="Ladies Stretch Comfort Twill Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/ladies-stretch-twill-pants-a.webp" alt="Ladies Stretch Comfort Twill Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Ladies Stretch Comfort Twill Pants</div>
             </div>
-            <div class="pdf-card-title">Ladies Stretch Comfort Twill Pants</div>
             <div class="pdf-card-desc">Flexible stretch twill pants designed for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 6)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/cotton-lounge-pants-a.webp" alt="Cotton Lounge Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/cotton-lounge-pants-a.webp" alt="Cotton Lounge Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Cotton Lounge Pants</div>
             </div>
-            <div class="pdf-card-title">Cotton Lounge Pants</div>
             <div class="pdf-card-desc">Lightweight, breathable cotton loungewear pants.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/flannel-lounge-pants-a.webp" alt="Flannel Lounge Pants" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/flannel-lounge-pants-a.webp" alt="Flannel Lounge Pants" />
+              </div>
+              <span class="pdf-card-category">trousers bottoms</span>
+              <div class="pdf-card-title">Flannel Lounge Pants</div>
             </div>
-            <div class="pdf-card-title">Flannel Lounge Pants</div>
             <div class="pdf-card-desc">Warm and cozy flannel loungewear pants.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">APPAREL - SPORTSWEAR SLEEPWEAR</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-cotton-sleep-suit-a.webp" alt="Mens Cotton Sleep Suit" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-cotton-sleep-suit-a.webp" alt="Mens Cotton Sleep Suit" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Mens Cotton Sleep Suit</div>
             </div>
-            <div class="pdf-card-title">Mens Cotton Sleep Suit</div>
             <div class="pdf-card-desc">Two-piece breathable cotton sleepwear set for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/womens-cotton-sleep-suit-a.webp" alt="Womens Cotton Sleep Suit" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/womens-cotton-sleep-suit-a.webp" alt="Womens Cotton Sleep Suit" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Womens Cotton Sleep Suit</div>
             </div>
-            <div class="pdf-card-title">Womens Cotton Sleep Suit</div>
             <div class="pdf-card-desc">Soft and comfortable cotton sleepwear set for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-flannel-sleep-suit-a.webp" alt="Mens Flannel Sleep Suit" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-flannel-sleep-suit-a.webp" alt="Mens Flannel Sleep Suit" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Mens Flannel Sleep Suit</div>
             </div>
-            <div class="pdf-card-title">Mens Flannel Sleep Suit</div>
             <div class="pdf-card-desc">Warm two-piece flannel sleepwear set for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/womens-flannel-sleep-suit-a.webp" alt="Womens Flannel Sleep Suit" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/womens-flannel-sleep-suit-a.webp" alt="Womens Flannel Sleep Suit" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Womens Flannel Sleep Suit</div>
             </div>
-            <div class="pdf-card-title">Womens Flannel Sleep Suit</div>
             <div class="pdf-card-desc">Cozy two-piece flannel sleepwear set for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 7)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-sweat-tops-a.webp" alt="Mens Sweat Absorbent Tops" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-sweat-tops-a.webp" alt="Mens Sweat Absorbent Tops" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Mens Sweat Absorbent Tops</div>
             </div>
-            <div class="pdf-card-title">Mens Sweat Absorbent Tops</div>
             <div class="pdf-card-desc">Moisture-wicking athletic tops for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/ladies-sweat-tops-a.webp" alt="Ladies Sweat Absorbent Tops" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/ladies-sweat-tops-a.webp" alt="Ladies Sweat Absorbent Tops" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Ladies Sweat Absorbent Tops</div>
             </div>
-            <div class="pdf-card-title">Ladies Sweat Absorbent Tops</div>
             <div class="pdf-card-desc">Moisture-wicking athletic tops for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-sweat-bottoms-a.webp" alt="Mens Sweat Absorbent Bottoms" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-sweat-bottoms-a.webp" alt="Mens Sweat Absorbent Bottoms" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Mens Sweat Absorbent Bottoms</div>
             </div>
-            <div class="pdf-card-title">Mens Sweat Absorbent Bottoms</div>
             <div class="pdf-card-desc">Moisture-wicking athletic pants and shorts for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/ladies-sweat-bottoms-a.webp" alt="Ladies Sweat Absorbent Bottoms" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/ladies-sweat-bottoms-a.webp" alt="Ladies Sweat Absorbent Bottoms" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Ladies Sweat Absorbent Bottoms</div>
             </div>
-            <div class="pdf-card-title">Ladies Sweat Absorbent Bottoms</div>
             <div class="pdf-card-desc">Moisture-wicking athletic pants and shorts for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/mens-sweat-jackets-a.webp" alt="Mens Sweat Absorbent Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/mens-sweat-jackets-a.webp" alt="Mens Sweat Absorbent Jackets" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Mens Sweat Absorbent Jackets</div>
             </div>
-            <div class="pdf-card-title">Mens Sweat Absorbent Jackets</div>
             <div class="pdf-card-desc">Lightweight performance jackets for men.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/ladies-sweat-jackets-a.webp" alt="Ladies Sweat Absorbent Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/ladies-sweat-jackets-a.webp" alt="Ladies Sweat Absorbent Jackets" />
+              </div>
+              <span class="pdf-card-category">sportswear sleepwear</span>
+              <div class="pdf-card-title">Ladies Sweat Absorbent Jackets</div>
             </div>
-            <div class="pdf-card-title">Ladies Sweat Absorbent Jackets</div>
             <div class="pdf-card-desc">Lightweight performance jackets designed for women.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
       </div>
 
       <div class="page-footer">
-        <span>BM International | Product Showcase</span>
+        <span>BM International | Product Portfolio Showcase</span>
         <span>bminternational.com.pk</span>
       </div>
     </div>
-    
+  
     <div class="page">
       <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 8)</span>
       </div>
-
-      <h3 class="cat-heading">APPAREL - KIDS WEAR</h3>
 
       <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-infant-rompers-a.webp" alt="Kids Infant Rompers" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-infant-rompers-a.webp" alt="Kids Infant Rompers" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Infant Rompers</div>
             </div>
-            <div class="pdf-card-title">Kids Infant Rompers</div>
             <div class="pdf-card-desc">Ultra-soft and safe cotton rompers for babies.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-shorts-a.webp" alt="Kids Shorts" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-shorts-a.webp" alt="Kids Shorts" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Shorts</div>
             </div>
-            <div class="pdf-card-title">Kids Shorts</div>
             <div class="pdf-card-desc">Comfortable and durable shorts for active children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-tshirt-a.webp" alt="Kids T-Shirt" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-tshirt-a.webp" alt="Kids T-Shirt" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids T-Shirt</div>
             </div>
-            <div class="pdf-card-title">Kids T-Shirt</div>
             <div class="pdf-card-desc">Soft, breathable cotton tees with kid-friendly dyes.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-pajamas-a.webp" alt="Kids Pajamas" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-pajamas-a.webp" alt="Kids Pajamas" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Pajamas</div>
             </div>
-            <div class="pdf-card-title">Kids Pajamas</div>
             <div class="pdf-card-desc">Cozy sleepwear bottoms for kids.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-pajama-suits-a.webp" alt="Kids Pajama Suits" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-pajama-suits-a.webp" alt="Kids Pajama Suits" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Pajama Suits</div>
             </div>
-            <div class="pdf-card-title">Kids Pajama Suits</div>
             <div class="pdf-card-desc">Two-piece matching pajama sets for children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-shorts-suits-a.webp" alt="Kids Shorts Suits" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-shorts-suits-a.webp" alt="Kids Shorts Suits" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Shorts Suits</div>
             </div>
-            <div class="pdf-card-title">Kids Shorts Suits</div>
             <div class="pdf-card-desc">Matching t-shirt and shorts sets for kids.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 9)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-jeans-a.webp" alt="Kids Jeans" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-jeans-a.webp" alt="Kids Jeans" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Jeans</div>
             </div>
-            <div class="pdf-card-title">Kids Jeans</div>
             <div class="pdf-card-desc">Durable stretch denim jeans for children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-denim-shorts-a.webp" alt="Kids Denim Shorts" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-denim-shorts-a.webp" alt="Kids Denim Shorts" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Denim Shorts</div>
             </div>
-            <div class="pdf-card-title">Kids Denim Shorts</div>
             <div class="pdf-card-desc">Sturdy and stylish denim shorts for kids.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-denim-jacket-a.webp" alt="Kids Denim Jackets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-denim-jacket-a.webp" alt="Kids Denim Jackets" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Denim Jackets</div>
             </div>
-            <div class="pdf-card-title">Kids Denim Jackets</div>
             <div class="pdf-card-desc">Classic denim jackets scaled for children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-hoodie-a.webp" alt="Kids Hoodie" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-hoodie-a.webp" alt="Kids Hoodie" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Hoodie</div>
             </div>
-            <div class="pdf-card-title">Kids Hoodie</div>
             <div class="pdf-card-desc">Warm and cozy fleece hoodies for kids.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-sweatshirt-a.webp" alt="Kids Sweatshirt" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-sweatshirt-a.webp" alt="Kids Sweatshirt" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Sweatshirt</div>
             </div>
-            <div class="pdf-card-title">Kids Sweatshirt</div>
             <div class="pdf-card-desc">Soft crewneck sweatshirts for children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-fleece-pajamas-a.webp" alt="Kids Fleece Pajamas" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-fleece-pajamas-a.webp" alt="Kids Fleece Pajamas" />
+              </div>
+              <span class="pdf-card-category">kids wear</span>
+              <div class="pdf-card-title">Kids Fleece Pajamas</div>
             </div>
-            <div class="pdf-card-title">Kids Fleece Pajamas</div>
             <div class="pdf-card-desc">Warm fleece sleepwear bottoms for kids.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
       </div>
 
       <div class="page-footer">
-        <span>BM International | Product Showcase</span>
+        <span>BM International | Product Portfolio Showcase</span>
         <span>bminternational.com.pk</span>
       </div>
     </div>
-    
+  
     <div class="page">
       <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 10)</span>
       </div>
-
-      <h3 class="cat-heading">ACCESSORIES - CAPS HEADWEAR</h3>
 
       <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/baseball-caps-a.webp" alt="Baseball Caps" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/baseball-caps-a.webp" alt="Baseball Caps" />
+              </div>
+              <span class="pdf-card-category">caps headwear</span>
+              <div class="pdf-card-title">Baseball Caps</div>
             </div>
-            <div class="pdf-card-title">Baseball Caps</div>
             <div class="pdf-card-desc">Custom baseball caps for brands and promotions.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/snapbacks-a.webp" alt="Snapbacks" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/snapbacks-a.webp" alt="Snapbacks" />
+              </div>
+              <span class="pdf-card-category">caps headwear</span>
+              <div class="pdf-card-title">Snapbacks</div>
             </div>
-            <div class="pdf-card-title">Snapbacks</div>
             <div class="pdf-card-desc">Flat-brim snapback caps with customizable embroidery.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/beanies-a.webp" alt="Beanies" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/beanies-a.webp" alt="Beanies" />
+              </div>
+              <span class="pdf-card-category">caps headwear</span>
+              <div class="pdf-card-title">Beanies</div>
             </div>
-            <div class="pdf-card-title">Beanies</div>
             <div class="pdf-card-desc">Warm knitted beanies for winter wear.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/bucket-hats-a.webp" alt="Bucket Hats" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/bucket-hats-a.webp" alt="Bucket Hats" />
+              </div>
+              <span class="pdf-card-category">caps headwear</span>
+              <div class="pdf-card-title">Bucket Hats</div>
             </div>
-            <div class="pdf-card-title">Bucket Hats</div>
             <div class="pdf-card-desc">Trendy cotton bucket hats for sun protection.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/visors-a.webp" alt="Visors" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/visors-a.webp" alt="Visors" />
+              </div>
+              <span class="pdf-card-category">caps headwear</span>
+              <div class="pdf-card-title">Visors</div>
             </div>
-            <div class="pdf-card-title">Visors</div>
             <div class="pdf-card-desc">Sporty sun visors with adjustable straps.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">ACCESSORIES - FACE MASKS</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/reusable-masks-a.webp" alt="Reusable Fabric Masks" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/reusable-masks-a.webp" alt="Reusable Fabric Masks" />
+              </div>
+              <span class="pdf-card-category">face masks</span>
+              <div class="pdf-card-title">Reusable Fabric Masks</div>
             </div>
-            <div class="pdf-card-title">Reusable Fabric Masks</div>
             <div class="pdf-card-desc">Washable and breathable multi-layer cotton face masks.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 11)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/disposable-masks-a.webp" alt="Disposable Masks" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/disposable-masks-a.webp" alt="Disposable Masks" />
+              </div>
+              <span class="pdf-card-category">face masks</span>
+              <div class="pdf-card-title">Disposable Masks</div>
             </div>
-            <div class="pdf-card-title">Disposable Masks</div>
             <div class="pdf-card-desc">Lightweight protective disposable face masks.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kids-masks-a.webp" alt="Kids Masks" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kids-masks-a.webp" alt="Kids Masks" />
+              </div>
+              <span class="pdf-card-category">face masks</span>
+              <div class="pdf-card-title">Kids Masks</div>
             </div>
-            <div class="pdf-card-title">Kids Masks</div>
             <div class="pdf-card-desc">Soft fabric masks scaled and designed for children.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">HOME-TEXTILES - KITCHEN BATH TEXTILES</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/kitchen-towels-a.webp" alt="Kitchen Towels" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/kitchen-towels-a.webp" alt="Kitchen Towels" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Kitchen Towels</div>
             </div>
-            <div class="pdf-card-title">Kitchen Towels</div>
             <div class="pdf-card-desc">Highly absorbent cotton towels for kitchen use.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/wash-towels-a.webp" alt="Wash Towels" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/wash-towels-a.webp" alt="Wash Towels" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Wash Towels</div>
             </div>
-            <div class="pdf-card-title">Wash Towels</div>
             <div class="pdf-card-desc">Soft and durable washcloths for daily cleansing.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-bath-towels-1.webp" alt="Bath Towels" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bath-towels-1.webp" alt="Bath Towels" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Bath Towels</div>
             </div>
-            <div class="pdf-card-title">Bath Towels</div>
             <div class="pdf-card-desc">Plush, high-pile cotton towels for bath use.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-bath-mats-1.webp" alt="Bath Mats" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bath-mats-1.webp" alt="Bath Mats" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Bath Mats</div>
             </div>
-            <div class="pdf-card-title">Bath Mats</div>
             <div class="pdf-card-desc">Thick, slip-resistant woven cotton bath mats.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
+      </div>
+
+      <div class="page-footer">
+        <span>BM International | Product Portfolio Showcase</span>
+        <span>bminternational.com.pk</span>
+      </div>
+    </div>
+  
+    <div class="page">
+      <div class="page-header">
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 12)</span>
+      </div>
+
+      <div class="pdf-product-grid">
+        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-hand-towels-1.webp" alt="Hand Towels" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-hand-towels-1.webp" alt="Hand Towels" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Hand Towels</div>
             </div>
-            <div class="pdf-card-title">Hand Towels</div>
             <div class="pdf-card-desc">Soft hand towels in custom weaves and border designs.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-aprons-1.webp" alt="Aprons" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-aprons-1.webp" alt="Aprons" />
+              </div>
+              <span class="pdf-card-category">kitchen bath textiles</span>
+              <div class="pdf-card-title">Aprons</div>
             </div>
-            <div class="pdf-card-title">Aprons</div>
             <div class="pdf-card-desc">Protective kitchen aprons in durable twill or canvas.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
-      </div>
-
-      <div class="page-footer">
-        <span>BM International | Product Showcase</span>
-        <span>bminternational.com.pk</span>
-      </div>
-    </div>
-    
-    <div class="page">
-      <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
-      </div>
-
-      <h3 class="cat-heading">HOME-TEXTILES - BEDDING LINEN</h3>
-
-      <div class="pdf-product-grid">
-        
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-bed-sheet-sets-1.webp" alt="Bed Sheet Sets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-bed-sheet-sets-1.webp" alt="Bed Sheet Sets" />
+              </div>
+              <span class="pdf-card-category">bedding linen</span>
+              <div class="pdf-card-title">Bed Sheet Sets</div>
             </div>
-            <div class="pdf-card-title">Bed Sheet Sets</div>
             <div class="pdf-card-desc">Flat sheets, fitted sheets, and pillowcase sets in premium thread counts.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-fitted-sheets-1.webp" alt="Fitted Sheets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-fitted-sheets-1.webp" alt="Fitted Sheets" />
+              </div>
+              <span class="pdf-card-category">bedding linen</span>
+              <div class="pdf-card-title">Fitted Sheets</div>
             </div>
-            <div class="pdf-card-title">Fitted Sheets</div>
             <div class="pdf-card-desc">Deep-pocket elasticized fitted sheets.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-duvet-covers-1.webp" alt="Duvet Covers" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-duvet-covers-1.webp" alt="Duvet Covers" />
+              </div>
+              <span class="pdf-card-category">bedding linen</span>
+              <div class="pdf-card-title">Duvet Covers</div>
             </div>
-            <div class="pdf-card-title">Duvet Covers</div>
             <div class="pdf-card-desc">Elegant duvet covers with button or zipper closures.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/3-kitchen-bath-bedding-textiles-pillow-cases-comforter-sets-1.webp" alt="Pillow Cases & Comforter Sets" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/3-kitchen-bath-bedding-textiles-pillow-cases-comforter-sets-1.webp" alt="Pillow Cases & Comforter Sets" />
+              </div>
+              <span class="pdf-card-category">bedding linen</span>
+              <div class="pdf-card-title">Pillow Cases & Comforter Sets</div>
             </div>
-            <div class="pdf-card-title">Pillow Cases & Comforter Sets</div>
             <div class="pdf-card-desc">Matching comforters and decorative pillow shams.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
       </div>
 
       <div class="page-footer">
-        <span>BM International | Product Showcase</span>
+        <span>BM International | Product Portfolio Showcase</span>
         <span>bminternational.com.pk</span>
       </div>
     </div>
-    
+  
     <div class="page">
       <div class="page-header">
-        <img src="images/logo.png" class="page-header-logo" alt="Logo" />
-        <span class="page-header-title">Product Showcase</span>
+        <img src="images/bmi_hexagon_logo.png" class="page-header-logo" alt="Logo" />
+        <span class="page-header-title">Product Showcase (Page 13)</span>
       </div>
-
-      <h3 class="cat-heading">HOME-TEXTILES - RAGS</h3>
 
       <div class="pdf-product-grid">
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/white-cotton-rags-a.webp" alt="White Cotton Rags" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/white-cotton-rags-a.webp" alt="White Cotton Rags" />
+              </div>
+              <span class="pdf-card-category">rags</span>
+              <div class="pdf-card-title">White Cotton Rags</div>
             </div>
-            <div class="pdf-card-title">White Cotton Rags</div>
             <div class="pdf-card-desc">Premium metal-free white cotton cleaning rags for industrial use.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/multi-color-rags-a.webp" alt="Multi Color Cotton Rags" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/multi-color-rags-a.webp" alt="Multi Color Cotton Rags" />
+              </div>
+              <span class="pdf-card-category">rags</span>
+              <div class="pdf-card-title">Multi Color Cotton Rags</div>
             </div>
-            <div class="pdf-card-title">Multi Color Cotton Rags</div>
             <div class="pdf-card-desc">Eco-friendly colored cotton rags for general cleaning.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
           <div class="pdf-product-card">
-            <div class="pdf-card-img-wrapper">
-              <img src="images/products/4-rags-assorted-rags-1.webp" alt="Assorted Rags" />
+            <div>
+              <div class="pdf-card-img-wrapper">
+                <img src="images/products/4-rags-assorted-rags-1.webp" alt="Assorted Rags" />
+              </div>
+              <span class="pdf-card-category">rags</span>
+              <div class="pdf-card-title">Assorted Rags</div>
             </div>
-            <div class="pdf-card-title">Assorted Rags</div>
             <div class="pdf-card-desc">Absorbent mixed fabric rags for industrial spills.</div>
-            <span class="pdf-badge">.WebP Optimized</span>
           </div>
         
       </div>
 
       <div class="page-footer">
-        <span>BM International | Product Showcase</span>
+        <span>BM International | Product Portfolio Showcase</span>
         <span>bminternational.com.pk</span>
       </div>
     </div>
-    
+  
 
 </body>
 </html>
