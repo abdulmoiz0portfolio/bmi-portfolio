@@ -174,14 +174,23 @@
       <div class="chat-header">
         <div class="header-brand">
           <div class="brand-avatar">
-            <span class="online-indicator"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
+            <span class="online-indicator"></span>
           </div>
           <div class="brand-text">
-            <h3>BMI Sourcing AI <span class="badge-tag">VERIFIED</span></h3>
-            <p>⚡ Online • Instant Textile Concierge</p>
+            <div class="brand-title-row">
+              <h3>BMI Sourcing AI</h3>
+              <span class="verified-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                Verified
+              </span>
+            </div>
+            <p class="status-text">
+              <span class="status-dot"></span>
+              Instant Textile Concierge
+            </p>
           </div>
         </div>
         <div class="header-controls">
@@ -192,7 +201,12 @@
           <button id="ai-chat-reset" title="Reset Chat" aria-label="Reset Conversation">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
           </button>
-          <button id="ai-chat-close" title="Close" aria-label="Close Chat Window">&times;</button>
+          <button id="ai-chat-close" title="Close" aria-label="Close Chat Window">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
         </div>
       </div>
 
