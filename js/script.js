@@ -60,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get form data
             const formData = new FormData(contactForm);
             
+            // Check Turnstile Verification
+            const turnstileResponse = formData.get('cf-turnstile-response');
+            if (!turnstileResponse) {
+                if (formError) {
+                    formError.textContent = "Please complete the 'Verify you are human' challenge first.";
+                    formError.style.display = 'block';
+                }
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+                return;
+            }
+            
             // Post via AJAX to FormSubmit
             fetch(contactForm.action, {
                 method: "POST",

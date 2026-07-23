@@ -33,6 +33,9 @@
     <!-- Google Fonts (Optimized for Render Blocking) -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 
+    <!-- Cloudflare Turnstile Verification API -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
+
     <!-- JSON-LD Structured Data: Schema.org Organization + WebSite -->
     <script type="application/ld+json">
     [
@@ -464,6 +467,10 @@
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
                     </div>
+                    
+                    <!-- Cloudflare Turnstile Challenge -->
+                    <div class="cf-turnstile" data-sitekey="1x00000000000000000000AA" data-theme="light" style="margin-bottom: 20px;"></div>
+                    
                     <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
