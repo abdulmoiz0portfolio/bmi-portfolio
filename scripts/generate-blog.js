@@ -4,7 +4,7 @@ const path = require('path');
 // Configuration
 const SITE_URL = 'https://bminternational.com.pk';
 const BLOG_DIR = path.join(__dirname, '..', 'content', 'articles');
-const OUT_DIR = path.join(__dirname, '..', 'articles');
+const OUT_DIR = path.join(__dirname, '..', 'blogs');
 const TEMPLATES_DIR = path.join(__dirname, '..', 'templates');
 const ROOT_DIR = path.join(__dirname, '..');
 const ARTICLES_PER_PAGE = 5;
@@ -186,7 +186,7 @@ function generate() {
         }
         
         // Canonical URL
-        const canonicalUrl = `${SITE_URL}/articles/${articleSlug}`;
+        const canonicalUrl = `${SITE_URL}/blogs/${articleSlug}`;
         
         // Build JSON-LD structured data (Article + Breadcrumbs)
         const schemas = [
@@ -227,8 +227,8 @@ function generate() {
                     {
                         "@type": "ListItem",
                         "position": 2,
-                        "name": "Articles",
-                        "item": `${SITE_URL}/articles/`
+                        "name": "Blogs",
+                        "item": `${SITE_URL}/blogs/`
                     },
                     {
                         "@type": "ListItem",
@@ -259,14 +259,14 @@ function generate() {
             const excerpt = rMeta.description.length > 120 ? rMeta.description.substring(0, 117) + '...' : rMeta.description;
             relatedHtml += `
             <div class="article-card">
-                <a href="../../articles/${rMeta.slug}/" class="card-img-link">
+                <a href="../../blogs/${rMeta.slug}/" class="card-img-link">
                     <img class="card-img" src="../../${rMeta.featuredImage}" alt="${rMeta.title}" loading="lazy">
                 </a>
                 <div class="card-body">
                     <span class="card-date">${rMeta.publishedDate}</span>
-                    <h3 class="card-title"><a href="../../articles/${rMeta.slug}/">${rMeta.title}</a></h3>
+                    <h3 class="card-title"><a href="../../blogs/${rMeta.slug}/">${rMeta.title}</a></h3>
                     <p class="card-excerpt">${excerpt}</p>
-                    <a href="../../articles/${rMeta.slug}/" class="card-readmore">Read Article <i class="fas fa-arrow-right"></i></a>
+                    <a href="../../blogs/${rMeta.slug}/" class="card-readmore">Read Article <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>`;
         });
@@ -289,7 +289,7 @@ function generate() {
             .replace(/{{JSON_LD_SCHEMA}}/g, JSON.stringify(schemas, null, 2));
             
         fs.writeFileSync(path.join(articleDir, 'index.html'), pageHtml);
-        console.log(`Generated article: /articles/${articleSlug}`);
+        console.log(`Generated article: /blogs/${articleSlug}`);
     });
     
     // 4. Generate Listing pages (with pagination)
@@ -310,14 +310,14 @@ function generate() {
                 const excerpt = meta.description.length > 140 ? meta.description.substring(0, 137) + '...' : meta.description;
                 gridHtml += `
                 <div class="article-card">
-                    <a href="${rootPath}articles/${meta.slug}/" class="card-img-link">
+                    <a href="${rootPath}blogs/${meta.slug}/" class="card-img-link">
                         <img class="card-img" src="${rootPath}${meta.featuredImage}" alt="${meta.title}" loading="lazy">
                     </a>
                     <div class="card-body">
                         <span class="card-date">${meta.publishedDate}</span>
-                        <h2 class="card-title"><a href="${rootPath}articles/${meta.slug}/">${meta.title}</a></h2>
+                        <h2 class="card-title"><a href="${rootPath}blogs/${meta.slug}/">${meta.title}</a></h2>
                         <p class="card-excerpt">${excerpt}</p>
-                        <a href="${rootPath}articles/${meta.slug}/" class="card-readmore">Read Article <i class="fas fa-arrow-right"></i></a>
+                        <a href="${rootPath}blogs/${meta.slug}/" class="card-readmore">Read Article <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>`;
             });
@@ -331,7 +331,7 @@ function generate() {
         if (page === 1) {
             paginationHtml += `<span class="pagination-btn disabled"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</span>`;
         } else {
-            const prevUrl = page === 2 ? `${rootPath}articles/` : `${rootPath}articles/page/${page - 1}/`;
+            const prevUrl = page === 2 ? `${rootPath}blogs/` : `${rootPath}blogs/page/${page - 1}/`;
             paginationHtml += `<a href="${prevUrl}" class="pagination-btn"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</a>`;
         }
         
@@ -342,16 +342,16 @@ function generate() {
         if (page === totalPages) {
             paginationHtml += `<span class="pagination-btn disabled">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></span>`;
         } else {
-            const nextUrl = `${rootPath}articles/page/${page + 1}/`;
+            const nextUrl = `${rootPath}blogs/page/${page + 1}/`;
             paginationHtml += `<a href="${nextUrl}" class="pagination-btn">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></a>`;
         }
         
         // Page Title & Meta
         const pageTitle = page === 1 
-            ? 'BM International Articles | Sourcing & Garment Manufacturing Sourcing Blog' 
-            : `Articles Page ${page} | Sourcing & Garment Manufacturing Blog`;
+            ? 'BM International Blogs | Sourcing & Garment Manufacturing Sourcing Blog' 
+            : `Blogs Page ${page} | Sourcing & Garment Manufacturing Blog`;
         const pageDesc = 'Read our expert articles and guides on apparel sourcing, factory auditing, customs clearance, private label clothing, and shipping from Pakistan.';
-        const canonicalUrl = page === 1 ? `${SITE_URL}/articles/` : `${SITE_URL}/articles/page/${page}/`;
+        const canonicalUrl = page === 1 ? `${SITE_URL}/blogs/` : `${SITE_URL}/blogs/page/${page}/`;
         
         let listHtml = listTemplate
             .replace(/{{ROOT_PATH}}/g, rootPath)
@@ -365,14 +365,14 @@ function generate() {
         // Write file
         if (page === 1) {
             fs.writeFileSync(path.join(OUT_DIR, 'index.html'), listHtml);
-            console.log('Generated index listing: /articles/index.html');
+            console.log('Generated index listing: /blogs/index.html');
         } else {
             const pageDir = path.join(OUT_DIR, 'page', String(page));
             if (!fs.existsSync(pageDir)) {
                 fs.mkdirSync(pageDir, { recursive: true });
             }
             fs.writeFileSync(path.join(pageDir, 'index.html'), listHtml);
-            console.log(`Generated page ${page} listing: /articles/page/${page}/index.html`);
+            console.log(`Generated page ${page} listing: /blogs/page/${page}/index.html`);
         }
     }
     
@@ -386,7 +386,7 @@ function generate() {
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>${SITE_URL}/articles/</loc>
+    <loc>${SITE_URL}/blogs/</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -394,7 +394,7 @@ function generate() {
 
     articles.forEach(art => {
         sitemapXml += `  <url>
-    <loc>${SITE_URL}/articles/${art.metadata.slug}/</loc>
+    <loc>${SITE_URL}/blogs/${art.metadata.slug}/</loc>
     <lastmod>${art.metadata.updatedDate}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -408,7 +408,7 @@ function generate() {
     // 6. Generate/Update robots.txt
     const robotsTxt = `User-agent: *
 Allow: /
-Allow: /articles/
+Allow: /blogs/
 
 Sitemap: ${SITE_URL}/sitemap.xml
 `;
