@@ -80,16 +80,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok.');
+            })
             .then(data => {
-                if (data.success || data.ok || response.ok) {
+                if (data.success === "true" || data.success === true || data.ok) {
                     contactForm.reset();
+                    if (window.turnstile) {
+                        window.turnstile.reset();
+                    }
                     formSuccess.style.display = 'block';
+                    if (formError) formError.style.display = 'none';
                     setTimeout(() => {
                         formSuccess.style.display = 'none';
                     }, 8000);
                 } else {
-                    if (formError) formError.style.display = 'block';
+                    if (formError) {
+                        formError.textContent = "Oops! Something went wrong. Please try again.";
+                        formError.style.display = 'block';
+                    }
                 }
             })
             .catch(error => {
