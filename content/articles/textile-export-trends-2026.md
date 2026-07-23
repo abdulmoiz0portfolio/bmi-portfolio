@@ -1,7 +1,7 @@
 ---
 title: "Pakistan Textile Export Trends 2026: B2B Sourcing and Garment Manufacturing Strategy"
-seoTitle: "Pakistan Textile Export & Garment Sourcing Trends 2026 | B2B Guide"
-description: "Discover the latest 2026 trends in Pakistan's textile exports, garment manufacturing, and sustainable global apparel sourcing strategies."
+seoTitle: "Pakistan Textile Export & Sourcing Trends 2026 | B2B Guide"
+description: "Discover the latest 2026 trends in Pakistan's textile exports, garment manufacturing, and sustainable B2B apparel sourcing strategies for global brands."
 author: "Muhammad Moeen Baig"
 publishedDate: "2026-07-23"
 updatedDate: "2026-07-23"

@@ -1,7 +1,7 @@
 ---
 title: "The Rise of Agentic AI: How Autonomous Agents are Changing the Future of Work"
 seoTitle: "The Rise of Agentic AI & Future of Work 2026 | B2B Guide"
-description: "Discover how Agentic AI and autonomous agents are transforming enterprise workflows, software development, and B2B productivity in 2026."
+description: "Discover how Agentic AI and autonomous agents are transforming enterprise workflows, software development, and B2B organizational productivity in 2026."
 author: "Muhammad Moeen Baig"
 publishedDate: "2026-07-23"
 updatedDate: "2026-07-23"

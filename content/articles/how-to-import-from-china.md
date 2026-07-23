@@ -1,7 +1,7 @@
 ---
 title: "How to Import from China: A Step-by-Step Sourcing Guide"
 seoTitle: "How to Import from China: Sourcing & Logistics Guide"
-description: "A comprehensive guide on importing goods from China. Discover how to find reliable suppliers, manage quality control, navigate logistics, and minimize import risks."
+description: "Learn how to import from China. Discover how to find reliable suppliers, manage quality control, navigate shipping logistics, and minimize B2B import risks."
 author: "Muhammad Moeen Baig"
 publishedDate: "2026-05-15"
 updatedDate: "2026-07-20"
