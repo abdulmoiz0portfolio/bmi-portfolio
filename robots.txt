@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Allow: /articles/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://bminternational.com.pk/sitemap.xml

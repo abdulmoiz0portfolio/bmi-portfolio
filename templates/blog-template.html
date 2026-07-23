@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SEO_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <meta name="keywords" content="{{KEYWORDS}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{CANONICAL_URL}}">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="{{SEO_TITLE}}">
+    <meta property="og:description" content="{{META_DESCRIPTION}}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{CANONICAL_URL}}">
+    <meta property="og:image" content="{{FEATURED_IMAGE}}">
+    <meta property="article:published_time" content="{{PUBLISHED_DATE}}">
+    <meta property="article:modified_time" content="{{UPDATED_DATE}}">
+    <meta property="article:author" content="{{AUTHOR}}">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{SEO_TITLE}}">
+    <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{FEATURED_IMAGE}}">
+
+    <link rel="icon" href="{{ROOT_PATH}}images/favicon.webp" type="image/webp" />
+    <link rel="icon" href="{{ROOT_PATH}}images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="{{ROOT_PATH}}images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="{{ROOT_PATH}}css/styles.css">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Article & Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {{JSON_LD_SCHEMA}}
+    </script>
+
+    <style>
+        /* Blog Detail Custom Styling */
+        .blog-header {
+            background-color: var(--dark-navy);
+            color: var(--white);
+            padding: 80px 0 60px 0;
+            text-align: center;
+            position: relative;
+        }
+        .blog-header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .blog-meta-top {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .blog-meta-top i {
+            margin-right: 5px;
+            color: var(--accent-blue);
+        }
+        .blog-header h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.25;
+        }
+        .blog-breadcrumbs {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 25px;
+        }
+        .blog-breadcrumbs a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.2s;
+        }
+        .blog-breadcrumbs a:hover {
+            color: var(--white);
+        }
+        .blog-breadcrumbs span {
+            margin: 0 8px;
+        }
+        .blog-container {
+            max-width: 800px;
+            margin: -40px auto 80px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 10;
+        }
+        .blog-featured-img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .blog-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #374151;
+        }
+        .blog-content h2 {
+            font-size: 1.75rem;
+            color: var(--primary-blue);
+            margin: 40px 0 20px 0;
+            font-weight: 700;
+        }
+        .blog-content h3 {
+            font-size: 1.4rem;
+            color: var(--dark-navy);
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        .blog-content p {
+            margin-bottom: 25px;
+        }
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 25px;
+            padding-left: 20px;
+        }
+        .blog-content li {
+            margin-bottom: 10px;
+        }
+        .blog-content blockquote {
+            border-left: 4px solid var(--primary-blue);
+            background-color: var(--light-bg);
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            border-radius: 0 4px 4px 0;
+        }
+        .blog-footer {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #E5E7EB;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .blog-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .blog-tag {
+            background-color: var(--light-bg);
+            color: var(--primary-blue);
+            padding: 5px 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 20px;
+        }
+        .related-section {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+            border-top: 1px solid #E5E7EB;
+        }
+        .related-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .article-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .card-img-link {
+            display: block;
+            position: relative;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            overflow: hidden;
+        }
+        .card-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .article-card:hover .card-img {
+            transform: scale(1.05);
+        }
+        .card-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-date {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .card-title a {
+            color: var(--dark-navy);
+        }
+        .card-title a:hover {
+            color: var(--primary-blue);
+        }
+        .card-excerpt {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .card-readmore {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .card-readmore:hover {
+            color: var(--dark-navy);
+        }
+        
+        @media (max-width: 768px) {
+            .blog-header {
+                padding: 60px 0 40px 0;
+            }
+            .blog-header h1 {
+                font-size: 2rem;
+            }
+            .blog-container {
+                margin: -20px 15px 60px 15px;
+                padding: 25px;
+            }
+            .blog-featured-img {
+                margin-bottom: 25px;
+            }
+            .blog-content {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="{{ROOT_PATH}}index.html" class="logo">
+                <img src="{{ROOT_PATH}}images/logo.png" alt="BM International Logo" class="logo-img" id="nav-logo" onerror="this.onerror=null; this.src='{{ROOT_PATH}}images/media__1781973991228.png';">
+                <span class="logo-text">BM International</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="{{ROOT_PATH}}index.html#home">Home</a></li>
+                <li><a href="{{ROOT_PATH}}index.html#about">About</a></li>
+                <li><a href="{{ROOT_PATH}}index.html#services">Services</a></li>
+                <li><a href="{{ROOT_PATH}}index.html#products">Products</a></li>
+                <li><a href="{{ROOT_PATH}}index.html#why-us">Why Us</a></li>
+                <li><a href="{{ROOT_PATH}}index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="blog-header">
+        <div class="blog-header-content">
+            <div class="blog-meta-top">
+                <span><i class="far fa-calendar-alt"></i>Published: {{PUBLISHED_DATE}}</span>
+                <span><i class="far fa-calendar-check"></i>Updated: {{UPDATED_DATE}}</span>
+                <span><i class="far fa-user"></i>By {{AUTHOR}}</span>
+            </div>
+            <h1>{{TITLE}}</h1>
+            <div class="blog-breadcrumbs">
+                <a href="{{ROOT_PATH}}index.html">Home</a><span>/</span><a href="{{ROOT_PATH}}articles/index.html">Articles</a><span>/</span><span>{{TITLE}}</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ARTICLE MAIN CONTAINER -->
+    <main class="container">
+        <article class="blog-container">
+            <img src="{{ROOT_PATH}}{{FEATURED_IMAGE}}" alt="{{TITLE}} Featured Image" class="blog-featured-img" onerror="this.onerror=null; this.style.display='none';">
+            
+            <div class="blog-content">
+                {{CONTENT}}
+            </div>
+
+            <div class="blog-footer">
+                <div class="blog-tags">
+                    {{TAGS_HTML}}
+                </div>
+                <div class="blog-share">
+                    <span style="font-weight: 600; font-size: 0.9rem; margin-right: 10px; color: var(--text-light);">Share:</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{CANONICAL_URL}}" target="_blank" style="margin-right: 15px; color: #1877F2; font-size: 1.1rem;" aria-label="Share on Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url={{CANONICAL_URL}}&text={{TITLE}}" target="_blank" style="margin-right: 15px; color: #1DA1F2; font-size: 1.1rem;" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{CANONICAL_URL}}&title={{TITLE}}" target="_blank" style="color: #0A66C2; font-size: 1.1rem;" aria-label="Share on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- RELATED ARTICLES -->
+    <section class="related-section">
+        <div class="container">
+            <h2 class="related-title">Related Articles</h2>
+            <div class="related-grid">
+                {{RELATED_ARTICLES}}
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="{{ROOT_PATH}}images/logo.png" alt="BM International corporate logo" onerror="this.onerror=null; this.src='{{ROOT_PATH}}images/media__1781973991228.png';">
+                    <span>BM International</span>
+                </div>
+                <p>Your Trusted Garments Sourcing Partner in Pakistan.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ROOT_PATH}}index.html#home">Home</a></li>
+                    <li><a href="{{ROOT_PATH}}index.html#about">About</a></li>
+                    <li><a href="{{ROOT_PATH}}index.html#services">Services</a></li>
+                    <li><a href="{{ROOT_PATH}}index.html#products">Products</a></li>
+                    <li><a href="{{ROOT_PATH}}index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Info</h4>
+                <p>Suit # B2, Ground Floor, Abuzar Apartment, Block N, North Nazimabad, Karachi</p>
+                <p>
+                    <a href="mailto:ceo@bminternational.com.pk">ceo@bminternational.com.pk</a><br>
+                    <a href="mailto:bmi.imp.exp@gmail.com">bmi.imp.exp@gmail.com</a>
+                </p>
+                <p><a href="https://wa.me/923312859323" target="_blank">+92 331 285 9323</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 BM International. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/923312859323" target="_blank" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Mobile Nav JS -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

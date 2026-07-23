@@ -1,0 +1,10 @@
+{
+  "name": "bmi-portfolio",
+  "version": "1.0.0",
+  "description": "BM International website and blog system",
+  "scripts": {
+    "build": "node scripts/generate-blog.js"
+  },
+  "author": "BM International",
+  "license": "ISC"
+}
