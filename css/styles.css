@@ -117,8 +117,8 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    padding: 10px 40px; /* Reduced overall navbar padding */
-    max-height: 65px; /* Restricted header element height to 65px */
+    padding: 8px 40px; /* Adjusted overall navbar padding */
+    max-height: 70px; /* Restricted header element height to 70px */
     transition: all 0.3s ease;
 }
 
@@ -135,12 +135,12 @@ img {
 }
 
 .logo-img {
-    height: 38px; /* Reduced logo image size */
+    height: 48px; /* Increased logo image size */
     width: auto;
 }
 
 .logo-text {
-    font-size: 18px; /* Reduced logo text size to 18px */
+    font-size: 20px; /* Increased logo text size to 20px */
     font-weight: 800;
     letter-spacing: -0.5px;
     color: var(--dark-navy);
