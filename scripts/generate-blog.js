@@ -7,7 +7,7 @@ const BLOG_DIR = path.join(__dirname, '..', 'content', 'articles');
 const OUT_DIR = path.join(__dirname, '..', 'blogs');
 const TEMPLATES_DIR = path.join(__dirname, '..', 'templates');
 const ROOT_DIR = path.join(__dirname, '..');
-const ARTICLES_PER_PAGE = 5;
+const ARTICLES_PER_PAGE = 100;
 
 // Create output and template directories if they don't exist
 if (!fs.existsSync(OUT_DIR)) {
@@ -327,23 +327,25 @@ function generate() {
         let paginationHtml = '';
         const rootPath = page === 1 ? '../' : '../../../';
         
-        // Prev button
-        if (page === 1) {
-            paginationHtml += `<span class="pagination-btn disabled"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</span>`;
-        } else {
-            const prevUrl = page === 2 ? `${rootPath}blogs/` : `${rootPath}blogs/page/${page - 1}/`;
-            paginationHtml += `<a href="${prevUrl}" class="pagination-btn"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</a>`;
-        }
-        
-        // Page info
-        paginationHtml += `<span class="pagination-info">Page ${page} of ${totalPages}</span>`;
-        
-        // Next button
-        if (page === totalPages) {
-            paginationHtml += `<span class="pagination-btn disabled">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></span>`;
-        } else {
-            const nextUrl = `${rootPath}blogs/page/${page + 1}/`;
-            paginationHtml += `<a href="${nextUrl}" class="pagination-btn">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></a>`;
+        if (totalPages > 1) {
+            // Prev button
+            if (page === 1) {
+                paginationHtml += `<span class="pagination-btn disabled"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</span>`;
+            } else {
+                const prevUrl = page === 2 ? `${rootPath}blogs/` : `${rootPath}blogs/page/${page - 1}/`;
+                paginationHtml += `<a href="${prevUrl}" class="pagination-btn"><i class="fas fa-chevron-left" style="margin-right: 5px;"></i> Prev</a>`;
+            }
+            
+            // Page info
+            paginationHtml += `<span class="pagination-info">Page ${page} of ${totalPages}</span>`;
+            
+            // Next button
+            if (page === totalPages) {
+                paginationHtml += `<span class="pagination-btn disabled">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></span>`;
+            } else {
+                const nextUrl = `${rootPath}blogs/page/${page + 1}/`;
+                paginationHtml += `<a href="${nextUrl}" class="pagination-btn">Next <i class="fas fa-chevron-right" style="margin-left: 5px;"></i></a>`;
+            }
         }
         
         // Page Title & Meta
