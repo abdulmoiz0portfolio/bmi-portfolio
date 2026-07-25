@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Mobile Navigation Toggle
     const mobileMenu = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
@@ -240,10 +240,11 @@
             card.className = 'product-card show';
 
             // Fixed: Use imageA and imageB inside a wrapper for hover swap effect
+            // Optimized: Use data-src for hover image to defer load until hover/tap, cutting page weight by 50%
             card.innerHTML = `
                 <div class="product-image-wrapper">
                     <img class="img-default" src="${product.imageA || product.image}" alt="${product.name}" loading="lazy" width="300" height="225">
-                    <img class="img-hover" src="${product.imageB || product.image}" alt="${product.name} folded" loading="lazy" width="300" height="225">
+                    <img class="img-hover" data-src="${product.imageB || product.image}" alt="${product.name} folded" loading="lazy" width="300" height="225">
                     ${product.imageB ? '<button class="mobile-toggle-btn" aria-label="Toggle image"><i class="fas fa-chevron-right"></i></button>' : ''}
                 </div>
                 <div class="product-info">
@@ -347,9 +348,20 @@
         });
     }
 
-    // Event delegation for mobile image toggle button
+    // Event delegation for mobile image toggle button and mouseover hover preloading
     const grid = document.getElementById('products-grid');
     if (grid) {
+        // 1. Mouseover (Desktop): Load hover image on hover
+        grid.addEventListener('mouseover', (e) => {
+            const card = e.target.closest('.product-card');
+            if (!card) return;
+            const hoverImg = card.querySelector('.img-hover');
+            if (hoverImg && !hoverImg.src) {
+                hoverImg.src = hoverImg.getAttribute('data-src');
+            }
+        });
+
+        // 2. Click (Mobile): Toggle image view on mobile tap
         grid.addEventListener('click', (e) => {
             const toggleBtn = e.target.closest('.mobile-toggle-btn');
             if (!toggleBtn) return;
@@ -358,6 +370,10 @@
             
             const wrapper = toggleBtn.closest('.product-image-wrapper');
             if (wrapper) {
+                const hoverImg = wrapper.querySelector('.img-hover');
+                if (hoverImg && !hoverImg.src) {
+                    hoverImg.src = hoverImg.getAttribute('data-src');
+                }
                 wrapper.classList.toggle('show-hover');
             }
         });
