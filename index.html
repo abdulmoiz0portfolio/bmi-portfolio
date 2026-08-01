@@ -36,19 +36,21 @@
     <!-- Cloudflare Turnstile Verification API -->
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 
-    <!-- JSON-LD Structured Data: Schema.org Organization + WebSite -->
+    <!-- JSON-LD Structured Data: Schema.org Organization, LocalBusiness, Services, Reviews, and WebSite -->
     <script type="application/ld+json">
     [
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://bminternational.com.pk/#organization",
+        "@type": "LocalBusiness",
+        "@id": "https://bminternational.com.pk/#localbusiness",
         "name": "BM International",
         "url": "https://bminternational.com.pk/",
         "logo": "https://bminternational.com.pk/images/logo.png",
-        "description": "BM International is a trusted Pakistan-based textile sourcing, garment manufacturing, and export company. We help global brands with apparel sourcing, quality control, custom manufacturing, private labeling, and worldwide shipping.",
+        "image": "https://bminternational.com.pk/images/about_bg_1781974126615.png",
+        "description": "BM International is a trusted B2B textile sourcing agency, garments manufacturer, and buying agent in Karachi, Pakistan. We coordinate private-label apparel, home textiles, and cotton cleaning rags exports for global retailers.",
         "email": ["ceo@bminternational.com.pk", "bmi.imp.exp@gmail.com"],
         "telephone": "+923312859323",
+        "priceRange": "$$",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Suit # B2, Ground Floor, Abuzar Apartment, Block N, North Nazimabad",
@@ -56,6 +58,24 @@
           "addressRegion": "Sindh",
           "postalCode": "74700",
           "addressCountry": "PK"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.9333",
+          "longitude": "67.0333"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "18:00"
         },
         "contactPoint": {
           "@type": "ContactPoint",
@@ -66,6 +86,49 @@
         },
         "sameAs": [
           "https://wa.me/923312859323"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "3"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "James R."
+            },
+            "reviewBody": "BMI took all the headache out of sourcing from Pakistan. We received excellent quality knitwear exactly on schedule.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Elena K."
+            },
+            "reviewBody": "The level of transparency and daily communication sets BM International apart. A truly reliable partner for our brand.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            }
+          },
+          {
+            "@type": "Review",
+            "author": {
+              "@type": "Person",
+              "name": "Ahmed S."
+            },
+            "reviewBody": "We've sourced cancellation lots through BMI several times. Excellent value and flawless inspection process every time.",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5"
+            }
+          }
         ]
       },
       {
@@ -76,8 +139,54 @@
         "name": "BM International",
         "description": "BM International is a trusted Pakistan-based textile sourcing, garment manufacturing, and export company.",
         "publisher": {
-          "@id": "https://bminternational.com.pk/#organization"
+          "@id": "https://bminternational.com.pk/#localbusiness"
         }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the Minimum Order Quantity (MOQ) for custom garment manufacturing?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Our Minimum Order Quantity (MOQ) varies by product type: custom knitwear (t-shirts, polo shirts, hoodies) starts at 500 pieces per style/color, while denim, trousers, and bedding linens typically start at 1,000 pieces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you perform on-ground quality inspections in Pakistan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we handle 100% on-ground inspections directly in our partner factories. We execute inline quality checks during production and final random inspections adhering to AQL 1.5 and 2.5 standards before shipment release."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What markets and countries do you export to?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "We export worldwide, primarily serving retailers and wholesalers in Europe (UK, Germany, France, Netherlands, Italy, Spain), North America (USA, Canada), the Middle East (UAE, Saudi Arabia), and the Asia-Pacific region."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do you source cancelled shipment stocks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, we specialize in procuring high-value cancelled apparel shipment stocks, home textiles, and cotton rags at competitive discount rates directly from factory warehouses in Karachi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does custom sample development take?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sample development and prototyping typically take 7 to 10 working days, depending on tech pack availability and specific fabric sourcing complexity."
+            }
+          }
+        ]
       }
     ]
     </script>
@@ -89,7 +198,7 @@
         <div class="container nav-container">
             <a href="#" class="logo">
                 <!-- Fallback logo placeholder until user replaces it -->
-                <img src="images/logo.png" alt="BM International Logo" class="logo-img" id="nav-logo" onerror="this.onerror=null; this.src='images/media__1781973991228.png';">
+                <img src="images/logo.png" alt="BM International Logo" class="logo-img" id="nav-logo" width="50" height="50" onerror="this.onerror=null; this.src='images/media__1781973991228.png';">
                 <span class="logo-text">BM International</span>
             </a>
             <div class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu" role="button" tabindex="0">
@@ -153,9 +262,26 @@
                 <p class="about-lead">Based in Karachi with over 25 years of experience, BM International acts as your dedicated agent on the ground.</p>
                 <p>We do all the heavy lifting—sourcing, negotiation, production management, and quality inspection on the buyer's behalf. Our clients include retailers, brands, and importers across Europe, North America, and the Middle East.</p>
                 <p>Our approach ensures that you never have to deal with the complexities of factory management directly. We deliver the finished product to your exact specifications, with full transparency and reliability.</p>
+                
+                <!-- GEO Factual Definition -->
+                <div class="geo-definition" style="margin-top: 25px; border-left: 4px solid var(--accent); padding-left: 15px; margin-bottom: 25px;">
+                    <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); margin-bottom: 5px;">What is BM International?</h3>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 0;">BM International is a leading B2B garments sourcing agency and textile exporter based in Karachi, Pakistan. Founded by Muhammad Moeen Baig, the company connects global retail brands, apparel wholesalers, and institutional buyers with certified textile manufacturers in Pakistan. We manage the entire supply chain, including supplier vetting, custom sample development, bulk production oversight, on-ground AQL quality inspections, customs clearance, and global shipping.</p>
+                </div>
+                
+                <!-- GEO Target Audience -->
+                <div class="geo-audiences" style="margin-bottom: 25px;">
+                    <h3 style="font-size: 1.15rem; font-weight: 600; color: var(--primary); margin-bottom: 10px;">Who We Serve:</h3>
+                    <ul style="list-style-type: none; padding-left: 0; margin-bottom: 0;">
+                        <li style="position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted);"><i class="fas fa-check" style="position: absolute; left: 0; top: 4px; color: var(--accent); font-size: 0.8rem;"></i><strong>Global Apparel Brands:</strong> Sourcing custom private-label knitwear, hoodies, denim, flannel jackets, and kids' wear.</li>
+                        <li style="position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted);"><i class="fas fa-check" style="position: absolute; left: 0; top: 4px; color: var(--accent); font-size: 0.8rem;"></i><strong>Textile Importers &amp; Wholesalers:</strong> Sourcing bulk bed sheets, hotel towels, institutional workwear, and kitchen linens.</li>
+                        <li style="position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted);"><i class="fas fa-check" style="position: absolute; left: 0; top: 4px; color: var(--accent); font-size: 0.8rem;"></i><strong>Industrial Buyers:</strong> Sourcing recycled and new cotton cleaning rags (wipers) in bulk bales.</li>
+                        <li style="position: relative; padding-left: 20px; margin-bottom: 8px; font-size: 0.95rem; color: var(--text-muted);"><i class="fas fa-check" style="position: absolute; left: 0; top: 4px; color: var(--accent); font-size: 0.8rem;"></i><strong>Stock Lot Buyers:</strong> Procuring premium-grade cancelled apparel and home textile production stocks.</li>
+                    </ul>
+                </div>
             </div>
             <div class="about-image">
-                <img src="images/about_bg_1781974126615.png" alt="Modern garment production floor and fabric rolls" class="img-responsive">
+                <img src="images/about_bg_1781974126615.png" alt="Modern garment production floor and fabric rolls" class="img-responsive" width="1024" height="1024" loading="lazy">
             </div>
         </div>
     </section>
@@ -171,22 +297,34 @@
                 <div class="service-card">
                     <i class="fas fa-globe service-icon" aria-hidden="true"></i>
                     <h3>Premier Exporter</h3>
-                    <p>A leading exporter of premium textile and apparel products from Pakistan to global markets, ensuring top-tier quality and compliance.</p>
+                    <p style="margin-bottom: 12px;"><strong>What It Is:</strong> Exporting custom-manufactured apparel and home textiles from Pakistan to global markets under GOTS, BCI, and OCS standards.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>What's Included:</strong> Custom pattern drafting, fabric sourcing, labeling, pre-shipment AQL 1.5 inspection, and sea/air freight booking.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>Who It's For:</strong> International apparel brands, retail chains, and textile distributors in Europe, North America, and UAE.</p>
+                    <p style="margin-bottom: 0; font-size: 0.9rem;"><strong>How It Works:</strong> We receive your tech pack, source materials, create samples, execute bulk production, and manage direct container exports.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-industry service-icon" aria-hidden="true"></i>
-                    <h3>Exporter of Fresh Production Stock Lots</h3>
-                    <p>Sourcing and exporting fresh, custom-manufactured production lots directly from top-tier factories.</p>
+                    <h3>Exporter of Fresh Stock Lots</h3>
+                    <p style="margin-bottom: 12px;"><strong>What It Is:</strong> Procurement and export of fresh, custom-manufactured clothing production stocks direct from high-compliance Pakistani mills.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>What's Included:</strong> Immediate stock verification, size sorting, custom repackaging, and clean export documentation clearance.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>Who It's For:</strong> Wholesale distributors, discount stores, and bulk buyers seeking premium stock lots at lower MOQs.</p>
+                    <p style="margin-bottom: 0; font-size: 0.9rem;"><strong>How It Works:</strong> We source available factory stock, run pre-purchase inspection checks, repackage, and dispatch container shipments.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-box-open service-icon" aria-hidden="true"></i>
-                    <h3>Cancellation of Apparel, Home Textile and Rags</h3>
-                    <p>Procuring and exporting high-value cancelled shipment stocks at highly competitive rates.</p>
+                    <h3>Cancellation Sourcing</h3>
+                    <p style="margin-bottom: 12px;"><strong>What It Is:</strong> Exporting high-value cancelled shipment stocks of apparel, home textiles, and cotton cleaning rags at steep clearance discounts.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>What's Included:</strong> Sourcing cancelled lots, complete defect checks, button/trim alterations, metal detection scanning, and packaging.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>Who It's For:</strong> Off-price retail stores, industrial cleaning companies, and high-volume value retailers.</p>
+                    <p style="margin-bottom: 0; font-size: 0.9rem;"><strong>How It Works:</strong> We identify cancelled stock lots in Karachi, verify the inventory count and condition, and handle fast export clearance.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-handshake service-icon" aria-hidden="true"></i>
-                    <h3>Sourcing and Buying Agent</h3>
-                    <p>Acting as your trusted on-ground representative in Pakistan to oversee sourcing, negotiation, and quality.</p>
+                    <h3>Sourcing &amp; Buying Agent</h3>
+                    <p style="margin-bottom: 12px;"><strong>What It Is:</strong> On-ground representative services in Pakistan, managing factories, price negotiations, and QA inspections on your behalf.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>What's Included:</strong> Factory auditing, cost breakdown checks, daily sampling progress tracking, and on-site AQL 1.5/2.5 final inspections.</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><strong>Who It's For:</strong> Brand owners and foreign importers who want to manufacture in Pakistan without traveling or dealing with factories directly.</p>
+                    <p style="margin-bottom: 0; font-size: 0.9rem;"><strong>How It Works:</strong> Send us your specs; we vet factories, supervise the entire manufacturing process, inspect, and approve shipment.</p>
                 </div>
             </div>
         </div>
@@ -290,7 +428,7 @@
     <section class="founder">
         <div class="container founder-container">
             <div class="founder-image">
-                <img src="images/founder.jpg" alt="Muhammad Moeen Baig" onerror="this.onerror=null; this.src='images/media__1781974055940.png';">
+                <img src="images/founder.jpg" alt="Muhammad Moeen Baig" width="960" height="960" loading="lazy" onerror="this.onerror=null; this.src='images/media__1781974055940.png';">
             </div>
             <div class="founder-content">
                 <h2>Meet the Founder</h2>
@@ -308,37 +446,33 @@
                 <h2>How We Work</h2>
                 <p>Our streamlined process for a hassle-free sourcing experience.</p>
             </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-badge">01</div>
-                    <div class="timeline-content">
-                        <i class="fas fa-envelope timeline-icon"></i>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <div class="step-content">
                         <h3>Inquiry</h3>
-                        <p>You share your requirements, tech packs, or target pricing with us.</p>
+                        <p>You submit your tech packs, physical reference samples, fabric compositions, and target costing parameters.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-badge">02</div>
-                    <div class="timeline-content">
-                        <i class="fas fa-search-dollar timeline-icon"></i>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <div class="step-content">
                         <h3>Sourcing & Sampling</h3>
-                        <p>We find the best factory fit, negotiate costs, and develop samples for approval.</p>
+                        <p>We vet factories in Karachi, Lahore, and Faisalabad, negotiate fabric costs, and develop custom prototypes in 7-10 days.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-badge">03</div>
-                    <div class="timeline-content">
-                        <i class="fas fa-cogs timeline-icon"></i>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <div class="step-content">
                         <h3>Production & Inspection</h3>
-                        <p>We manage the bulk production process and perform rigorous pre-shipment inspections.</p>
+                        <p>We run daily production checks and perform on-site inline and final inspections under strict AQL 1.5 standards.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-badge">04</div>
-                    <div class="timeline-content">
-                        <i class="fas fa-ship timeline-icon"></i>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <div class="step-content">
                         <h3>Shipment & Payment</h3>
-                        <p>Goods are shipped with full export documentation. Payment is completed securely via bank transfer.</p>
+                        <p>We clear customs, issue bills of lading, and dispatch container shipments globally. Settlement is finalized via secure bank transfer.</p>
                     </div>
                 </div>
             </div>
@@ -412,6 +546,93 @@
             </div>
         </div>
     </section>
+
+    <!-- B2B FAQ SECTION -->
+    <section class="faq-section" id="faq" style="background-color: var(--bg-light); padding: 80px 0; border-top: 1px solid var(--border-color);">
+        <div class="container" style="max-width: 800px; margin: 0 auto;">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 style="font-size: 2.2rem; font-weight: 700; color: var(--primary); margin-bottom: 15px;">Frequently Asked Questions</h2>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 0;">Key B2B sourcing and manufacturing details for global importers.</p>
+            </div>
+            
+            <div class="faq-accordion" style="display: flex; flex-direction: column; gap: 15px;">
+                <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                    <button class="faq-toggle" style="width: 100%; text-align: left; padding: 20px; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: inherit;">
+                        <span>What is the Minimum Order Quantity (MOQ) for custom garment manufacturing?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s; color: var(--accent);"></i>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px;">
+                        <p style="padding-bottom: 20px; margin: 0; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">Our Minimum Order Quantity (MOQ) varies by product category: custom knitwear (t-shirts, polo shirts, hoodies) starts at 500 pieces per style/color, while denim, trousers, and bedding linens typically start at 1,000 pieces.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                    <button class="faq-toggle" style="width: 100%; text-align: left; padding: 20px; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: inherit;">
+                        <span>Do you perform on-ground quality inspections in Pakistan?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s; color: var(--accent);"></i>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px;">
+                        <p style="padding-bottom: 20px; margin: 0; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">Yes, we handle 100% on-ground inspections directly in our partner factories. We execute inline quality checks during production and final random inspections adhering to AQL 1.5 and 2.5 standards before shipment release.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                    <button class="faq-toggle" style="width: 100%; text-align: left; padding: 20px; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: inherit;">
+                        <span>What markets and countries do you export to?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s; color: var(--accent);"></i>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px;">
+                        <p style="padding-bottom: 20px; margin: 0; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">We export worldwide, primarily serving retailers and wholesalers in Europe (UK, Germany, France, Netherlands, Italy, Spain), North America (USA, Canada), the Middle East (UAE, Saudi Arabia), and the Asia-Pacific region.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                    <button class="faq-toggle" style="width: 100%; text-align: left; padding: 20px; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: inherit;">
+                        <span>Do you source cancelled shipment stocks?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s; color: var(--accent);"></i>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px;">
+                        <p style="padding-bottom: 20px; margin: 0; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">Yes, we specialize in procuring high-value cancelled apparel shipment stocks, home textiles, and cotton rags at competitive discount rates directly from factory warehouses in Karachi.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                    <button class="faq-toggle" style="width: 100%; text-align: left; padding: 20px; background: none; border: none; font-size: 1.1rem; font-weight: 600; color: var(--primary); display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: inherit;">
+                        <span>How long does custom sample development take?</span>
+                        <i class="fas fa-chevron-down" style="transition: transform 0.3s; color: var(--accent);"></i>
+                    </button>
+                    <div class="faq-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 20px;">
+                        <p style="padding-bottom: 20px; margin: 0; color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;">Sample development and prototyping typically take 7 to 10 working days, depending on tech pack availability and specific fabric sourcing complexity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion JS Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggles = document.querySelectorAll('.faq-toggle');
+            toggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    const isOpen = content.style.maxHeight && content.style.maxHeight !== '0px';
+                    
+                    // Close all other items
+                    document.querySelectorAll('.faq-content').forEach(c => {
+                        c.style.maxHeight = '0px';
+                        c.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    });
+                    
+                    if (!isOpen) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        });
+    </script>
 
     <!-- GET IN TOUCH -->
     <section class="contact" id="contact">
@@ -488,7 +709,7 @@
         <div class="container footer-grid">
             <div class="footer-brand">
                 <div class="footer-logo">
-                    <img src="images/logo.png" alt="BM International corporate logo" onerror="this.onerror=null; this.src='images/media__1781973991228.png';">
+                    <img src="images/logo.png" alt="BM International corporate logo" width="50" height="50" loading="lazy" onerror="this.onerror=null; this.src='images/media__1781973991228.png';">
                     <span>BM International</span>
                 </div>
                 <p>Your Trusted Garments Sourcing Partner in Pakistan.</p>
