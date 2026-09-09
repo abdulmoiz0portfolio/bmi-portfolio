@@ -21,24 +21,77 @@ function parseFrontMatter(fileContent) {
         return { metadata: {}, body: fileContent };
     }
     const yamlBlock = matches[1];
-    const body = matches[2];
+    let body = matches[2];
     const metadata = {};
     
-    yamlBlock.split('\n').forEach(line => {
-        const sepIndex = line.indexOf(':');
-        if (sepIndex === -1) return;
-        const key = line.slice(0, sepIndex).trim();
-        let value = line.slice(sepIndex + 1).trim();
-        
-        // Parse array format e.g. ["import from China", "sourcing"]
-        if (value.startsWith('[') && value.endsWith(']')) {
-            value = value.slice(1, -1).split(',').map(item => item.trim().replace(/^['"]|['"]$/g, ''));
-        } else {
-            // Strip enclosing quotes if present
-            value = value.replace(/^['"]|['"]$/g, '');
-        }
-        metadata[key] = value;
+    const lines = yamlBlock.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+    const hasMultipleKeysPerLine = lines.some(line => {
+        const colonCount = (line.match(/:/g) || []).length;
+        return colonCount > 1 && !line.startsWith('tags:') && !line.startsWith('keywords:') && !line.startsWith('related:');
     });
+
+    if (lines.length <= 1 || hasMultipleKeysPerLine) {
+        const kvRegex = /([a-zA-Z0-9_-]+)\s*:\s*("(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|\[[^\]]*\]|[^\n\r]+?)(?=(?:\s+[a-zA-Z0-9_-]+\s*:)|$)/gs;
+        let match;
+        while ((match = kvRegex.exec(yamlBlock)) !== null) {
+            const key = match[1].trim();
+            let value = match[2].trim();
+            if (value.startsWith('[') && value.endsWith(']')) {
+                value = value.slice(1, -1).split(',').map(item => item.trim().replace(/^['"]|['"]$/g, ''));
+            } else {
+                value = value.replace(/^['"]|['"]$/g, '');
+            }
+            metadata[key] = value;
+        }
+    } else {
+        lines.forEach(line => {
+            const sepIndex = line.indexOf(':');
+            if (sepIndex === -1) return;
+            const key = line.slice(0, sepIndex).trim();
+            let value = line.slice(sepIndex + 1).trim();
+            
+            // Parse array format e.g. ["import from China", "sourcing"]
+            if (value.startsWith('[') && value.endsWith(']')) {
+                value = value.slice(1, -1).split(',').map(item => item.trim().replace(/^['"]|['"]$/g, ''));
+            } else {
+                // Strip enclosing quotes if present
+                value = value.replace(/^['"]|['"]$/g, '');
+            }
+            metadata[key] = value;
+        });
+    }
+
+    // Property normalization
+    metadata.title = metadata.title || metadata.seoTitle || '';
+    metadata.seoTitle = metadata.seoTitle || metadata.title;
+    metadata.description = metadata.description || 'Expert textile sourcing and garment manufacturing insights.';
+    metadata.author = metadata.author || 'BM International Team';
+    metadata.publishedDate = metadata.publishedDate || metadata.date || new Date().toISOString().split('T')[0];
+    metadata.updatedDate = metadata.updatedDate || metadata.publishedDate || new Date().toISOString().split('T')[0];
+    metadata.featuredImage = (metadata.featuredImage || metadata.image || 'images/logo.png').replace(/^\/+/, '');
+    metadata.keywords = metadata.keywords || (Array.isArray(metadata.tags) ? metadata.tags : (metadata.tags ? [metadata.tags] : []));
+
+    // Clean body from code fences, style tags, and raw outer HTML document wrapper
+    body = body.trim();
+    body = body.replace(/^```(?:html)?\s*/i, '').replace(/\s*```$/, '').trim();
+    body = body.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '');
+
+    if (body.includes('<!DOCTYPE html>') || body.includes('<body') || body.includes('<html')) {
+        const bodyMatch = body.match(/<body[^>]*>([\s\S]*?)<\/body>/i);
+        if (bodyMatch) {
+            body = bodyMatch[1].trim();
+        } else {
+            body = body.replace(/<!DOCTYPE[^>]*>/gi, '')
+                       .replace(/<\/?html[^>]*>/gi, '')
+                       .replace(/<head[^>]*>[\s\S]*?<\/head>/gi, '')
+                       .trim();
+        }
+    }
+
+    // Remove duplicate top h1 if present
+    if (metadata.title) {
+        body = body.replace(/^\s*<h1[^>]*>[\s\S]*?<\/h1>\s*/i, '').trim();
+    }
     
     return { metadata, body };
 }
