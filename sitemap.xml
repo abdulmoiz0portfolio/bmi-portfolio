@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bminternational.com.pk/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bminternational.com.pk/blogs/</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bminternational.com.pk/blogs/the-rise-of-agentic-os-how-2026-flagship-ai-smartphones-deliver-real-time-personal-assistants-on-device-2026/</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bminternational.com.pk/blogs/how-the-new-agentic-os-on-snapdragon-x3-ai-smartphones-is-redefining-mobile-productivity-in-2026-2026/</loc>
