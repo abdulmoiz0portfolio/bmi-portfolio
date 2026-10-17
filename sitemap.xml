@@ -2,15 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bminternational.com.pk/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://bminternational.com.pk/blogs/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bminternational.com.pk/blogs/agentic-ai-smartphones-how-snapdragon-9-gen-4-s-on-device-npu-is-redefining-personal-assistants-in-2026-2026/</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bminternational.com.pk/blogs/how-on-device-small-language-models-are-transforming-smartphones-in-2026-the-ultimate-guide-to-ai-powered-mobile-experiences-2026/</loc>
